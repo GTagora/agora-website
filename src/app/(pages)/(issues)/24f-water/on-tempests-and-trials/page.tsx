@@ -50,11 +50,11 @@ export default async function Article() {
             churned down debris-ridden rapids, terrified to hit our heads,
             terrified of the murky dark, terrified to stop. But it doesn’t stop.
             The rain keeps pounding, the water keeps rising till it’s truly all
-            you can think, all you can know, all you’ve ever known. That's what
+            you can think, all you can know, all you’ve ever known. That&apos;s what
             it is.
             <br />
             <br />
-            Why do bad things happen to good people? It's all bad. At least,
+            Why do bad things happen to good people? It&apos;s all bad. At least,
             that’s what the world wants us to know.
             <br />
             <br />

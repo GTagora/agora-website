@@ -50,7 +50,7 @@ export default function Blog() {
 		<main className={styles.main}>
 			<h1 className={styles.h1}>Blog</h1>
 			<div className={styles.allcards}>
-				{articles.map((article) => (
+				{articles.map((article:Article) => (
 					<BlogCard key={article.id} article={article} />
 				))}
 			</div>

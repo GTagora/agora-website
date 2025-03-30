@@ -18,7 +18,7 @@ export default function Article() {
 	const formattedText = (
 		<>
 			<p>
-				<i>"For now we see in a mirror dimly, but then face to face"</i> — 1
+				<i><q>For now we see in a mirror dimly, but then face to face</q></i> — 1
 				Corinthians 13:12 (ESV)
 			</p>
 			<br />

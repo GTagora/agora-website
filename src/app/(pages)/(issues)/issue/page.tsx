@@ -1,11 +1,13 @@
 import styles from './page.module.css'
-import IssueCard from '@/app/components/issue-card';
-import IssuuButton from '@/app/components/issuuButton';
+import { ArticleCard } from '@/app/components/cards';
+import { IssuuButton } from '@/app/components/buttons';
 import Footer from '@/app/components/footer';
+import { Article } from '@/app/types/types';
 
 
-const articles = [
+const articles: Article[] = [
     {
+        id: 1,
         title: 'article 1',
         image: '/issues/issue/test.png',
         genre: 'poem',
@@ -13,6 +15,7 @@ const articles = [
         link: '/issue/article-1'
     },
     {
+        id: 2,
         title: 'article 2 name',
         image: '/issues/issue/test.png',
         genre: 'poem',
@@ -43,8 +46,8 @@ export default async function Issue() {
                     </div>
                 </div>
                 <div className={styles.articlesContainer}>
-                    {articles && articles.map((article: any) => (
-                        <IssueCard key={article.name} article={article}></IssueCard>
+                    {articles && articles.map((item: Article) => (
+                        <ArticleCard key={item.id} article={item}></ArticleCard>
                     ))}
                 </div>
             </div>

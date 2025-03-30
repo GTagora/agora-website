@@ -1,35 +1,35 @@
 import styles from './staff.module.css'
-import Image from 'next/image';
+// import Image from 'next/image';
 import Footer from '@/app/components/footer'
 
-type MemberProps= {
-    name: string;
-    roles: string[];
-    img: string; //TYPE DEPENDS ON HOW IMG ID IS READ FROM DATABASE
-}
+// type MemberProps= {
+//     name: string;
+//     roles: string[];
+//     img: string; //TYPE DEPENDS ON HOW IMG ID IS READ FROM DATABASE
+// }
 
-async function getStaff() {
-    const res = await fetch(`https://agora-backend-sxd6.onrender.com/contacts/getStaff`, { cache: 'force-cache' });
-    const data = res.json();
-    return data;
-}
+// async function getStaff() {
+//     const res = await fetch(`https://agora-backend-sxd6.onrender.com/contacts/getStaff`, { cache: 'force-cache' });
+//     const data = res.json();
+//     return data;
+// }
 
-function Member( { name, roles, img}:MemberProps) {
-    const roleString = roles.join(', ');
-    return (
-        <div className={styles.memberCard}>
-            <Image
-                className={styles.headshot}
-                src={img === "" ? '/default-member.jpg' : img}
-                width={450}
-                height={450}
-                alt={name + ' headshot'}
-            />
-            <h1>{name}</h1>
-            <h2>{roleString}</h2>
-        </div>
-    )
-}
+// function Member( { name, roles, img}:MemberProps) {
+//     const roleString = roles.join(', ');
+//     return (
+//         <div className={styles.memberCard}>
+//             <Image
+//                 className={styles.headshot}
+//                 src={img === "" ? '/default-member.jpg' : img}
+//                 width={450}
+//                 height={450}
+//                 alt={name + ' headshot'}
+//             />
+//             <h1>{name}</h1>
+//             <h2>{roleString}</h2>
+//         </div>
+//     )
+// }
 
 export default async function Staff() {
     // const staff = await getStaff();

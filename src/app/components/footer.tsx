@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from './footer.module.css' // Import CSS file for styling
 
 function socialButton(img:string, alt:string, link:string) {
-    return (<a href={link} target="blank">
+    return (<Link href={link} target="blank">
             <div className={styles['social-buttons']}>
                 <Image 
                     className={styles['social-images']}
@@ -13,7 +13,7 @@ function socialButton(img:string, alt:string, link:string) {
                     alt={alt}
                 />
             </div>
-    </a>)
+    </Link>)
 }
 
 const Footer = () => {
@@ -39,31 +39,31 @@ const Footer = () => {
             <div className={styles.textBox}>
                 <div className={styles.row}>
                     <div className={styles.column}>
-                        <a href="/about" className={styles.heading}>About</a>
-                        <a className={styles.footerLink} href="/about">
+                        <Link href="/about" className={styles.heading}>About</Link>
+                        <Link className={styles.footerLink} href="/about">
                             Mission
-                        </a>
-                        <a className={styles.footerLink}  href="/about/staff">
+                        </Link>
+                        <Link className={styles.footerLink}  href="/about/staff">
                             Staff
-                        </a>
+                        </Link>
                     </div>
                     <div className={styles.column}>
-                        <a href="/archive" className={styles.heading}>Archive</a>
-                        <a className={styles.footerLink} href="/#latest-issue">
+                        <Link href="/archive" className={styles.heading}>Archive</Link>
+                        <Link className={styles.footerLink} href="/#latest-issue">
                             Latest Issue
-                        </a>
-                        <a className={styles.footerLink}  href="/archive">
+                        </Link>
+                        <Link className={styles.footerLink}  href="/archive">
                             Past Issues
-                        </a>
+                        </Link>
                     </div>
                     <div className={styles.column}>
-                        <a href="/contact" className={styles.heading}>Contact</a>
-                        <a className={styles.footerLink}  href="mailto:gatechagora@gmail.com" target="_blank">
+                        <Link href="/contact" className={styles.heading}>Contact</Link>
+                        <Link className={styles.footerLink}  href="mailto:gatechagora@gmail.com" target="_blank">
                             Email
-                        </a>
-                        <a className={styles.footerLink}  href="https://www.instagram.com/gt.agora/" target="_blank">
+                        </Link>
+                        <Link className={styles.footerLink}  href="https://www.instagram.com/gt.agora/" target="_blank">
                             Instagram
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
