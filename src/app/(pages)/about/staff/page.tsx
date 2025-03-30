@@ -34,11 +34,10 @@ function Member( { name, roles, img}:MemberProps) {
 export default async function Staff() {
     // const staff = await getStaff();
     return (
-    <main className={styles.main}>
+    <main className="flex flex-col items-center p-2 font-serif">
       <div className={styles.container}>
         <h1 className={styles.pageHeader}>Staff & Contributors</h1>
-        <p className="mt-12" >Apologies; this page is under maintenance.</p>
-
+        <p className="mt-12 font-ebgaramond" >Apologies! This page is under maintenance.</p>
         {/* <h2 className={styles.sectionHeader}>Executive Staff</h2>
         <div className={styles.section}>
             {staff && staff.map(async (person: any) => {

@@ -13,6 +13,15 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"], 
+        serif: ["Cormorant Garamond", "serif"], 
+        mono: ["Fira Code", "monospace"], 
+        ebgaramond: "var(--font-ebgaramond)",
+        playfairsc: "var(--font-playfair-sc)",
+        playfair: "var(--font-playfair)",
+        cormorant: "var(--font-cormorant)",
+      },
     },
   },
   plugins: [],
