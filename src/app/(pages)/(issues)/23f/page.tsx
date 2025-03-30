@@ -1,6 +1,6 @@
 import styles from './page.module.css'
-import IssueCard from '@/app/components/issue-card';
-import IssuuButton from '@/app/components/issuuButton';
+import { IssueCard } from '@/app/components/cards';
+import { IssuuButton } from '@/app/components/buttons';
 import Footer from '@/app/components/footer';
 
 // Properly typed Article interface instead of any typing

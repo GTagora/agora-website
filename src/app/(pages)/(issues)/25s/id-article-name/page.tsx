@@ -5,21 +5,20 @@ import Footer from '@/app/components/footer'
 
 export default async function Article() {
     const author = 'author name';
-    const credit = 'Photo by someone';
+    const credit = 'Photo by Someone';
     const title = 'Article 1';
-    const date = 'Month 01, Year';
+    const date = 'April 23, 2025';
 
     return (
         <div>
             <div className={styles.main}>
                 <div className={styles.container}>
-                    {/* <iframe className={styles.video} src='VIDEO LINK HERE'/> */}
                     <Image 
-                    className={styles.image}
-                    src='/issues/issue/test.png'
-                    width={600}
-                    height={600}
-                    alt='article image'/>
+                        className={styles.image}
+                        src='/issues/25s/test.webp'
+                        width={600}
+                        height={600}
+                        alt='article image'/>
                     <p className = {styles.credit}>{credit}</p>
                     <h1 className={styles.title}>{title}</h1>
                     <h2 className={styles.author}>BY {author.toUpperCase()}</h2>

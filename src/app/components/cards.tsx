@@ -7,7 +7,7 @@ interface IssueCard {
     article: { [key:string]: any };
 }
 
-export default function IssueCard({article}: IssueCard) {
+export function IssueCard({article}: IssueCard) {
     const image = article.image;
     const title = article.title;
     const genre = article.genre.toUpperCase();

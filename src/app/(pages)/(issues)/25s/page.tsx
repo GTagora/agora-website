@@ -1,24 +1,25 @@
-
 import styles from './page.module.css'
-import IssueCard from '@/app/components/issue-card';
-import IssuuButton from '@/app/components/issuuButton';
+import { IssueCard } from '@/app/components/cards';
+import { IssuuButton } from '@/app/components/buttons';
 import Footer from '@/app/components/footer';
 
 
 const articles = [
     {
-        title: 'article 1',
-        image: '/issues/issue/test.png',
-        genre: 'poem',
+        id: 0,
+        title: 'EXAMPLE',
+        image: '/issues/25s/test.webp',
+        genre: 'genre',
         issue: 'Garden',
-        link: '/issue/article-1'
+        link: '/25s/id-article-name'
     },
     {
-        title: 'article 2 name',
-        image: '/issues/issue/test.png',
-        genre: 'poem',
+        id: 11,
+        title: 'His story & mine',
+        image: '/issues/25s/his-story-and-mine.webp',
+        genre: 'essay',
         issue: 'Garden',
-        link: '/issue/article-2'
+        link: '/25s/11-his-story-and-mine'
     }
 ]
 
