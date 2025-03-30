@@ -10,3 +10,14 @@ export type Article = {
 export interface ArticleCard {
     article: Article
 };
+
+export interface BlogCardProps {
+    article: {
+        id: number,
+        title: string;
+        genre: string;
+        img: string;
+        slug: string;
+        date: string;
+    }
+}

@@ -1,9 +1,10 @@
 import styles from './blog-card.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
+import { BlogCardProps } from '../types/types'
 
 
-export default function BlogCard({article}:any) {
+export default function BlogCard({article}:BlogCardProps) {
     return (
         <Link href={article.slug}>
             <div className={styles.card}>

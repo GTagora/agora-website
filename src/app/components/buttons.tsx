@@ -7,7 +7,7 @@ import styles from './issuuButton.module.css'
  * @param link (string) - the URL to the Issue upload 
  * @returns a button component
  */
-export function IssuuButton({ link }:any) {
+export function IssuuButton({ link }:{ link:string }) {
     return (
         <Link href={link} target="_blank">
             <div className={styles.button}>Check out our digital print issue &#x2192;&nbsp;&nbsp;&nbsp;&nbsp;</div>
@@ -20,7 +20,7 @@ export function IssuuButton({ link }:any) {
  * @param number (number) - the footnote number
  * @returns superscript number that links to footnote
  */
-export function Reference({ number }:any) {
+export function Reference({ number }:{ number:number }) {
     return (
         <sup>
             <Link 
@@ -39,7 +39,10 @@ export function Reference({ number }:any) {
     )
 }
 
-export function Footnote({ number, text }:any) {
+export function Footnote({ number, text }:{ 
+    number:number, 
+    text:string 
+}) {
     return (
         <p>
             <sup>{number}</sup>
