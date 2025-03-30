@@ -1,6 +1,5 @@
-
 import styles from './page.module.css'
-import IssueCard from '@/app/(templates)/issue-card';
+import IssueCard from '@/app/components/issue-card';
 import IssuuButton from '@/app/components/issuuButton';
 import Footer from '@/app/components/footer';
 
