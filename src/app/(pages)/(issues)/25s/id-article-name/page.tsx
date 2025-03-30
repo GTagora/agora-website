@@ -1,6 +1,7 @@
 import styles from './page.module.css'
 import Image from 'next/image'
 import Footer from '@/app/components/footer'
+import { Reference, Footnote } from '@/app/components/buttons';
 
 
 export default async function Article() {
@@ -25,7 +26,11 @@ export default async function Article() {
                     <h3 className={styles.date}>{date}</h3>
                     <div className={styles.text}>
                         {/* REPLACE TEXT HERE */}
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Lorem ipsum dolor sit amet,<Reference number={1} />consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                    <div className="mt-8 leading-6">
+                        <p className="mb-3 font-bold">Footnotes</p>
+                        <Footnote number={1} text="Footnote text"/> <br/>
                     </div>
                 </div>
             </div>

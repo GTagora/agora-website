@@ -2,6 +2,7 @@ import styles from './page.module.css'
 import Image from 'next/image'
 import Footer from '@/app/components/footer'
 import Link from 'next/link';
+import { Reference, Footnote } from '@/app/components/buttons';
 
 
 export default async function Article() {
@@ -45,7 +46,7 @@ export default async function Article() {
                         But, (2) their sin did not hinder His love. Despite the sin that separated them, God continued to love Adam and Eve. Yes, God exiled them from the garden of Eden, but He did so <q>lest [Adam] reach out his hand and take also of the tree of life and eat, and live forever</q> (Genesis 3:22). He banished them, so they would not live forever in separation from Him: it was in mercy and in love that God removed Adam and Eve from the garden. And from the moment of separation, He began to work to bring them back.  <br/><br/>
                         These two truths are also written into my own story. Upon leaving campus, I felt I&apos;d fallen: I was physically weakened and humbled, my consistent academic record was marred with Withdrawals, and the relationships and church that bolstered my faith were suddenly swept away far beyond my reach. But I realized I&apos;d grown entitled to undeserved blessings &mdash; <q>what do you have that you did not receive?</q> (1 Cor. 4:7) &mdash; and these gifts were rightly His to take away. In their absence, He revealed where my foundation stood upon His gifts instead of Him alone. I was able to see the trajectory of my sin and its incompatibility with His perfection, and subsequently repent with more clarity. My time at home wasn&apos;t easy; it was a season of physical resilience, spiritual refinement and quiet solitude. But it was also a time to rest and re-center, which brought much reassurance and warmth in my relationship with Him. It wasn&apos;t banishment; rather, it was a testament to His faithful pursuit of my heart and His prudent protection of my faith. So when I look back, all I see is His love and mercy, all to His glory. <br/><br/>
                         We live in a fallen world. The reality Adam and Eve lived in after the Fall was marked by pain, toil, and futility, with a prescribed ending: <q>to dust you shall return</q> (Genesis 3:19). And the cycle of sin and pain has only worsened since then, establishing war, greed, violence, and constant enmity as our new status quo. Suffering, then, is to be expected, as <q>all who desire to live a godly life in Christ Jesus will be persecuted, while evil people and impostors will go on from bad to worse, deceiving and being deceived</q> (2 Timothy 3:12).  <br/><br/>
-                        But there is suffering and there is true evil, and I&apos;ve come to learn that suffering is actually good, as Apostle Paul writes, <q>suffering produces endurance, and endurance produces character, and character produces hope</q> (Romans 5:3-5).<sup><Link scroll={false} href="#foot1" id="#ref1" className="text-blue-600 hover:underline">1</Link></sup> In fact, <i>only one bad thing has ever happened, and that is the death of Jesus.</i>  <br/><br/>
+                        But there is suffering and there is true evil, and I&apos;ve come to learn that suffering is actually good, as Apostle Paul writes, <q>suffering produces endurance, and endurance produces character, and character produces hope</q> (Romans 5:3-5).<Reference number={1} /> In fact, <i>only one bad thing has ever happened, and that is the death of Jesus.</i>  <br/><br/>
                         It&apos;s simple yet subversive. The just punishment for human sin is death, or eternal separation from God. Jesus, who never sinned and hence never left the intimacy of God, not only chose to die, descending into the pits of Hell, but he also chose to shoulder the burdens of the whole world, paying the wage of death once and for all to save us. Jesus&apos; death was <q>bad</q> because it was wholly undeserved and excruciatingly painful, and yet we celebrate Good Friday because of the hope his resurrection offers. He rose and overcame death, and through him alone we can be reconciled with God, our first and most intimate Friend.  <br/><br/>
                         Where the world fell and couldn&apos;t get back up, God had been planning from the beginning to save us.  <br/><br/>
                         <br/>
@@ -57,7 +58,7 @@ export default async function Article() {
                     </div>
                     <div className="mt-8 leading-6">
                         <p className="mb-3 font-bold">Footnotes</p>
-                        <sup><Link id="#foot1" scroll={false} href="#ref1">1</Link></sup> There is much more to say about Christian suffering, but I&apos;ll avoid derailing us here <br/>
+                        <Footnote number={1} text={`There is much more to say about Christian suffering, but I'll avoid derailing us here`}/> <br/>
                         <sup>2</sup> Always happy to share more about my testimony!
                     </div>
                 </div>
