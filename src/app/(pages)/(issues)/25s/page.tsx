@@ -1,8 +1,8 @@
 import styles from './page.module.css'
-import { IssueCard } from '@/app/components/cards';
+import { ArticleCard } from '@/app/components/cards';
 import { IssuuButton } from '@/app/components/buttons';
 import Footer from '@/app/components/footer';
-
+import { Article } from '@/app/types/types';
 
 const articles = [
     {
@@ -45,8 +45,8 @@ export default async function Issue() {
                     </div>
                 </div>
                 <div className={styles.articlesContainer}>
-                    {articles && articles.map((article: any) => (
-                        <IssueCard key={article.name} article={article}></IssueCard>
+                    {articles && articles.map((item: Article) => (
+                        <ArticleCard key={item.id} article={item}></ArticleCard>
                     ))}
                 </div>
             </div>

@@ -3,21 +3,22 @@ import Link from "next/link";
 import Footer from "@/app/components/footer";
 import Image from "next/image";
 
-type Issue = {
-	semester: string;
-	theme: string;
-	slug: string;
-	image: string;
-	volume: number;
-	issue: number;
+type Card = {
+	issue: {
+		semester: string;
+		theme: string;
+		slug: string;
+		image: string;
+		volume: number;
+		issue: number,
+	}
 }
 
 // Update the IssueCard component to use the proper types
-const Card = ({ issue }: any ) => { //figure out how to change this from any type
+const Card = ({ issue } : Card) => { //figure out how to change this from any type
 	return (
 		<Link href={issue.slug}>
 			<div className={styles.card}>
-				{/* TypeScript will now correctly infer the types */}
 				<Image
 					className={styles.img}
 					src={issue.image}

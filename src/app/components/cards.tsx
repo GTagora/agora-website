@@ -3,11 +3,18 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 
-interface IssueCard {
-    article: { [key:string]: any };
+interface ArticleCard {
+    article: { 
+        id: number,
+        title: string,
+        image: string,
+        genre: string,
+        issue: string,
+        link: string,
+    };
 }
 
-export function IssueCard({article}: IssueCard) {
+export function ArticleCard({ article }: ArticleCard) {
     const image = article.image;
     const title = article.title;
     const genre = article.genre.toUpperCase();

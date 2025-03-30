@@ -1,7 +1,6 @@
 import styles from './blog-card.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
-import pic from 'public/test.jpg'
 
 
 export default function BlogCard({article}:any) {

@@ -1,10 +1,12 @@
 import styles from './page.module.css'
-import { IssueCard } from '@/app/components/cards';
+import { ArticleCard } from '@/app/components/cards';
 import { IssuuButton } from '@/app/components/buttons';
 import Footer from '@/app/components/footer';
+import { Article } from '@/app/types/types';
 
 const articles = [
   {
+    id: 3,
     title: "Canyon",
     image: "/issues/24f-water/canyon.webp",
     genre: "poem",
@@ -12,6 +14,7 @@ const articles = [
     link: "/24f-water/canyon",
   },
   {
+    id: 1,
     title: "On Tempests and Trials",
     image: "/issues/24f-water/on-tempests-and-trials.webp",
     genre: "personal essay",
@@ -19,6 +22,7 @@ const articles = [
     link: "/24f-water/on-tempests-and-trials",
   },
   {
+    id: 5,
     title: "Sometimes I Feel Just Like A Fish",
     image: "/issues/24f-water/sometimes-i-feel-just-like-a-fish.webp",
     genre: "personal essay",
@@ -26,6 +30,7 @@ const articles = [
     link: "/24f-water/sometimes-i-feel-just-like-a-fish",
   },
   {
+    id: 2,
     title: "The Donkey and the Lake",
     image: "/issues/24f-water/the-donkey-and-the-lake.webp",
     genre: "poem",
@@ -33,6 +38,7 @@ const articles = [
     link: "/24f-water/the-donkey-and-the-lake",
   },
   {
+    id: 4,
     title: "who i am",
     image: "/issues/24f-water/who-i-am.webp",
     genre: "poem",
@@ -95,9 +101,8 @@ export default async function Issue() {
           </div>
         </div>
         <div className={styles.articlesContainer}>
-          {articles &&
-            articles.map((article:any) => (
-              <IssueCard key={article.name} article={article}></IssueCard>
+            {articles && articles.map((item: Article) => (
+                <ArticleCard key={item.id} article={item}></ArticleCard>
             ))}
         </div>
       </div>
