@@ -34,11 +34,11 @@ export default function Article() {
 				the time. It’s a question that people have been trying to answer since
 				before Christ came to earth - take Greek philosopher Epicurus, who said
 				(in paraphrase):
-				<i>
-					"Is God willing to prevent evil, but not able? Then he is not
+				<i><q>
+					Is God willing to prevent evil, but not able? Then he is not
 					omnipotent. Is he able, but not willing? Then he is malevolent. Is he
-					both able and willing? Then from whence comes evil?"
-				</i>
+					both able and willing? Then from whence comes evil?
+				</q></i>
 			</p>
 			<p>
 				While I don’t believe that there will ever be a perfect satisfactory

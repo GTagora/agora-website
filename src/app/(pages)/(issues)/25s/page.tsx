@@ -30,7 +30,7 @@ export default async function Issue() {
     const semester = 'Spring 2025'
     const theme = 'Garden';
     const issuu = 'https://issuu.com/gtagora/docs/agora_s25';
-    const image = '/covers/25s.jpg';
+    // const image = '/covers/25s.jpg';
 
     return (
         <main className={styles.main}>

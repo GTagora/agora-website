@@ -135,7 +135,7 @@ export default function Article() {
 					Egypt. The vine refers to the kingdom of Judah. The chapter describes
 					how the vine was planted by the Babylon eagle in a bountiful place but
 					foolishly stretched out its roots toward the eagle of Egypt. The
-					stretching roots represent the Judeans' allegiance with Egypt in
+					stretching roots represent the Judeans&apos; allegiance with Egypt in
 					opposition to Babylon. This was in direct rebellion with God’s command
 					to settle down and prosper in Babylon.
 				</small>

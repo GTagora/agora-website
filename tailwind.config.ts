@@ -22,6 +22,9 @@ const config: Config = {
         playfair: "var(--font-playfair)",
         cormorant: "var(--font-cormorant)",
       },
+      colors: {
+        neutralTan: 'var(--neutral-tan)',
+      }
     },
   },
   plugins: [],

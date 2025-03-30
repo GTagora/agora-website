@@ -96,7 +96,7 @@ export default async function Issue() {
         </div>
         <div className={styles.articlesContainer}>
           {articles &&
-            articles.map((article: any) => (
+            articles.map((article:any) => (
               <IssueCard key={article.name} article={article}></IssueCard>
             ))}
         </div>
