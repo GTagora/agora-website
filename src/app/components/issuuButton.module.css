@@ -1,0 +1,18 @@
+.button {
+    font-size: 12pt;
+    letter-spacing: .05rem;
+    padding: 1rem;
+    padding-inline: 2rem;
+    border-radius: 4rem;
+    border: 2px solid var(--darkest-green);
+    text-align: center;
+    color: var(--darkest-green);
+}
+
+.button:hover {
+    background-color: var(--darkest-green);
+    font-weight: 400;
+    transition: .25s;
+    letter-spacing: .07rem;
+    color: var(--bg-color);
+}
