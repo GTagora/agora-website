@@ -10,14 +10,14 @@ const articles = [
         title: 'article 1',
         image: '/issues/issue/test.png',
         genre: 'poem',
-        issue: 'Water',
+        issue: 'Garden',
         link: '/issue/article-1'
     },
     {
         title: 'article 2 name',
         image: '/issues/issue/test.png',
         genre: 'poem',
-        issue: 'Water',
+        issue: 'Garden',
         link: '/issue/article-2'
     }
 ]
