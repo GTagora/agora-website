@@ -24,6 +24,13 @@ const config: Config = {
       },
       colors: {
         neutralTan: 'var(--neutral-tan)',
+        agoraGreen: 'var(--agora-green)',
+        lightGreen: 'var(--light-green)',
+        lightLightGreen: 'var(--light-light-green)',
+        grayGreen: 'var(--gray-green)',
+        darkGrayGreen: 'var(--dark-gray-green)',
+        darkGreen: 'var(--dark-green)',
+        darkestGreen: 'var(--darkest-green)',
       }
     },
   },

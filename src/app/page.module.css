@@ -17,9 +17,9 @@ fonts:
 
 /* ---------MOBILE VIEW----------- */
 @media screen and (max-width: 699px) {
-    .desk {
+    /* .desk {
       display: none;
-    }
+    } */
   
     .main {
       display: flex;
