@@ -1,7 +1,6 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 import Footer from "@/app/components/footer";
-import { Reference, Footnote } from "@/app/components/buttons";
 
 export default async function Article() {
   const author = "Catherine Tian";
@@ -102,9 +101,9 @@ export default async function Article() {
             We continue down the new trail, this one unpaved and slightly muddy.
             As I glance at my shoes, I notice a thin layer of brown dirt inching
             its way along the pale blue treads of my sneakers, turning my
-            semi-new shoes a murky brown. It's as if the hills of the pavement
-            have agitated my soul. Another bout of irritation catches me off
-            guard.
+            semi-new shoes a murky brown. It&apos;s as if the hills of the
+            pavement have agitated my soul. Another bout of irritation catches
+            me off guard.
             <br />
             <br />
             Regaining my footing, now acclimated to the new terrain, I turn to
@@ -142,10 +141,10 @@ export default async function Article() {
             protect. But the house’s focal point is its garden. Small and
             humble, the garden has the air of a middle-aged mother. Baby red
             tomatoes growing in one corner, the sprouts of bell peppers in
-            another. Judging by how carefully it's kept, I presume the mother
-            must be a recent empty-nester who now nurtures her plants just as
-            she tended to her children, hoping that if she watered them well,
-            they too would one day bear fruit.
+            another. Judging by how carefully it&apos;s kept, I presume the
+            mother must be a recent empty-nester who now nurtures her plants
+            just as she tended to her children, hoping that if she watered them
+            well, they too would one day bear fruit.
             <br />
             <br />
             I look to the side at my friend again. He is focused on this house,
