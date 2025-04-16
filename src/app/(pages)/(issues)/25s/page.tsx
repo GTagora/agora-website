@@ -6,14 +6,6 @@ import { Article } from "@/app/types/types";
 
 const articles = [
   {
-    id: 0,
-    title: "EXAMPLE",
-    image: "/issues/25s/test.webp",
-    genre: "genre",
-    issue: "Garden",
-    link: "/25s/id-article-name",
-  },
-  {
     id: 1,
     title: "guidance for a seed",
     image: "/issues/25s/guidance-for-a-seed.webp",
@@ -36,6 +28,7 @@ const articles = [
     genre: "academic essay",
     issue: "Garden",
     link: "/25s/3-between-the-two-gardens",
+  },
   {
     id: 4,
     title: "The Perennial Plant",
@@ -91,7 +84,7 @@ export default async function Issue() {
   const issue = 2;
   const semester = "Spring 2025";
   const theme = "Garden";
-  const issuu = "https://issuu.com/gtagora/docs/agora_s25";
+  const issuu = "https://issuu.com/gtagora/docs/spring_25_garden";
   // const image = '/covers/25s.jpg';
 
   return (
@@ -104,7 +97,21 @@ export default async function Issue() {
       <div className={styles.hbox}>
         <div className={styles.letter}>
           <h3>Letter from the editors</h3>
-          <div>{/* INSERT LETTER FROM EICS HERE */}</div>
+          <div>
+          Dear Reader,<br/>
+          <br/>
+          The seasons have turned again. It’s in the rush of spring’s coming, as nature swiftly and brilliantly reveals its color, as classes accelerate toward a hectic close, and as the pollen haze settles around us, that we bring you this fourth issue of <i>Agora</i>. In whatever season you’re in, Reader, we’re so glad to share this journal with you today.<br/>
+          <br/>
+          Over the past two years, we have seen <i>Agora</i> grow: what began as a mere seed — a ‘What if?’, a vision, and a leap of faith — is now a promising sprout. God’s hand has been tender and faithful, and this semester, we saw fruit in new writers, perspectives, and a powerful momentum that pushed this issue forward. We’re endlessly grateful to all who have supported this journal, from our current and alumni staff to Augustine Collective to our many donors. At the same time, we firmly believe that <i>Agora</i> is a living testament that it’s “only God who gives the growth” (1 Corinthians 3:6). As He has poured in, our staff and writers have grown and flourished, all so that His many blessings may be put on full display.<br/>
+          <br/>
+          In preparation for this publication, our staff collectively chose the theme Garden, as befit the warming weather around us. Gardens at any scale, from towering forests to humble plots, provide a home to all sorts of plants and tiny creatures. Our individual faith walks reflect a similar diversity, and yet we’re all united in one ecosystem, growing toward the same source.<br/>
+          <br/>
+          We invite you in to enjoy the beauty and freshness of His garden as you spend time with these pages. Just as a garden is composed of many different flora and fauna, each writer embodies an individual story, voice, and reflection of God’s work and beauty. We hope that this journal provides a space of physical and spiritual rest — take a break, give yourself time, maybe even take this booklet outside (touch grass!) as you wander through this garden with us. After all, spring is here! So pause to admire His beauty, and He will surely meet you, wherever your garden may be.<br/>
+          <br/>
+          Bessings,<br/>
+          Olivia and Catherine
+
+          </div>
         </div>
         <div className={styles.articlesContainer}>
           {articles &&
