@@ -95,8 +95,9 @@ export default async function Issue() {
       </h5>
       {issuu ? <IssuuButton link={issuu} /> : null}
       <div className={styles.hbox}>
-        <div className={styles.letter}>
-          <h3>Letter from the editors</h3>
+        <div className="mt-12 mx-14 p-10 rounded-3xl bg-neutralTan
+                        md:w-[30vw] font-ebgaramond md:mx-3">
+          <h3 className="font-playfairsc font-bold text-lg mb-3 tracking-wider">Letter from the editors</h3>
           <div>
           Dear Reader,<br/>
           <br/>
