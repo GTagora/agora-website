@@ -32,7 +32,7 @@ export default function Home() {
             </div>
             <a id="latest-issue" href="#latest-issue">
             </a>
-            <div className={styles.container}>
+            <div className="mt-96 px-36 h-[70vh]">
                 <div className="mx-auto gap-10 w-[60vw] lg:w-[30vw]">
                     <h3>Hi there!</h3>
                     <p className={styles.noticeText}>Our website is currently undergoing maintenance. Please visit our blog or view our print publications via the links below. Thank you for your patience &amp; continued support!</p>
