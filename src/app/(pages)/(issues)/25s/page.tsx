@@ -97,7 +97,7 @@ const articles = [
     id: 12,
     title: "The Source",
     image: "/issues/25s/the-source/14_panel.webp",
-    genre: "genre",
+    genre: "comic",
     issue: "Garden",
     link: "/25s/12-the-source",
   },
