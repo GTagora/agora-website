@@ -1,8 +1,8 @@
-import styles from './page.module.css'
-import { ArticleCard } from '@/app/components/cards';
-import { IssuuButton } from '@/app/components/buttons';
-import Footer from '@/app/components/footer';
-import { Article } from '@/app/types/types';
+import styles from "./page.module.css";
+import { ArticleCard } from "@/app/components/cards";
+import { IssuuButton } from "@/app/components/buttons";
+import Footer from "@/app/components/footer";
+import { Article } from "@/app/types/types";
 
 const articles = [
   {
@@ -52,6 +52,22 @@ const articles = [
     genre: "poem",
     issue: "Cycles",
     link: "/24s-cycles/without-you",
+  },
+  {
+    id: 7,
+    title: "sanctification, and why i don’t like the dishwasher",
+    image: "/issues/24s-cycles/chris.jpg",
+    genre: "personal essay",
+    issue: "Cycles",
+    link: "/24s-cycles/sanctification-and-why-i-dont-like-the-dishwasher",
+  },
+  {
+    id: 8,
+    title: "Adactylidium",
+    image: "/issues/24s-cycles/catherine.png",
+    genre: "personal essay",
+    issue: "Cycles",
+    link: "/24s-cycles/adactylidium",
   },
 ];
 
@@ -112,8 +128,9 @@ export default async function Issue() {
           </div>
         </div>
         <div className={styles.articlesContainer}>
-            {articles && articles.map((item: Article) => (
-                <ArticleCard key={item.id} article={item}></ArticleCard>
+          {articles &&
+            articles.map((item: Article) => (
+              <ArticleCard key={item.id} article={item}></ArticleCard>
             ))}
         </div>
       </div>
