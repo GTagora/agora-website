@@ -77,7 +77,7 @@ export default async function Issue() {
   const semester = "Spring 2024";
   const theme = "Cycles";
   const issuu = "https://issuu.com/gtagora/docs/agora_s24";
-  const image = "/covers/s24.webp";
+  // const image = "/covers/s24.webp";
 
   return (
     <main className={styles.main}>
