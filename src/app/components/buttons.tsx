@@ -32,9 +32,9 @@ export function Reference({ number }: { number: number }) {
         onClick={(e) => {
           e.preventDefault(); // Stop instant jump
           document
-            .getElementById("fn1")
+            .getElementById(`fn${number}`)
             ?.scrollIntoView({ behavior: "smooth", block: "start" });
-          history.pushState(null, "", "#fn1"); // Update URL
+          history.pushState(null, "", `#fn${number}`); // Update URL
         }}
         className="text-blue-700 hover:underline"
       >
@@ -71,9 +71,9 @@ export function Footnote({
         onClick={(e) => {
           e.preventDefault();
           document
-            .getElementById("ref1")
+            .getElementById(`ref${number}`)
             ?.scrollIntoView({ behavior: "smooth", block: "center" });
-          history.pushState(null, "", "#ref1");
+          history.pushState(null, "", `#ref${number}`);
         }}
         className="text-blue-700 hover:underline"
       >

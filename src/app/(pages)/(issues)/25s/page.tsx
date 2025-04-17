@@ -62,6 +62,14 @@ const articles = [
     link: "/25s/7-the-hoe-ly-spirit",
   },
   {
+    id: 8,
+    title: "Hiding",
+    image: "/issues/25s/hiding.webp",
+    genre: "poem",
+    issue: "Garden",
+    link: "/25s/8-hiding",
+  },
+  {
     id: 9,
     title: "Broken Vessel",
     image: "/issues/25s/broken-vessel.webp",
@@ -70,12 +78,28 @@ const articles = [
     link: "/25s/9-broken-vessel",
   },
   {
+    id: 10,
+    title: "Our Gardener",
+    image: "/issues/25s/our-gardener.webp",
+    genre: "essay",
+    issue: "Garden",
+    link: "/25s/10-our-gardener",
+  },
+  {
     id: 11,
     title: "His story & mine",
     image: "/issues/25s/his-story-and-mine.webp",
     genre: "essay",
     issue: "Garden",
     link: "/25s/11-his-story-and-mine",
+  },
+  {
+    id: 12,
+    title: "The Source",
+    image: "/issues/25s/the-source/14_panel.webp",
+    genre: "genre",
+    issue: "Garden",
+    link: "/25s/12-the-source",
   },
 ];
 
