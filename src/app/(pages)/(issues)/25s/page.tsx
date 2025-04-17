@@ -101,6 +101,46 @@ const articles = [
     issue: "Garden",
     link: "/25s/12-the-source",
   },
+  {
+    id: 13,
+    title: "Do It for the Vine",
+    image: "/issues/25s/do-it-for-the-vine.webp",
+    genre: "essay",
+    issue: "Garden",
+    link: "/25s/13-do-it-for-the-vine",
+  },
+  {
+    id: 14,
+    title: "Under the Sun",
+    image: "/issues/25s/under-the-sun.webp",
+    genre: "essay",
+    issue: "Garden",
+    link: "/25s/14-under-the-sun",
+  },
+  {
+    id: 15,
+    title: "Garden of Graves",
+    image: "/issues/25s/garden-of-graves.webp",
+    genre: "essay",
+    issue: "Garden",
+    link: "/25s/15-garden-of-graves",
+  },
+  {
+    id: 16,
+    title: "Under the Fig Tree",
+    image: "/issues/25s/under-the-fig-tree.webp",
+    genre: "poem",
+    issue: "Garden",
+    link: "/25s/16-under-the-fig-tree",
+  },
+  {
+    id: 17,
+    title: "Eden to Gethsemane",
+    image: "/issues/25s/eden-to-gethsemane.webp",
+    genre: "essay",
+    issue: "Garden",
+    link: "/25s/17-eden-to-gethsemane",
+  },
 ];
 
 export default async function Issue() {

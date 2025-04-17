@@ -24,7 +24,7 @@ export default async function Article() {
                     <h1 className={styles.title}>{title}</h1>
                     <h2 className={styles.author}>BY {author.toUpperCase()}</h2>
                     <h3 className={styles.date}>{date}</h3>
-                    <div className="lg:w-[50%]">
+                    <div className="lg:w-[75%] xl:w-[50%]">
                         <p className="text-right text-orange-700">Oh no, look at you, sinning again.</p>
                         <p className="">I, I didn’t mean to</p>
                         <p className="text-right text-orange-700">It doesn’t matter, you still sinned right?</p>
@@ -43,7 +43,7 @@ export default async function Article() {
                         <p className="">What is it?</p>
                         <p className="text-right text-orange-700">I think it’s God’s footsteps, quick, run, hide, you’re not ready for Him to see you right?</p>
                     </div>
-                    <div className="mt-16 md:w-[75%] lg:w-[50%]">
+                    <div className="mt-16 lg:w-[75%] xl:w-[50%]">
                         <p className="text-right text-green-800">Why are you hiding?</p>
                         <p className="">Because I messed up. I sinned against God</p>
                         <p className="text-right text-green-800">Does hiding fix things?</p>
