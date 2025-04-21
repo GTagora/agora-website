@@ -173,7 +173,7 @@ export default async function Issue() {
           <br/>
           We invite you in to enjoy the beauty and freshness of His garden as you spend time with these pages. Just as a garden is composed of many different flora and fauna, each writer embodies an individual story, voice, and reflection of God’s work and beauty. We hope that this journal provides a space of physical and spiritual rest — take a break, give yourself time, maybe even take this booklet outside (touch grass!) as you wander through this garden with us. After all, spring is here! So pause to admire His beauty, and He will surely meet you, wherever your garden may be.<br/>
           <br/>
-          Bessings,<br/>
+          Blessings,<br/>
           Olivia and Catherine
 
           </div>

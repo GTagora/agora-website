@@ -59,7 +59,7 @@ export function HomeCard({ article }: HomeCard) {
         <Link href={article.link}>
             <div className="w-full flex flex-col overflow-hidden">
                 <Image
-                    className="w-full h-[350pt] object-cover"
+                    className="w-full h-[300pt] md:h-[350pt] object-cover"
                     src={article.image ? article.image : "/test.jpg"}
                     width={400}
                     height={300}

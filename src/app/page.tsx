@@ -177,19 +177,24 @@ export default function Home() {
 		</div>
 
 		{/* LATEST ISSUE */}
-		<div className="my-12 flex flex-row gap-12
+		<div className="mt-12 grid grid-cols-5 gap-12 bg-neutralTan px-28 py-20
 						lg:w-[80vw]">
-			<Image
-				className="w-[50%] object-cover"
-				src='/issues/25s/25s-garden-cover.webp'
-				width={400}
-				height={400}
-				alt='article image'/>
-			<div className="flex flex-col text-left">
+			<div className="col-span-2">
+				<Image
+					className="w-full h-full object-cover"
+					src='/issues/25s/25s-garden-cover.webp'
+					width={400}
+					height={400}
+					alt='article image'/>
+			</div>
+			<div className="col-span-3 flex flex-col text-left">
 				<p className="font-bold text-xl">LATEST ISSUE:</p>
 				<p className="font-playfair italic font-black text-[80pt] -mt-8 -ml-3">GARDEN</p>
+				<div className="pt-1 border-t-2 border-black flex flex-row justify-between">
+					<p className="font-cormorant">Dear Reader,</p>
+					<p className="font-bold text-xs text-right">LETTER FROM THE EICS</p>
+				</div>
 				<div className="font-cormorant">
-					Dear Reader,<br/>
 					<br/>
 					The seasons have turned again. It’s in the rush of spring’s coming, as nature swiftly and brilliantly reveals its color, as classes accelerate toward a hectic close, and as the pollen haze settles around us, that we bring you this fourth issue of <i>Agora</i>. In whatever season you’re in, Reader, we’re so glad to share this journal with you today.<br/>
 					<br/>
@@ -199,15 +204,15 @@ export default function Home() {
 					<br/>
 					We invite you in to enjoy the beauty and freshness of His garden as you spend time with these pages. Just as a garden is composed of many different flora and fauna, each writer embodies an individual story, voice, and reflection of God’s work and beauty. We hope that this journal provides a space of physical and spiritual rest — take a break, give yourself time, maybe even take this booklet outside (touch grass!) as you wander through this garden with us. After all, spring is here! So pause to admire His beauty, and He will surely meet you, wherever your garden may be.<br/>
 					<br/>
-					Bessings,<br/>
+					Blessings,<br/>
 					Olivia and Catherine
 				</div>
 			</div>
 		</div>
 
 		{/* ARTICLES */}
-		<div className="py-14 w-full gap-x-8 gap-y-14
-						md:grid md:grid-cols-2
+		<div className="py-14 w-full flex flex-col gap-12
+						md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-14
 						lg:w-[80vw] lg:grid xl:grid-cols-3">
 			{articles.map((article) => {
 			return (
