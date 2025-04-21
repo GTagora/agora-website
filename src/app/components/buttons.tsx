@@ -23,62 +23,45 @@ export function IssuuButton({ link }: { link: string }) {
  * @returns superscript number that links to footnote
  */
 export function Reference({ number }: { number: number }) {
-  return (
-    <sup>
-      <Link
-        href={`#fn${number}`}
-        id={`ref${number}`}
-        scroll={false}
-        onClick={(e) => {
-          e.preventDefault(); // Stop instant jump
-          document
-            .getElementById(`fn${number}`)
-            ?.scrollIntoView({ behavior: "smooth", block: "start" });
-          history.pushState(null, "", `#fn${number}`); // Update URL
-        }}
-        className="text-blue-700 hover:underline"
-      >
-        {number}
-      </Link>
-    </sup>
-  );
+	return (
+		<sup>
+			<Link
+				href={`#fn${number}`}
+				id={`ref${number}`}
+				scroll={false}
+				onClick={(e) => {
+					e.preventDefault();
+					document
+						.getElementById(`fn${number}`)
+						?.scrollIntoView({ behavior: "smooth", block: "start" });
+					history.pushState(null, "", `#fn${number}`);
+				}}
+				className="text-blue-700 hover:underline"
+			>
+				{number}
+			</Link>
+		</sup>
+	);
 }
 
-export function Footnote({
-  number,
-  text,
-  link,
-}: {
-  number: number;
-  text: string;
-  link?: string;
-}) {
-  return (
-    <p>
-      <sup>{number}</sup>
-      {link ? (
-        <Link
-          href={link}
-          className="text-blue-700 hover:underline"
-        >{` ${text} `}</Link>
-      ) : (
-        ` ${text} `
-      )}
-      <Link
-        href={`#ref${number}`}
-        id={`fn${number}`}
-        scroll={false}
-        onClick={(e) => {
-          e.preventDefault();
-          document
-            .getElementById(`ref${number}`)
-            ?.scrollIntoView({ behavior: "smooth", block: "center" });
-          history.pushState(null, "", `#ref${number}`);
-        }}
-        className="text-blue-700 hover:underline"
-      >
-        ^
-      </Link>
-    </p>
-  );
+export function Footnote({ number, text }: { number: number; text: string }) {
+	return (
+		<p id={`fn${number}`}>
+			<sup>{number}</sup> {text}{" "}
+			<Link
+				href={`#ref${number}`}
+				scroll={false}
+				onClick={(e) => {
+					e.preventDefault();
+					document
+						.getElementById(`ref${number}`)
+						?.scrollIntoView({ behavior: "smooth", block: "center" });
+					history.pushState(null, "", `#ref${number}`);
+				}}
+				className="text-blue-700 hover:underline"
+			>
+				^
+			</Link>
+		</p>
+	);
 }

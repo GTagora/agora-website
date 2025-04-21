@@ -1,7 +1,6 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 import Footer from "@/app/components/footer";
-import { Reference, Footnote } from "@/app/components/buttons";
 
 export default async function Article() {
 	const author = "Elliott Chen";

@@ -36,7 +36,8 @@ export default async function Article() {
 							He enters this vibrant world He has made, reaching into the dirt
 							to perform His grand finale; he “[forms] a man from the dust of
 							the ground and [breathes] into his nostrils the breath of life,
-							and the man [becomes] a living being.”<sup>1</sup>
+							and the man [becomes] a living being.”
+							<Reference number={1} />
 						</p>
 						<br />
 
@@ -46,10 +47,11 @@ export default async function Article() {
 							gift from his Creator. Not just breath in his lungs, but God’s
 							breath: a tie of intimacy and joyful dependence. Not just a place
 							to live, but a lush and bountiful garden, where every tree is
-							“pleasing to the eye and good for food.”<sup>2</sup> Not just a
-							few animals to keep him company, but a woman, made for him and
-							from him, “bone of [his] bones and flesh of [his] flesh.”
-							<sup>3</sup>
+							“pleasing to the eye and good for food.”
+							<Reference number={2} /> Not just a few animals to keep him
+							company, but a woman, made for him and from him, “bone of [his]
+							bones and flesh of [his] flesh.”
+							<Reference number={3} />
 						</p>
 						<br />
 
@@ -102,8 +104,9 @@ export default async function Article() {
 							rebellion continues. He faces a dilemma, though. While he has
 							every right to destroy these broken, corrupted people for the
 							atrocities they’ve committed, against both Him and each other, He
-							still cannot help but love them.<sup>4</sup> He is the embodiment
-							of perfect love, after all, and they are his treasured creation.
+							still cannot help but love them.
+							<Reference number={4} /> He is the embodiment of perfect love,
+							after all, and they are his treasured creation.
 						</p>
 						<br />
 
@@ -117,7 +120,8 @@ export default async function Article() {
 							because they already deserve this consequence. The only one
 							righteous enough to take on the challenge is the only one who
 							doesn’t deserve it — the sinless man, God in the flesh, Jesus
-							Christ.<sup>5</sup>
+							Christ.
+							<Reference number={5} />
 						</p>
 						<br />
 
@@ -126,7 +130,8 @@ export default async function Article() {
 							descend into his creation, just as he did when he first spoke it
 							into being. He will live a perfect life for thirty-three years,
 							and then he will sacrifice himself to save his people from all
-							their messiness and sin.<sup>6</sup>
+							their messiness and sin.
+							<Reference number={6} />
 						</p>
 						<br />
 
@@ -142,10 +147,11 @@ export default async function Article() {
 							remains. Jesus may be fully God, but he’s also fully human: we see
 							him assaulted with all the frenetic emotions one would expect of a
 							man about to be killed. He’s in agony, “overwhelmed with sorrow to
-							the point of death,”<sup>7</sup> his sweat laced with blood
-							<sup>8</sup>, falling on his face before his Father. He takes the
-							cup of his demise into shaking hands, and he prays for God’s will
-							to be done.
+							the point of death,”
+							<Reference number={7} /> his sweat laced with blood
+							<Reference number={8} />, falling on his face before his Father.
+							He takes the cup of his demise into shaking hands, and he prays
+							for God’s will to be done.
 						</p>
 						<br />
 
@@ -164,23 +170,25 @@ export default async function Article() {
 							These passages are sobering, and rightly so. Ultimately, though,
 							Gethsemane gives hope to the struggling Christian; no matter how
 							our flesh may fail, our faith lies in the redeeming sacrifice of
-							Jesus, and our salvation in Him is secure.<sup>9</sup> As
-							displayed in the very next chapters, like Eden’s peace,
-							Gethsemane’s anguish won’t last: Jesus will return from the dead
-							and bathe this broken world in hope.<sup>10</sup> He will rise,
-							and we have been rising ever since.
+							Jesus, and our salvation in Him is secure.
+							<Reference number={9} /> As displayed in the very next chapters,
+							like Eden’s peace, Gethsemane’s anguish won’t last: Jesus will
+							return from the dead and bathe this broken world in hope.
+							<Reference number={10} /> He will rise, and we have been rising
+							ever since.
 						</p>
 						<br />
 
 						<p>
 							Granted, it can be slow and uncertain, this process of
-							sanctification.<sup>11</sup> However, we know that one day, God
-							will come down to earth for the final time. The book of Revelation
+							sanctification.
+							<Reference number={11} /> However, we know that one day, God will
+							come down to earth for the final time. The book of Revelation
 							tells us that once again, we will “be his people, and God himself
 							will be with [us] and be [our] God. He will wipe every tear from
 							[our] eyes. There will be no more death or mourning or crying or
 							pain, for the old order of things [will have] passed away.”
-							<sup>12</sup>
+							<Reference number={12} />
 						</p>
 						<br />
 
