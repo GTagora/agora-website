@@ -254,7 +254,7 @@ export default async function Article() {
 								Seek first the kingdom and His righteousness, and everything
 								else will be added.
 							</strong>{" "}
-							<sup>1</sup> (Matthew 6:33)
+							<Reference number={1} /> (Matthew 6:33)
 						</p>
 					</div>
 				</div>
