@@ -1,8 +1,8 @@
-import styles from './page.module.css'
-import { ArticleCard } from '@/app/components/cards';
-import { IssuuButton } from '@/app/components/buttons';
-import Footer from '@/app/components/footer';
-import { Article } from '@/app/types/types';
+import styles from "./page.module.css";
+import { ArticleCard } from "@/app/components/cards";
+import { IssuuButton } from "@/app/components/buttons";
+import Footer from "@/app/components/footer";
+import { Article } from "@/app/types/types";
 
 const articles = [
   {
@@ -53,6 +53,22 @@ const articles = [
     issue: "Cycles",
     link: "/24s-cycles/without-you",
   },
+  {
+    id: 7,
+    title: "sanctification, and why i don’t like the dishwasher",
+    image: "/issues/24s-cycles/chris.jpg",
+    genre: "personal essay",
+    issue: "Cycles",
+    link: "/24s-cycles/sanctification-and-why-i-dont-like-the-dishwasher",
+  },
+  {
+    id: 8,
+    title: "Adactylidium",
+    image: "/issues/24s-cycles/catherine.png",
+    genre: "personal essay",
+    issue: "Cycles",
+    link: "/24s-cycles/adactylidium",
+  },
 ];
 
 export default async function Issue() {
@@ -61,7 +77,7 @@ export default async function Issue() {
   const semester = "Spring 2024";
   const theme = "Cycles";
   const issuu = "https://issuu.com/gtagora/docs/agora_s24";
-  const image = "/covers/s24.webp";
+  // const image = "/covers/s24.webp";
 
   return (
     <main className={styles.main}>
@@ -112,8 +128,9 @@ export default async function Issue() {
           </div>
         </div>
         <div className={styles.articlesContainer}>
-            {articles && articles.map((item: Article) => (
-                <ArticleCard key={item.id} article={item}></ArticleCard>
+          {articles &&
+            articles.map((item: Article) => (
+              <ArticleCard key={item.id} article={item}></ArticleCard>
             ))}
         </div>
       </div>
