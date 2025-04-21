@@ -216,7 +216,7 @@ export default function Home() {
 						lg:w-[80vw] lg:grid xl:grid-cols-3">
 			{articles.map((article) => {
 			return (
-				<HomeCard article={article} />
+				<HomeCard key={article.id} article={article} />
 			)
 			})}
 		</div>

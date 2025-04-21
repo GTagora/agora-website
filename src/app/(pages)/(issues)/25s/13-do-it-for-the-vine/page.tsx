@@ -91,7 +91,7 @@ export default async function Article() {
 							Friends are the flowers of our garden. There is something sweet in
 							our shared interests or experiences, like a fragrance which draws
 							us in. And there is a brightness and color that only someone
-							else's personality can bring to our lives. But if our friendships
+							else&apos;s personality can bring to our lives. But if our friendships
 							are not deeply rooted, they become wilted and easily blown away
 							during the storms of our life.
 						</p>

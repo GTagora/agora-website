@@ -6,6 +6,7 @@
     align-items: center;
     padding-inline: 25px 15px;
     font-size: 14pt;
+    font-family: var(--font-cormorant);
     background-color: var(--bg-color);
     top: 0;
     position: fixed;
