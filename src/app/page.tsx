@@ -177,11 +177,11 @@ export default function Home() {
 		</div>
 
 		{/* LATEST ISSUE */}
-		<div className="mt-12 grid grid-cols-5 gap-12 bg-neutralTan px-28 py-20
-						lg:w-[80vw]">
+		<div className="mt-12 bg-neutralTan px-28 py-20
+						lg:grid lg:grid-cols-5 gap-12 lg:w-[80vw]">
 			<div className="col-span-2">
 				<Image
-					className="w-full h-full object-cover"
+					className="hidden lg:block w-full h-full object-cover"
 					src='/issues/25s/25s-garden-cover.webp'
 					width={400}
 					height={400}
