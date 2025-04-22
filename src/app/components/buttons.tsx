@@ -8,13 +8,13 @@ import styles from "./issuuButton.module.css";
  * @returns a button component
  */
 export function IssuuButton({ link }: { link: string }) {
-	return (
-		<Link href={link} target="_blank">
-			<div className={styles.button}>
-				Check out our digital print issue &#x2192;&nbsp;&nbsp;&nbsp;&nbsp;
-			</div>
-		</Link>
-	);
+  return (
+    <Link href={link} target="_blank">
+      <div className={styles.button}>
+        Check out our digital print issue &#x2192;&nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </Link>
+  );
 }
 
 /**

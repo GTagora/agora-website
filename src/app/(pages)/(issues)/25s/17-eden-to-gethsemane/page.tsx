@@ -5,8 +5,8 @@ import { Reference, Footnote } from "@/app/components/buttons";
 
 export default async function Article() {
 	const author = "Ashley Cheng";
-	const credit = "Photo by Olivia Hu";
-	const title = "His story & mine";
+	const credit = "Photo by Matthew Lai";
+	const title = "Eden to Gethsemane";
 	const date = "April 23, 2025";
 
 	return (

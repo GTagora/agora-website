@@ -16,7 +16,6 @@
 .main h1 {
   font-family: var(--font-playfair-sc);
   letter-spacing: .3rem;
-  margin-block: 4rem;
 }
 
 .container {
@@ -93,7 +92,6 @@
   }
 
   .container {
-    margin-block: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -15,6 +15,7 @@
     -webkit-user-select: none;
     user-select: none;
     background-color: var(--bg-color);
+    font-family: var(--font-cormorant);
 }
 
 .logo {
@@ -78,7 +79,7 @@
  */
  .openBar3
 {
-    transform-origin: 2px 0px;
+    transform-origin: 1px 0px;
     transform: rotate(-45deg) translate(-1.5px, -1.5px);
 }
 
@@ -131,15 +132,16 @@
 }
 
 .label {
-    padding-block: 17px;
-    font-size: 16pt;
-    letter-spacing: 2px;
+    padding-block: 3px;
+    font-size: 14pt;
+    letter-spacing: 1px;
+    font-weight: 500;
 }
 
 .indent {
     padding-left: 15px;
-    padding-block: 10px;
-    font-size: 14.5pt;
+    margin-block: 2px;
+    font-size: 13pt;
     letter-spacing: 1px;
 }
 

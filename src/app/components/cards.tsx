@@ -1,38 +1,78 @@
-import styles from './issue-card.module.css'
-import Link from 'next/link'
-import Image from 'next/image'
-
+import Link from "next/link";
+import Image from "next/image";
 
 interface ArticleCard {
-    article: { 
-        id: number,
-        title: string,
-        image: string,
-        genre: string,
-        issue: string,
-        link: string,
-    };
+  article: {
+    id: number;
+    title: string;
+    image: string;
+    genre: string;
+    issue: string;
+    link: string;
+  };
 }
 
+interface HomeCard {
+    article: {
+      id: number;
+      title: string;
+      image: string;
+      genre: string;
+      author: string;
+      issue: string;
+      link: string;
+    };
+  }
+
 export function ArticleCard({ article }: ArticleCard) {
-    const image = article.image;
-    const title = article.title;
-    const genre = article.genre.toUpperCase();
-    const link = article.link;
-    return (
-        <Link href={link}>
-        <div className={styles.card}>
-            <div className={styles.text}>
-                <h2>{title}</h2>
-                <h3>{genre}</h3>
-                {/* <p className={styles.preview} dangerouslySetInnerHTML={{ __html: text.replace(/\\n/g, '\n')}}></p> */}
-            </div>
-            <Image 
-                className={styles.cardImage}
-                src={image ? image : '/test.jpg'}
-                width={400}
-                height={400}
-                alt='article image'/>
+  const image = article.image;
+  const title = article.title;
+  const genre = article.genre.toUpperCase();
+  const link = article.link;
+  return (
+    <Link href={link}>
+      <div
+        className="w-[87vw] h-[210px] p-[30px] bg-white rounded-lg shadow-lg flex flex-row justify-between gap-6
+                        md:w-[40vw]"
+      >
+        <div className="overflow-ellipsis">
+          <h2 className="font-ebgaramond font-bold text-xl line-clamp-2 leading-6">
+            {title}
+          </h2>
+          <h3 className="font-sans text-xs opacity-60 my-2">{genre}</h3>
+          {/* <p className={styles.preview} dangerouslySetInnerHTML={{ __html: text.replace(/\\n/g, '\n')}}></p> */}
         </div>
+        <Image
+          className="w-56 object-cover"
+          src={image ? image : "/test.jpg"}
+          width={400}
+          height={400}
+          alt="article image"
+        />
+      </div>
+    </Link>
+  );
+}
+
+export function HomeCard({ article }: HomeCard) {
+    return (
+        <Link href={article.link}>
+            <div className="w-full flex flex-col overflow-hidden">
+                <Image
+                    className="w-full h-[300pt] md:h-[350pt] object-cover"
+                    src={article.image ? article.image : "/test.jpg"}
+                    width={400}
+                    height={300}
+                    alt="article image"
+                    />
+                <div>
+                    <p className="font-playfair text-2xl font-bold mt-2">{article.title}</p>
+                    <div className="mt-1 font-[550] text-sm flex flex-flow justify-between">
+                        <p>{article.author.toUpperCase()}</p>
+                        <p>{article.genre.toUpperCase()}</p>
+                    </div>
+                </div>
+            </div>
         </Link>
-)}
+    );
+}

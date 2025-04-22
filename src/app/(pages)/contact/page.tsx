@@ -24,7 +24,7 @@ export default function Contact() {
         <div className={styles.main}>
             <div className={styles.container}>
                 <div className={styles.header}>
-                    <h1>Contact</h1>
+                    <h1 className="font-playfair text-[25pt] font-bold text-center">Contact</h1>
                     <p>For inquiries regarding content, submissions, or otherwise, <br /> email us at <a href="mailto:gatechagora@gmail.com"><u>gatechagora@gmail.com.</u></a></p>
                 </div>
 
@@ -44,7 +44,9 @@ export default function Contact() {
                     <div className={styles['email-button']}>Submit</div>
                 </div>
                     
-                <div className={styles.header}> <h1> Our Socials</h1></div>
+                <div className={styles.header}> 
+                    <h1 className="font-playfair text-[25pt] font-bold text-center">Our Socials</h1>
+                </div>
                 <div className={styles['social-container']}>
                     {socialButton("Instagram", "/socials/instagram.png", "instagram icon", "https://www.instagram.com/gt.agora/")}
                     {socialButton("Facebook", "/socials/facebook.png", "facebook icon", "https://www.facebook.com/groups/1308653603346414/")}

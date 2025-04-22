@@ -75,7 +75,7 @@ export default function Header() {
                 <Link href="/archive"><div className={styles.label} >ARCHIVE</div></Link>
 
             {/* CURRENT ISSUE */}
-                <Link href="/#latest-issue">
+                <Link href="/">
                     <motion.div 
                         className={styles.dropdown}
                         variants={dropdownVars}>
@@ -104,6 +104,15 @@ export default function Header() {
                 initial="initial"
                 whileHover="hover">
                 <Link href="/contact"><div className={styles.label} >CONTACT</div></Link>
+            </motion.div>
+        
+        {/* GIVE */}
+        <motion.div
+                className={styles.item}
+                variants={itemVars}
+                initial="initial"
+                whileHover="hover">
+                <Link href="/give"><div className={styles.label} >GIVE</div></Link>
             </motion.div>
         
         </div>

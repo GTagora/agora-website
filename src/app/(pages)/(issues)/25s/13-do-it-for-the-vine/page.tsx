@@ -5,7 +5,7 @@ import { Reference, Footnote } from "@/app/components/buttons";
 
 export default async function Article() {
 	const author = "Andy Ouyang";
-	const credit = "Photo by Andy Ouyang";
+	const credit = "";
 	const title = "Do It for the Vine";
 	const date = "April 23, 2025";
 
@@ -47,7 +47,7 @@ export default async function Article() {
 
 						<p>
 							Merriam Webster defines a friend as “one attached to another by
-							affection or esteem ” <Reference number={1} /> [Merriam-Webster].
+							affection or esteem.”<Reference number={1} />
 							But what amount of “affection” or “esteem” separates an
 							acquaintance from a friend? One person may draw that line
 							differently than the next. However you define it, we would never
@@ -75,8 +75,8 @@ export default async function Article() {
 							spending time with them, eating with them, and confiding in them.
 							Finally, friendship also means interceding in one another’s lives.
 							A friend is one who gives “earnest counsel” and is not afraid to
-							“wound” you when necessary
-							<Reference number={3} /> [Proverbs 27:6,9].
+							“wound” you when necessary.
+							<Reference number={3} />
 						</p>
 						<br />
 
@@ -92,7 +92,7 @@ export default async function Article() {
 							Friends are the flowers of our garden. There is something sweet in
 							our shared interests or experiences, like a fragrance which draws
 							us in. And there is a brightness and color that only someone
-							else's personality can bring to our lives. But if our friendships
+							else&apos;s personality can bring to our lives. But if our friendships
 							are not deeply rooted, they become wilted and easily blown away
 							during the storms of our life.
 						</p>
@@ -109,8 +109,8 @@ export default async function Article() {
 							something we are born into. We don’t choose family members based
 							on the sweetness of shared experience or the color of their
 							personality. Rather, the strength of family is in the deep roots
-							which anchor us through the storms of “adversity” in our lives
-							<Reference number={4} /> [Proverbs 17:17].
+							which anchor us through the storms of “adversity” in our lives.
+							<Reference number={4} />
 						</p>
 						<br />
 
@@ -119,8 +119,7 @@ export default async function Article() {
 							about our “brothers” and “sisters” in Christ? The comparison of
 							church to family is used over and over. We are called “members of
 							the household of God”
-							<Reference number={5} />
-							[Ephesians 2:19] and part of “the household of faith”
+							<Reference number={5} />and part of “the household of faith”
 							<Reference number={6} /> [Galatians 6:10]. When we follow Christ,
 							we are born again into the family of believers, and the same
 							concept applies: we cannot choose our siblings. And yet we are
@@ -135,15 +134,15 @@ export default async function Article() {
 							So what happens when we make friends within our church family? By
 							“choosing” only some people to be friends, are we showing
 							partiality and making “distinctions among ourselves”?
-							<Reference number={7} /> [James 2:4]
+							<Reference number={7} />
 						</p>
 						<br />
 
 						<p>
 							According to a survey by the American Bible Society, they found
 							that the most common negative experience in church was “exclusion
-							or cliques within the faith community”
-							<Reference number={8} /> [Fulks]. And for most Christians, that
+							or cliques within the faith community.”
+							<Reference number={8} /> And for most Christians, that
 							may not come as a surprise. It’s natural to want to make friends
 							with likeminded people, and for many Christians, those are other
 							members of the church. By nature, friendships are intentional and
@@ -167,8 +166,7 @@ export default async function Article() {
 
 						<p>
 							In our garden, Jesus is the vine and we the church are its
-							branches
-							<Reference number={9} /> [John 15:5]. And it is through that “true
+							branches.<Reference number={9} /> And it is through that “true
 							vine” that all believers are connected by an unbreakable bond of
 							unity.
 						</p>
@@ -176,16 +174,16 @@ export default async function Article() {
 
 						<p>
 							The unity we are called to have as a church is one that mirrors
-							the unity found between the Father, Son, and Spirit
-							<Reference number={10} /> [John 17:21]. And the bond that we have
+							the unity found between the Father, Son, and Spirit.
+							<Reference number={10} /> And the bond that we have
 							in Christ is stronger and closer than any other bond. For what
 							binding can be stronger than the blood of Christ and who could be
-							closer to you than your own body
-							<Reference number={11} /> [Ephesians 2:13,16]? Jesus charges us to
+							closer to you than your own body?
+							<Reference number={11} /> Jesus charges us to
 							love one another in the same way that He has loved us:
 							sacrificially and unconditionally. It’s only through “bearing with
 							one another”
-							<Reference number={12} /> [Ephesians 4:2] in that sacrificial and
+							<Reference number={12} /> in that sacrificial and
 							unconditional love that we can find the unity we’re called for.
 						</p>
 						<br />
@@ -200,8 +198,8 @@ export default async function Article() {
 							excluded or unwelcome. But “bearing with one another” does not
 							mean bottling up our pains and hurts into bitterness. We should be
 							honest with one another: accepting a “complaint” in humility and,
-							in turn, forgiving one another
-							<Reference number={13} /> [Colossians 3:13].
+							in turn, forgiving one another.
+							<Reference number={13} />
 						</p>
 						<br />
 
@@ -220,8 +218,8 @@ export default async function Article() {
 							the end goal. By putting too much of our hope and purpose on
 							community, we lose sight of our greater calling: to worship God
 							and serve others. We are called “fellow workers” and if we truly
-							believe that “the harvest is plentiful but the workers are few”
-							<Reference number={14} /> [Matthew 9:37], then we cannot afford to
+							believe that “the harvest is plentiful but the workers are few,”
+							<Reference number={14} /> then we cannot afford to
 							exclude even a single worker! But we are also made to rest from
 							our work, and we often find that rest in our friends that pour
 							into us. Which again leads us back to the central problem: we

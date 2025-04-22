@@ -37,6 +37,8 @@ export default function Hamburger() {
                     <Link href="/blog"><div className={styles.label}>BLOG</div></Link>
                     
                     <Link href="/contact"><div className={styles.label} >CONTACT</div></Link>
+
+                    <Link href="/give"><div className={styles.label} >GIVE</div></Link>
                 </div>
             </div>
             <Link href="/" className={styles.logo}>
