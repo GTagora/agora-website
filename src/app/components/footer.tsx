@@ -18,8 +18,9 @@ function socialButton(img:string, alt:string, link:string) {
 
 const Footer = () => {
     return (
-        <div className={styles.box}>
-            <div className={styles.column}>
+        <div className="flex flex-col justify-center items-center my-12 font-ebgaramond
+                        md:flex-row lg:justify-between lg:w-full lg:px-20">
+            <div className="flex flex-col text-left">
                 <Link href="/">
                     <Image
                         className={styles.logo}
@@ -38,7 +39,7 @@ const Footer = () => {
             </div>
             <div className={styles.textBox}>
                 <div className={styles.row}>
-                    <div className={styles.column}>
+                    <div className="flex flex-col text-left">
                         <Link href="/about" className={styles.heading}>About</Link>
                         <Link className={styles.footerLink} href="/about">
                             Mission
@@ -47,16 +48,16 @@ const Footer = () => {
                             Staff
                         </Link>
                     </div>
-                    <div className={styles.column}>
+                    <div className="flex flex-col text-left">
                         <Link href="/archive" className={styles.heading}>Archive</Link>
-                        <Link className={styles.footerLink} href="/#latest-issue">
+                        <Link className={styles.footerLink} href="/">
                             Latest Issue
                         </Link>
                         <Link className={styles.footerLink}  href="/archive">
                             Past Issues
                         </Link>
                     </div>
-                    <div className={styles.column}>
+                    <div className="flex flex-col text-left">
                         <Link href="/contact" className={styles.heading}>Contact</Link>
                         <Link className={styles.footerLink}  href="mailto:gatechagora@gmail.com" target="_blank">
                             Email

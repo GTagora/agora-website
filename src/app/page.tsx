@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { HomeCard } from "./components/cards";
+import Footer from "./components/footer";
 
 const articles = [
   {
@@ -159,7 +160,7 @@ const articles = [
 
 export default function Home() {
 	return (
-		<main className="flex flex-col items-center justify-start pt-24 px-10">
+	<main className="flex flex-col items-center justify-start pt-24 px-10">
 		
 		<div className="flex flex-row justify-center items-center gap-5">
 			<Image
@@ -220,6 +221,7 @@ export default function Home() {
 			)
 			})}
 		</div>
-		</main>
+		<Footer />
+	</main>
 	);
 }
