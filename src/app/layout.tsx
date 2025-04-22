@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Analytics } from "@vercel/analytics/react"
 import Header from './components/header'
 import Hamburger from './components/hamburger'
 import { EB_Garamond, Playfair_Display_SC, Cormorant_Garamond, Playfair_Display } from 'next/font/google'
@@ -63,6 +64,7 @@ export default function RootLayout({
         <Hamburger />
         <Header />
         {children}
+        <Analytics />
       </body>
     </html>
   )

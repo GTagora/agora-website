@@ -31,30 +31,22 @@ export default function Header() {
     }
 
     return (
-    <div className={styles.navbar}>
+    <div className="hidden md:flex flex-row w-[100%] justify-start items-center pl-10 text-lg fixed top-0 z-10 py-5 bg-[whitesmoke]">
     {/* LOGO */}
         <Link href="/">
             <Image
-                className={styles.logo}
+                className="w-11"
                 src="/logo-black-box.png"
                 width={75}
                 height={75}
                 alt='Agora logo'
             />
         </Link>
-        <div className={styles.buttons}>
-        {/* HOME */}
-            {/* <motion.div 
-                className={styles.item}
-                variants={itemVars}
-                initial="initial"
-                whileHover="hover">
-                <Link href="/"><div className={styles.label} >HOME</div></Link>
-            </motion.div> */}
+        <div className="hidden md:flex md:flex-row items-start pl-10 font-cormorant tracking-[.1rem]">
 
         {/* ABOUT */}
             <motion.div 
-                className={styles.item}
+                className=""
                 variants={itemVars}
                 initial="initial"
                 whileHover="hover">
@@ -76,7 +68,7 @@ export default function Header() {
 
         {/* ARCHIVE */}
             <motion.div 
-                className={styles.item}
+                className=""
                 variants={itemVars}
                 initial="initial"
                 whileHover="hover">
@@ -98,7 +90,7 @@ export default function Header() {
 
         {/* BLOG */}
             <motion.div 
-                className={styles.item}
+                className=""
                 variants={itemVars}
                 initial="initial"
                 whileHover="hover">
@@ -107,7 +99,7 @@ export default function Header() {
 
         {/* CONTACT */}
             <motion.div
-                className={styles.item}
+                className=""
                 variants={itemVars}
                 initial="initial"
                 whileHover="hover">

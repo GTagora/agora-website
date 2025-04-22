@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import { HomeCard } from "./components/cards";
 import Footer from "./components/footer";
 
@@ -224,4 +225,4 @@ export default function Home() {
 		<Footer />
 	</main>
 	);
-}
+ }
