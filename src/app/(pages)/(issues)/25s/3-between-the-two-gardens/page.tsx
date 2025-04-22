@@ -439,7 +439,6 @@ export default async function Article() {
             <Footnote
               number={34}
               text="https://www.sermonaudio.com/sermons/91423240277236"
-              link="https://www.sermonaudio.com/sermons/91423240277236"
             />
             <br />
             <Footnote
