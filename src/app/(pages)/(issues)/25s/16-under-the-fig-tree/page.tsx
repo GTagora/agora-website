@@ -1,10 +1,6 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 import Footer from "@/app/components/footer";
-<<<<<<< HEAD
-import { Reference, Footnote } from "@/app/components/buttons";
-=======
->>>>>>> s25-JP
 
 export default async function Article() {
 	const author = "Chelsea Ekwegh";
