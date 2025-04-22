@@ -48,7 +48,7 @@ const articles: Article[] = [
 export default function Blog() {
 	return (
 		<main className={styles.main}>
-			<h1 className={styles.h1}>Blog</h1>
+			<h1 className="font-playfair text-[25pt] font-bold text-center tracking-wider">BLOG</h1>
 			<div className={styles.allcards}>
 				{articles.map((article:Article) => (
 					<BlogCard key={article.id} article={article} />
