@@ -114,6 +114,15 @@ export default function Header() {
                 <Link href="/contact"><div className={styles.label} >CONTACT</div></Link>
             </motion.div>
         
+        {/* GIVE */}
+        <motion.div
+                className={styles.item}
+                variants={itemVars}
+                initial="initial"
+                whileHover="hover">
+                <Link href="/give"><div className={styles.label} >GIVE</div></Link>
+            </motion.div>
+        
         </div>
     </div>
 )}
