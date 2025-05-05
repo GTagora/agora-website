@@ -1,10 +1,26 @@
 {
-    "redirects": [
-      {
-        "source": "http://www.gtagora.com/:path*",
-        "destination": "https://www.gtagora.com/:path*",
-        "permanent": true
-      }
-    ]
-  }
-  
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "gtagora.vercel.app"
+        }
+      ],
+      "destination": "https://www.gtagora.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "gtagora.com"
+        }
+      ],
+      "destination": "https://www.gtagora.com/:path*",
+      "permanent": true
+    }
+  ]
+}
