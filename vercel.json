@@ -1,0 +1,10 @@
+{
+    "redirects": [
+      {
+        "source": "http://www.gtagora.com/:path*",
+        "destination": "https://www.gtagora.com/:path*",
+        "permanent": true
+      }
+    ]
+  }
+  
