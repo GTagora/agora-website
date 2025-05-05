@@ -179,8 +179,8 @@ export default function Home() {
 		</div>
 
 		{/* LATEST ISSUE */}
-		<div className="mt-12 bg-neutralTan px-28 py-20
-						lg:grid lg:grid-cols-5 gap-12 lg:w-[80vw]">
+		<div className="mt-12 bg-neutralTan py-20 w-[100vw] px-14
+						lg:px-28 lg:grid lg:grid-cols-5 gap-12 lg:w-[80vw]">
 			<div className="col-span-2">
 				<Image
 					className="hidden lg:block w-full h-full object-cover"
@@ -191,7 +191,7 @@ export default function Home() {
 			</div>
 			<div className="col-span-3 flex flex-col text-left">
 				<p className="font-bold text-xl">LATEST ISSUE:</p>
-				<p className="font-playfair italic font-black text-[80pt] -mt-8 -ml-3">GARDEN</p>
+				<p className="font-playfair italic font-black text-[60pt] lg:text-[80pt] lg:-mt-8 -ml-3">GARDEN</p>
 				<div className="pt-1 border-t-2 border-black flex flex-row justify-between">
 					<p className="font-cormorant">Dear Reader,</p>
 					<p className="font-bold text-xs text-right">LETTER FROM THE EICS</p>
