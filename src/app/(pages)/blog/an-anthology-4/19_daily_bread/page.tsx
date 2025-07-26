@@ -10,14 +10,6 @@ export default async function Page() {
 					<Link href="/blog/an-anthology-4" className={styles.breadcrumb}>
 						An Anthology of Joy and Thought Vol. 4
 					</Link>
-					<Image
-						className={styles.image}
-						src="/blog/an-anthology-4/19_daily_bread.webp"
-						width={600}
-						height={600}
-						alt="daily bread article image"
-					/>
-					<p className={styles.credit}>Image: Stephen Noh</p>
 					<h1 className={styles.title}>daily bread</h1>
 					<div className="leading-7">
 						On the brink of bitterness i stand<br/>
@@ -42,7 +34,7 @@ export default async function Page() {
 						<br/>
 						To bear the cross that Your son carried<br/>
 						A heavy weight it is<br/>
-						One that can’t be done alone<br/>
+						One that can&apos;t be done alone<br/>
 						And definitely not by me<br/>
 						<br/>
 						So, Lord I need Your presence<br/>
@@ -67,11 +59,10 @@ export default async function Page() {
 						<br/>
 						On the brink of bitterness i kneel<br/>
 						In the presence of the One who has it all<br/>
-						It’s all according to Your plan<br/>
+						It&apos;s all according to Your plan<br/>
 						All according to Your will<br/>
 						<br/>
-						<b>Inspired by Matthew 6:9-13, the Lord’s Prayer</b>
-
+						<b>Inspired by Matthew 6:9-13, the Lord&apos;s Prayer</b>
 					</div>
 
 					<div className={styles.buttons}>

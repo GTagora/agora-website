@@ -20,14 +20,14 @@ export default async function Page() {
 					<p className={styles.credit}>Image: Stephen Noh</p>
 					<h1 className={styles.title}>a broken melody </h1>
 					<div className={styles.text}>
-						“I’m sorry, Lord”<br/>
-						“I won’t do it again”<br/>
+						<q>I&apos;m sorry, Lord</q><br/>
+						<q>I won&apos;t do it again</q><br/>
 						<br/>
 						in my guilt i wallow<br/>
 						in my shame i hide<br/>
 						<br/>
 						for down in my heart<br/>
-						i know i’ll turn back<br/>
+						i know i&apos;ll turn back<br/>
 						<br/>
 						like Adam and Eve in the garden<br/>
 						i hide in my dirtiness<br/>
@@ -54,7 +54,7 @@ export default async function Page() {
 						renew this spirit<br/>
 						<br/>
 						for if I return, Lord<br/>
-						You promise You’ll renew me<br/>
+						You promise You&apos;ll renew me<br/>
 						<br/>
 						but can You make a new song, Lord?<br/>
 						can you fix this broken melody?<br/>
@@ -67,8 +67,8 @@ export default async function Page() {
 						<br/>
 						use it for Your glory<br/>
 						and make me a beautiful song<br/>
-						<br/>
-						Inspired by Jeremiah 15:19 and Maverick City Music’s song, ‘Broken Melodies’
+						<br/><br/>
+						<b>Inspired by Jeremiah 15:19 and Maverick City Music&apos;s song, ‘Broken Melodies&apos;</b>
 					</div>
 
 					<div className={styles.buttons}>

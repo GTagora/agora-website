@@ -18,9 +18,26 @@ export default async function Page() {
 						alt="article image"
 					/>
 					<p className={styles.credit}>Image: Stephen Noh</p>
-					<h1 className={styles.title}></h1>
-					<div className="leading-7">
-						
+					<h1 className={styles.title}>growing up</h1>
+					<div className="leading-8">
+						Growing up has been realizing that I can accomplish nothing but He has already accomplished everything<br/>
+						Growing up has been realizing I will not be loved by everyone yet I am wholly loved by the Perfect One<br/>
+						Growing up has been realizing that it is not my life, but the one He has given me<br/>
+						Growing up has been realizing the weight of my brokenness but the even greater weight of His sacrifice for me<br/>
+						Growing up has been realizing that there is nothing that anyone or this world can do to separate me from You<br/>
+						Growing up has been realizing that only in the wilderness, the hardship do you really grow the most<br/>
+						Growing up has been realizing that the desert is a blessing, to be only in Your presence, to rely wholly on You<br/>
+						Growing up has been realizing that God owes me nothing and that I owe Him everything, yet He still gave His son<br/>
+						Growing up has been realizing that He is always listening, working in the background, and preparing so that He may be most glorified<br/>
+						Growing up has been thinking I’d always be alone but He has always been by my side<br/>
+						<br/>
+						A year of growth<br/>
+						Of bitterness<br/>
+						Of acceptance<br/>
+						Of realization<br/>
+						<br/>
+						You are making me beautiful, Lord<br/>
+						So continue to do Your work in me<br/>
 					</div>
 
 					<div className={styles.buttons}>

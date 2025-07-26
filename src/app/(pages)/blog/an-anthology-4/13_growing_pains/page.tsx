@@ -18,9 +18,34 @@ export default async function Page() {
 						alt="article image"
 					/>
 					<p className={styles.credit}>Image: Stephen Noh</p>
-					<h1 className={styles.title}></h1>
-					<div className="leading-7">
-						
+					<h1 className={styles.title}>growning pains</h1>
+					<div className="leading-6">
+						To goodbyes<br/>
+						To hellos<br/>
+						<br/>
+						The old has passed<br/>
+						The new has come<br/>
+						<br/>
+						Things are changing<br/>
+						Yet are still the same<br/>
+						<br/>
+						Good things take time<br/>
+						Growing pains renew<br/>
+						<br/>
+						To the coming hellos<br/>
+						To the coming goodbyes<br/>
+						<br/>
+						Break me, Lord<br/>
+						Shape me, Lord<br/>
+						<br/>
+						Thank You<br/>
+						That You know what You’re doing<br/>
+						<br/>
+						To grow in fruit<br/>
+						To grow in love<br/>
+						<br/>
+						Whatever it takes<br/>
+						Good things take time<br/>
 					</div>
 
 					<div className={styles.buttons}>

@@ -18,7 +18,7 @@ export default async function Page() {
 						alt="article image"
 					/>
 					<p className={styles.credit}>Image: Stephen Noh</p>
-					<h1 className={styles.title}></h1>
+					<h1 className={styles.title}>a lifetime&apos;s worth of worship</h1>
 					<div className="leading-7">
 						<br/>In everlasting joy I live
 						<br/>In the palm of Your hands I dance

@@ -127,12 +127,12 @@
 
 	@media screen and (max-width: 1200px) {
 		.main {
-			padding-inline: 27vw;
+			padding-inline: 20vw;
 		}
 	}
 	@media screen and (min-width: 1200px) {
 		.main {
-			padding-inline: 35vw;
+			padding-inline: 30vw;
 		}
 	}
 

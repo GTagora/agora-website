@@ -23,11 +23,11 @@ export default async function Page() {
 						Sometimes I wish I never saw friends again…<br/><br/>
 						because when I see them again, I am reminded of all the wonderful times we shared…<br/><br/>
 						and then those wonderful times increase and increase until it becomes hard to part with them once again…<br/><br/>
-						but isn’t that the most beautiful blessing?<br/><br/>
+						but isn&apos;t that the most beautiful blessing?<br/><br/>
 						to have brothers and sisters to run alongside this race with…<br/><br/>
 						to share of His goodness and share in His joys and mercies.<br/><br/>
 						What a blessing that is.<br/><br/>
-						Bittersweet goodbyes may be the only way to truly recognize and reconcile with that. How beautiful that is.<br/><br/>
+						Bittersweet goodbyes may be the only way to truly recognize and reconcile with that. How beautiful that is.
 					</div>
 
 					<div className={styles.buttons}>
