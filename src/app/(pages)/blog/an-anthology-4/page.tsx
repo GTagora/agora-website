@@ -140,7 +140,7 @@ export default function Page() {
 						<div className={styles.col}>
 							<Image
 								className={styles.image}
-								src="/blog/an-anthology-4/1_who_am_i.webp"
+								src="/blog/an-anthology-4/20_image_bearer.webp"
 								width={600}
 								height={600}
 								alt="article image"
