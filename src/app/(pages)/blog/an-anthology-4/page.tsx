@@ -140,7 +140,7 @@ export default function Page() {
 						<div className={styles.col}>
 							<Image
 								className={styles.image}
-								src="/test.jpg"
+								src="/blog/an-anthology-4/1_who_am_i.webp"
 								width={600}
 								height={600}
 								alt="article image"
@@ -158,12 +158,14 @@ export default function Page() {
 					</div>
 					<h2 className={styles.subtitle}>Preface</h2>
 					<p className={styles.text}>
-						***
-						<br />
-						<br />
-						With love and blessings,
-						<br />
-						Stephen
+						Dear reader,<br/><br/>
+						It&apos;s been a little while again, hasn&apos;t it? Life has mellowed down. In some ways it has become quite routine and in other ways every day feels like a gift. I have come to love this quiet Texas life and the time that I am able to have with God without worldly pressures of success. With that said, this will probably be my final release of pieces.<br/><br/>
+						The timing of these pieces were in a way a reflection of my year of transition. From college student to young adult. They say the first year out of college is the hardest and at first, in my pride, I told myself, <q>I&apos;d never think that way.</q> Boy, was I wrong. The first couple months were amazing but about four months into this life, it got quite difficult to come to terms with the life of a young adult. These difficulties and feelings have calmed down in the past month or so, but instead of it being an overcoming of these things, it&apos;s more of an acclimation. None of the prayers I&apos;ve been directly praying have been answered necessarily and it&apos;s not like my circumstances changed, but I think God is slowly changing my attitude and posture towards this season of life. It&apos;s a prayer request that I think is indirectly being answered as I ask Him to <q>transform me to be more like You.</q><br/><br/>
+						It&apos;s been a strange season for sure. From being told I was being placed in a plowing season months ago to now recognizing this season of wilderness. I found myself, many times, questioning and complaining to God about my situation and my desire to be delivered from it. However, as I&apos;ve come to walk on through this season, I&apos;ve been coming to Him more than most other seasons and He has been giving me a more content and grateful heart in turn. It&apos;s a hard ask, a hard prayer, but ultimately if the wilderness is where I will be growing the most and the closest to Him, then it&apos;s the place I want to be most.<br/><br/>
+						Some recent updates are that I recently went on a short term mission trip to Tucson, Arizona and that I moved out of my parents house into my own apartment. In Tucson, we worked on a construction project and ran an art camp for the children with a local ministry, Corazón Ministries. There, I got a clear idea of what it meant to be in the wilderness. Being in the sweltering Arizona sun everyday working on a construction project helped me physically picture the difficulty of wandering in the wilderness. It&apos;s no wonder the Israelites complained. They had to do it for 40 years. That&apos;s crazy to think about because just a week alone was exhausting. With moving out, I didn&apos;t realize how much of a needed change it was for me and my heart. I&apos;ve been able to go back to hosting people/cooking for others and I remember just how much joy those things bring me.<br/><br/>
+						This season is still not exactly what I&apos;d hoped it to be and I&apos;m still praying diligently for those same things I&apos;ve been praying for years now, but I am definitely where He wants me to be in this season and that gives me more peace and comfort than any answered prayer can give. To live in this more mature form of joy and childlike faith has been wonderful and I&apos;m excited to see how much more He will grow me. I can only pray that you, reader, are also able to experience more of that. So here&apos;s just a little glimpse of that. I&apos;ll continue writing, just a lot slower and probably released somewhere more personal. With that said, reader, welcome to the fourth and final volume of <q>An Anthology of Joy and Thought.</q> Thank you for joining me in the reflections of this past year of life.<br/><br/>
+						With love, blessing, and joy for what is to come,<br/>
+						snoh
 					</p>
 					<br /> <br />
 					<h2 className={styles.subtitle}>Contents</h2>
