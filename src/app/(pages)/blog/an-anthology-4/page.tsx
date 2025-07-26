@@ -21,12 +21,12 @@ const contents = [
 	{
 		"id": 4,
 		"title": "\"is this really all?\"",
-		"href": "an-anthology-4/5_is_this_really_all"
+		"href": "an-anthology-4/4_is_this_really_all"
 	},
 	{
 		"id": 5,
 		"title": "paradox of time",
-		"href": "an-anthology-4/4_paradox_of_time"
+		"href": "an-anthology-4/5_paradox_of_time"
 	},
 	{
 		"id": 6,

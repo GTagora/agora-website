@@ -18,7 +18,7 @@ export default async function Page() {
 						alt="article image"
 					/>
 					<p className={styles.credit}>Image: Stephen Noh</p>
-					<h1 className={styles.title}>who am i? (what's in a name? pt. 2)</h1>
+					<h1 className={styles.title}>who am i? (what&apos;s in a name? pt. 2)</h1>
 					<div className="leading-7">
 						Who am I? Who was I made to be? What does God desire to do with me?<br/><br/>
 						These are all questions I have been asking myself lately. In a season of wilderness, I find myself feeling lost and purposeless in the midst of the desert. Wandering, searching, looking for direction and where the Lord desires to use me. So in the midst of this, I wanted to come back to reflect on who I was named after. Who I model myself to be (besides Jesus of course).<br/><br/>

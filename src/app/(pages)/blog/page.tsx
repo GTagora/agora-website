@@ -15,7 +15,7 @@ const articles: Article[] = [
 		id: 5,
 		title: "An Anthology of Joy and Thought Vol. 4",
 		genre: "POEM",
-		img: "/test.jpg",
+		img: "/blog/an-anthology-4/1_who_am_i.webp",
 		slug: "blog/an-anthology-4",
 		date: "July 26, 2025",
 	},
