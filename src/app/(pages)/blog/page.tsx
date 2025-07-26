@@ -12,6 +12,14 @@ interface Article {
 
 const articles: Article[] = [
 	{
+		id: 5,
+		title: "An Anthology of Joy and Thought Vol. 4",
+		genre: "POEM",
+		img: "/blog/an-anthology-4/20_image_bearer.webp",
+		slug: "blog/an-anthology-4",
+		date: "July 26, 2025",
+	},
+	{
 		id: 4,
 		title: "An Anthology of Joy and Thought Vol. 3",
 		genre: "POEM",
