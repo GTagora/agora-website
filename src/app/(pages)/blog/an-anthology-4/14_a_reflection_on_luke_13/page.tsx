@@ -12,7 +12,7 @@ export default async function Page() {
 					</Link>
 					<Image
 						className={styles.image}
-						src="/blog/an-anthology-4/a_reflection_on_luke_13.webp"
+						src="/blog/an-anthology-4/14_a_reflection_on_luke_13.webp"
 						width={600}
 						height={600}
 						alt="a reflection on luke 13 article image"
@@ -39,7 +39,7 @@ export default async function Page() {
 						<br/>
 						—<br/>
 						<br/>
-						At the cafe I did my study at, one of the baristas, his name was John. He came up to me and asked me what book of the Bible I was reading. He just wanted to ask me about what I was kind of blessed and convicted by, and so I shared. He was talking to me about how some pastors came to do a meeting there and all that stuff. They gave him a free shirt and then invited him to their church for Easter. He went back to get the extra shirt he got and gave it to me. It turns out the invite and shirt was from the church I grew up in, and I was like, wow. It's full circle.  The church where I grew up came here and to me it was just very touching. In a way, God showed me His goodness and mercy. He blessed me through showing me how I am where I need to be and placed John in my life in that moment.<br/><br/>
+						At the cafe I did my study at, one of the baristas, his name was John. He came up to me and asked me what book of the Bible I was reading. He just wanted to ask me about what I was kind of blessed and convicted by, and so I shared. He was talking to me about how some pastors came to do a meeting there and all that stuff. They gave him a free shirt and then invited him to their church for Easter. He went back to get the extra shirt he got and gave it to me. It turns out the invite and shirt was from the church I grew up in, and I was like, wow. It's full circle. The church where I grew up came here and to me it was just very touching. In a way, God showed me His goodness and mercy. He blessed me through showing me how I am where I need to be and placed John in my life in that moment.<br/><br/>
 						In the season of patience and growth, I'm always like, oh, I need to do something big, I need to do something big, I need to do this, this, this, this. But every time I come back and just sit in His presence, He 's just constantly reminding me of patience, perseverance and His ultimate love for me, and today I just saw so much of that.<br/><br/>
 						It's been a rough season, it's been hard, but through my desire for obedience, He is showing me more of Him.This entire weekend has been just a reminder and testament of his love for me. I've been beating myself down so much lately and the idea of first love has been coming back to me. Returning to my first love. How do I return to that first love, that depth of joy that I had two years ago. How do I return to that? It's been dwindling slowly, but I wanna get back to that deeper, deeper joy. Not just an outward joy, but an inward joy. I wanna get back to that, and I feel like slowly, slowly, slowly as I pray and kind of dwell on that, God has been helping me come back to that. Today was just a testament of that. Sure life is not the everything I imagined it to be, but I truly believe that He is working all things for His good and I believe that one day I'll look back on the season and truly be even more blessed and be able to see more about the season and how much He worked through it. In the meantime, as much as it sucks, He is still reminding me how much He loves me and how much He wants to show me.<br/><br/>
 						I thank you so much, God. Thank you. To You be the glory and I'm just so blessed and so undeserving of it, but, You still love me nonetheless, so thank You, God.<br/><br/>
@@ -48,13 +48,13 @@ export default async function Page() {
 
 					<div className={styles.buttons}>
 						<Link
-							href="/blog/an-anthology-4/**"
+							href="/blog/an-anthology-4/13_growing_pains"
 							className={styles.href}
 							>
 							&lt;&nbsp; Previous
 						</Link>
 						<Link
-							href="/blog/an-anthology-4/**"
+							href="/blog/an-anthology-4/15_a_lifetimes_worth_of_worship"
 							className={styles.href}
 							>
 							Next &nbsp;&gt;

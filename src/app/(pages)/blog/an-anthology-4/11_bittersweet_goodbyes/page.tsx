@@ -12,7 +12,7 @@ export default async function Page() {
 					</Link>
 					<Image
 						className={styles.image}
-						src="/blog/an-anthology-4/bittersweet_goodbyes.webp"
+						src="/blog/an-anthology-4/11_bittersweet_goodbyes.webp"
 						width={600}
 						height={600}
 						alt="bittersweet goodbyes article image"
@@ -32,13 +32,13 @@ export default async function Page() {
 
 					<div className={styles.buttons}>
 						<Link
-							href="/blog/an-anthology-4/**"
+							href="/blog/an-anthology-4/10_all_of_the_glory"
 							className={styles.href}
 							>
 							&lt;&nbsp; Previous
 						</Link>
 						<Link
-							href="/blog/an-anthology-4/**"
+							href="/blog/an-anthology-4/12_sorrowful_yet_always_rejoicing"
 							className={styles.href}
 							>
 							Next &nbsp;&gt;
