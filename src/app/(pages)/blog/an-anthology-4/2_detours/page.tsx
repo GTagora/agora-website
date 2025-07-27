@@ -32,7 +32,7 @@ export default async function Page() {
 						be still my heart<br/>
 						quiet my soul<br/>
 						<br/>
-						sit and reminiscence<br/>
+						sit in reminiscence<br/>
 						look to His faithfulness<br/>
 						<br/>
 						it&apos;s those moments when the speakers shut off<br/>
