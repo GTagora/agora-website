@@ -174,7 +174,7 @@ export default function Home() {
 		</div>
 		<div className="flex flex-row justify-between w-full md:w-[70vw] lg:w-[50vw] border-t-2 border-black font-bold text-sm md:text-md">
 			<p>GEORGIA TECH</p>
-			<p className="">A JOURNAL OF CHIRSTIAN THOUGHT</p>
+			<p className="">A JOURNAL OF CHRISTIAN THOUGHT</p>
 			<p className="">EST. 2023</p>
 		</div>
 
