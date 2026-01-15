@@ -1,37 +1,78 @@
-import styles from './page.module.css'
-import Image from 'next/image'
-import Footer from '@/app/components/footer'
-
+import styles from "./page.module.css";
+import Image from "next/image";
+import Footer from "@/app/components/footer";
 
 export default async function Article() {
-    const author = 'author name';
-    const credit = 'Photo by someone';
-    const title = 'Article 1';
-    const date = 'Month 01, Year';
+  const author = "Eddie Hong";
+  const credit = "Photo by Matthew Lai";
+  const title = "Stars Breathing";
+  const date = "December 6, 2026";
 
-    return (
-        <div>
-            <div className={styles.main}>
-                <div className={styles.container}>
-                    {/* <iframe className={styles.video} src='VIDEO LINK HERE'/> */}
-                    <Image 
-                    className={styles.image}
-                    src='/issues/issue/test.png'
-                    width={600}
-                    height={600}
-                    alt='article image'/>
-                    <p className = {styles.credit}>{credit}</p>
-                    <h1 className={styles.title}>{title}</h1>
-                    <h2 className={styles.author}>BY {author.toUpperCase()}</h2>
-                    <h3 className={styles.date}>{date}</h3>
-                    <div className={styles.text}>
-                        {/* REPLACE TEXT HERE */}
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </div>
-                </div>
-            </div>
-            <div className={styles.footer}>
-                <Footer />
-            </div>
+  return (
+    <div>
+      <div className={styles.main}>
+        <div className={styles.container}>
+          <Image
+            className={styles.image}
+            src="/issues/25f/stars-breathing.webp"
+            width={600}
+            height={600}
+            alt="article image"
+          />
+          <p className={styles.credit}>{credit}</p>
+          <h1 className={styles.title}>{title}</h1>
+          <h2 className={styles.author}>BY {author.toUpperCase()}</h2>
+          <h3 className={styles.date}>{date}</h3>
+          <div className={styles.text}>
+            <p>Space hums.</p>
+            <p>Never empty,</p>
+            <p>but breathing.</p>
+            <p>A steady inhale of nebulae,</p>
+            <p>the exhale of God’s imagination.</p>
+            <p>Light travels for centuries</p>
+            <p>but it began as a single word–</p>
+            <p>spoken by God before clocks,</p>
+            <p>before time bent to listen.</p>
+            <p>Every supernova echoes “Let there be,”</p>
+            <p>a wound of light bleeds creation–</p>
+            <p>heavens remember the cross,</p>
+            <p>where beauty once broke to make us whole.</p>
+            <p>I watch the stars consume themselves in brilliance,</p>
+            <p>born from heat, time, and pressure.</p>
+            <p>Science calls it fusion,</p>
+            <p>faith calls it fire–</p>
+            <p>one names the process,</p>
+            <p>the other, the Presence.</p>
+            <p>He holds both.</p>
+            <p>Atoms that forged stars</p>
+            <p>are the same that dwell in our body,</p>
+            <p>and neither burn without Him.</p>
+            <p>He crafts distance–</p>
+            <p>stretches between galaxies,</p>
+            <p>silences between orbits,</p>
+            <p>so perfectly</p>
+            <p>that we long for Him.</p>
+            <p>He veiled heavens</p>
+            <p>so we would seek,</p>
+            <p>and when we looked far enough,</p>
+            <p>He stepped closer–</p>
+            <p>Word became flesh</p>
+            <p>infinity folded into a single heartbeat.</p>
+            <p>So I stand under the sky</p>
+            <p>a fragment of dust,</p>
+            <p>a witness to light still traveling from Eden.</p>
+            <p>And in the stillness,</p>
+            <p>I whisper back into the vastness:</p>
+            <p>You are here.</p>
+            <p>You have always been here.</p>
+            <p>Silence sings Your Name.</p>
+            <p>Amen.</p>
+          </div>
         </div>
-)};
+      </div>
+      <div className={styles.footer}>
+        <Footer />
+      </div>
+    </div>
+  );
+}
