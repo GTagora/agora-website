@@ -181,26 +181,27 @@ export default async function Issue() {
             Letter from the Editor-in-Chief
           </h3>
           <div>
-            I’m overjoyed to invite you into this fifth issue of Agora — it has
-            been such a blessing to see this journal grow, both horizontally in
-            fellowship and vertically in genuine faith, and I am so humbled to
-            be able to share the fruits of God’s work with you today.
+            I’m overjoyed to invite you into this fifth issue of <i>Agora</i> —
+            it has been such a blessing to see this journal grow, both
+            horizontally in fellowship and vertically in genuine faith, and I am
+            so humbled to be able to share the fruits of God’s work with you
+            today.
             <br />
             <br />
-            Our name, Agora, derives from the ancient Greek word for an open,
-            public area for marketplaces and gatherings — as such, we hoped to
-            create space for spiritual discourse, fellowship, and the free
-            exchange of ideas. By God’s grace, this journal has slowly
-            approached that vision, and as you sit with this journal, you enter
-            this space with us.
+            Our name, <i>Agora</i>, derives from the ancient Greek word for an
+            open, public area for marketplaces and gatherings — as such, we
+            hoped to create space for <i>spiritual</i> discourse, fellowship,
+            and the free exchange of ideas. By God’s grace, this journal has
+            slowly approached that vision, and as you sit with this journal, you
+            enter this space with us.
             <br />
             <br />
-            As it happens, the theme of this semester’s publication is Space.
-            This encompasses both astronomical outer space and the smaller or
-            more abstract spaces we encounter in our daily lives. Space is
-            uniquely defined by what it is not: it is the distance between
-            objects, the pauses between words, the absence of something past, or
-            a vacant room to be filled.
+            As it happens, the theme of this semester’s publication is{" "}
+            <i>Space</i>. This encompasses both astronomical outer space and the
+            smaller or more abstract spaces we encounter in our daily lives.
+            Space is uniquely defined by what it is not: it is the distance
+            between objects, the pauses between words, the absence of something
+            past, or a vacant room to be filled.
             <br />
             <br />
             Space is the radical difference between two dimensions and three,
@@ -217,14 +218,15 @@ export default async function Issue() {
             <br />
             It’s been a delight to explore this dynamic and flexible concept
             together this semester through words, images, and dialogue. So
-            please, join us in this space; allow God to saturate this moment and
-            reveal how He has worked through these pieces this semester. He will
-            make this a space for rest & replenishing, and you may even discover
-            something out of this world! (sorry I couldn’t help myself)
+            please, join us in this <i>space</i>; allow God to saturate this
+            moment and reveal how He has worked through these pieces this
+            semester. He will make this a space for rest & replenishing, and you
+            may even discover something out of this world! (sorry I couldn’t
+            help myself)
             <br />
             <br />
-            Lastly, thank you for taking the time to read this journal; it’s
-            hard to express how much this means to our contributors, our
+            Lastly, <i>thank you</i> for taking the time to read this journal;
+            it’s hard to express how much this means to our contributors, our
             executive board, and myself. Grace and peace and blessings to you in
             God’s name, and if we haven’t already, I hope someday to meet you
             face to face.
