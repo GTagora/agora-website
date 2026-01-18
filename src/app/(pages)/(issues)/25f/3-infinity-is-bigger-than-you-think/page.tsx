@@ -5,7 +5,7 @@ import Footer from "@/app/components/footer";
 export default async function Article() {
   const author = "Raphael Cheng";
   const credit = "Photo by Joshua Chung";
-  const title = "Infinity is Bigger Than You Think";
+  const title = "Infinity Is Bigger Than You Think";
   const date = "December 6, 2025";
 
   return (
@@ -21,7 +21,7 @@ export default async function Article() {
           />
           <p className={styles.credit}>{credit}</p>
           <h1 className={styles.title}>{title}</h1>
-          <h2 className={styles.author}>BY RAPH CHENG</h2>
+          <h2 className={styles.author}>BY {author.toUpperCase()}</h2>
           <h3 className={styles.date}>{date}</h3>
           <div className={styles.text}>
             <p>Part 1</p>

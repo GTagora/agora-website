@@ -4,8 +4,8 @@ import Footer from "@/app/components/footer";
 
 export default async function Article() {
   const author = "Taylor Maerlender";
-  const credit = "Photo by someone";
-  const title = "Betweeen What Was and What WIll Be";
+  const credit = "Photo by Joshua Chung";
+  const title = "Between What Was and What Will Be";
   const date = "December 6, 2025";
 
   return (
