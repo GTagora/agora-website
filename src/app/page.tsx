@@ -255,7 +255,8 @@ export default function Home() {
             face to face.
             <br />
             <br />
-            All my love, Via
+            All my love, <br />
+            Via
           </div>
         </div>
       </div>
