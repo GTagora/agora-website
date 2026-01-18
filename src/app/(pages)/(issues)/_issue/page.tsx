@@ -12,7 +12,8 @@ const articles: Article[] = [
         image: '/issues/issue/test.png',
         genre: 'poem',
         issue: 'Water',
-        link: '/issue/article-1'
+        link: '/issue/article-1',
+        author: 'author name'
     },
     {
         id: 2,
@@ -20,7 +21,8 @@ const articles: Article[] = [
         image: '/issues/issue/test.png',
         genre: 'poem',
         issue: 'Water',
-        link: '/issue/article-2'
+        link: '/issue/article-2',
+        author: 'author name'
     }
 ]
 
