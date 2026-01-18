@@ -1,4 +1,3 @@
-import styles from "./page.module.css";
 import Image from "next/image";
 import Footer from "@/app/components/footer";
 
@@ -10,22 +9,26 @@ export default async function Article() {
 
   return (
     <div>
-      <div className={styles.main}>
-        <div className={styles.container}>
+      <div className="flex flex-col items-start pt-[140px] px-[10%] pb-60 min-h-screen bg-[var(--bg-color)] relative md:px-[20vw] md:py-[140px]">
+        <div className="mt-[100px] w-full md:mt-0">
           <Image
-            className={styles.image}
+            className="w-full h-auto object-cover md:object-contain my-5 md:my-8 md:max-h-[70vh]"
             src="/issues/25f/stars-breathing.webp"
             width={600}
             height={600}
             alt="article image"
           />
-          <p className={styles.credit}>{credit}</p>
-          <h1 className={styles.title}>{title}</h1>
-          <h2 className="font-lg font-serif font-bold">
-            BY {author.toUpperCase()}
+          <p className="text-[9pt] font-sans tracking-wide text-center opacity-70 mb-10">
+            {credit}
+          </p>
+          <h1 className="font-playfair font-medium text-[30pt] md:text-[40pt] my-5 md:my-10">
+            {title}
+          </h1>
+          <h2 className="font-cormorant font-semibold text-xl mb-1 uppercase">
+            BY {author}
           </h2>
-          <h3 className="font-lg font-serif mb-10">{date}</h3>
-          <div className="font-sm font-serif leading-7">
+          <h3 className="font-normal text-md mb-8 text-neutral-500">{date}</h3>
+          <div className="font-serif text-sm md:text-lg leading-[200%] whitespace-pre-line">
             <p>Space hums.</p>
             <p>Never empty,</p>
             <p>but breathing.</p>
@@ -80,7 +83,7 @@ export default async function Article() {
           </div>
         </div>
       </div>
-      <div className={styles.footer}>
+      <div className="w-full">
         <Footer />
       </div>
     </div>

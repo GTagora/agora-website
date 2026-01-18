@@ -10,21 +10,26 @@ export default async function Article() {
 
   return (
     <div>
-      <div className={styles.main}>
-        <div className={styles.container}>
-          {/* <iframe className={styles.video} src='VIDEO LINK HERE'/> */}
+      <div className="flex flex-col items-start pt-[140px] px-[10%] pb-60 min-h-screen bg-[var(--bg-color)] relative md:px-[20vw] md:py-[140px]">
+        <div className="mt-[100px] w-full md:mt-0">
           <Image
-            className={styles.image}
+            className="w-full h-auto object-cover md:object-contain my-3 md:max-h-[70vh]"
             src="/issues/25f/stars.webp"
             width={600}
             height={600}
             alt="article image"
           />
-          <p className={styles.credit}>{credit}</p>
-          <h1 className={styles.title}>{title}</h1>
-          <h2 className={styles.author}>BY {author.toUpperCase()}</h2>
-          <h3 className={styles.date}>{date}</h3>
-          <div className={styles.text}>
+          <p className="text-[9pt] font-sans tracking-wide text-center opacity-70 mb-10">
+            {credit}
+          </p>
+          <h1 className="font-playfair font-medium text-[30pt] md:text-[40pt] my-5 md:my-10">
+            {title}
+          </h1>
+          <h2 className="font-cormorant font-semibold text-xl mb-1 uppercase">
+            BY {author}
+          </h2>
+          <h3 className="font-normal text-md mb-8 text-neutral-500">{date}</h3>
+          <div className="font-serif text-sm md:text-lg leading-[200%] whitespace-pre-line">
             <p>
               God didn’t plant these dreams for nothing,
               <br />
@@ -34,6 +39,7 @@ export default async function Article() {
               <br />
               is a star He placed for you to reach
             </p>
+            <br />
             <p>
               He set them there when your strength was weak
               <br />
@@ -43,6 +49,7 @@ export default async function Article() {
               <br />
               would draw you to what was written
             </p>
+            <br />
             <p>
               When the climb feels like a distant sun,
               <br />
@@ -52,6 +59,7 @@ export default async function Article() {
               <br />
               was first a thought He planned for you
             </p>
+            <br />
             <p>
               So hold your dreams like constellations,
               <br />
@@ -63,6 +71,7 @@ export default async function Article() {
               <br />
               you will.
             </p>
+            <br />
             <p>
               <em>
                 Inspirations from Jeremiah 29:11, Ephesians 2:10, and Romans
@@ -72,7 +81,7 @@ export default async function Article() {
           </div>
         </div>
       </div>
-      <div className={styles.footer}>
+      <div className="w-full">
         <Footer />
       </div>
     </div>
