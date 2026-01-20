@@ -9,7 +9,7 @@ export default async function Article() {
 
   return (
     <div>
-      <div className="flex flex-col items-start pt-[140px] px-[10%] pb-60 min-h-screen bg-[var(--bg-color)] relative md:px-[20vw] md:py-[140px]">
+      <div className="flex flex-col items-start md:pt-[140px] px-[10%] pb-60 min-h-screen bg-[var(--bg-color)] relative md:px-[20vw] md:py-[140px]">
         <div className="mt-[100px] w-full md:mt-0">
           <Image
             className="w-full h-auto object-cover md:object-contain my-5 md:my-8 md:max-h-[70vh]"

@@ -1,6 +1,7 @@
-import styles from "./page.module.css";
+"use client";
 import Image from "next/image";
 import Footer from "@/app/components/footer";
+import { Reference, Footnote } from "@/app/components/buttons";
 
 export default async function Article() {
   const author = "Raphael Cheng";
@@ -10,20 +11,26 @@ export default async function Article() {
 
   return (
     <div>
-      <div className={styles.main}>
-        <div className={styles.container}>
+      <div className="flex flex-col items-start md:pt-[140px] px-[10%] pb-60 min-h-screen bg-[var(--bg-color)] relative md:px-[20vw] md:py-[140px]">
+        <div className="mt-[100px] w-full md:mt-0">
           <Image
-            className={styles.image}
+            className="w-full h-auto object-contain md:object-contain my-3 md:max-h-[70vh]"
             src="/issues/25f/infinity-is-bigger-than-you-think.webp"
             width={600}
             height={600}
             alt="article image"
           />
-          <p className={styles.credit}>{credit}</p>
-          <h1 className={styles.title}>{title}</h1>
-          <h2 className={styles.author}>BY {author.toUpperCase()}</h2>
-          <h3 className={styles.date}>{date}</h3>
-          <div className={styles.text}>
+          <p className="text-[9pt] font-sans tracking-wide text-center opacity-70 mb-10">
+            {credit}
+          </p>
+          <h1 className="font-playfair font-medium text-[30pt] md:text-[40pt] my-5 md:my-10">
+            {title}
+          </h1>
+          <h2 className="font-cormorant font-semibold text-xl mb-1 uppercase">
+            BY {author}
+          </h2>
+          <h3 className="font-normal text-md mb-8 text-neutral-500">{date}</h3>
+          <div className="font-serif text-sm md:text-lg leading-[200%] whitespace-pre-line space-y-6">
             <p>Part 1</p>
             <p>
               Numbers are a funny thing. As babies, we learn it pretty much
@@ -73,14 +80,14 @@ export default async function Article() {
             </p>
             <p>
               What about a thousand people? Does that start to sound like a lot?
-              Do you even know a thousand people? A 2008 study[1]***** estimated
-              that the average person knows about 600 people by name. That’s a
-              decent amount, but it’s not a thousand. And in the world of
-              numbers, 1000 isn’t even that much. If you’ve been to Broadway you
-              might’ve gone to the Eugene O’Neill theatre, which has a seating
-              capacity of 1066 people — and honestly, that theatre didn’t seem
-              that big to me. Yet it’s more people than the average person
-              knows!
+              Do you even know a thousand people? A 2008 study
+              <Reference number={1} /> estimated that the average person knows
+              about 600 people by name. That’s a decent amount, but it’s not a
+              thousand. And in the world of numbers, 1000 isn’t even that much.
+              If you’ve been to Broadway you might’ve gone to the Eugene O’Neill
+              theatre, which has a seating capacity of 1066 people — and
+              honestly, that theatre didn’t seem that big to me. Yet it’s more
+              people than the average person knows!
             </p>
             <p>
               Now if we’re talking big venues, maybe it’s easier to imagine the
@@ -175,8 +182,9 @@ export default async function Article() {
             <p>
               What would you consider a long time? It probably depends on the
               context, as we’re coming to see. A year? Two years? To Jacob,
-              fourteen years of labor was like nothing[2]***** (though I hope
-              you wouldn’t be as big a simp as he was).
+              fourteen years of labor was like nothing
+              <Reference number={2} /> (though I hope you wouldn’t be as big a
+              simp as he was).
             </p>
             <p>
               Or maybe I’m starting too large. An hour can seem like a long time
@@ -186,21 +194,9 @@ export default async function Article() {
               minute and it’ll feel so much longer than if you were playing a
               video game. Or that minute right after you ask out your crush, and
               you’re waiting for a response…
+              <Reference number="a" />
             </p>
-            <p>
-              <strong>Subscript A</strong>: [I want to add a little note here to
-              anyone who’s a young-earth creationist (For those of you
-              unfamiliar, YECs are those who have a literal interpretation of
-              the Bible and the creation story, placing Earth at around
-              6000-10,000 years old). Nothing but love, and I respect that you
-              have such a faithful view of the literal text of scripture. But as
-              someone who grew up loving dinosaurs, I’ll be talking about time
-              in the span of millions of years — which I think we can all agree
-              is a <em>long </em>time. Also, I <em>promise </em>that scientific
-              discoveries like these <em>do not </em>contradict what scripture
-              says — though if you are a YEC, I’m sure you’ve had that said to
-              you many times before.]
-            </p>
+
             <p>But anyways. Let’s go back in time, just a little bit.</p>
             <p>
               Archaeologists trace the emergence of human civilization to the
@@ -287,9 +283,9 @@ export default async function Article() {
               diagrams have to be to fit every planet on one page?
             </p>
             <p>
-              There’s a fun website called “If the Moon Were Only 1
-              Pixel,”[3]***** which creates an accurate scale model of our solar
-              system with Earth’s moon the size of a single pixel. For
+              There’s a fun website called “If the Moon Were Only 1 Pixel,”
+              <Reference number={3} /> which creates an accurate scale model of
+              our solar system with Earth’s moon the size of a single pixel. For
               reference, that means each pixel is about 3500 km, or as the site
               says, roughly the distance from New York to Las Vegas. The sun is
               a big yellow circle, fills up like a fourth of the screen — and
@@ -349,17 +345,7 @@ export default async function Article() {
               not even a fraction of infinity. Not a speck on a page. A number
               that is physically impossible to just <em>write out </em>is, in
               essence, the same value as 1 with respect to infinity.
-            </p>
-            <p>
-              <strong>Subscript B</strong>: [Side note — within infinity, there
-              are actually even more infinities. Kind of. We can form numbers
-              into “infinite sets” — for example, the “infinite set of all whole
-              numbers,” or “the infinite set of all real numbers” — and they
-              would have different magnitudes. The infinity that represents all
-              real numbers, is infinitely larger than the infinity that
-              represents all whole numbers. But both of them are still infinity
-              — they are already an unquantifiable amount. One is just…
-              unquantifiably more unquantifiable than the other.]
+              <Reference number="b" />
             </p>
             <p>
               But what <em>is </em>infinity?
@@ -370,13 +356,15 @@ export default async function Article() {
               limit as x approaches infinity?” You might recall it better like
               this:
             </p>
-            <p></p>
+            <p className="italic font-bold ml-8">
+              lim<sub>x→∞</sub> f(x)
+            </p>
             <p>
               Now f(x) can be any sort of function. It could be exponential, it
               could be trigonometric, it could be a simple x + 3 or a
               complicated integral. For this example, I’ll use something simple:
             </p>
-            <p></p>
+            <p className="italic font-bold ml-8">f(x) = 1/x</p>
             <p>
               You probably know just from looking at it, that the answer to the
               limit as x approaches infinity is 0. After all, one divided by
@@ -408,12 +396,13 @@ export default async function Article() {
             <p>Let me take back what I just said.</p>
             <p>
               You should know that we will never be able to fully understand an
-              infinite God. It’s not possible — he says so Himself[4]*****. I
-              mean, our greatest minds say that “if you think you understand
-              quantum mechanics, you do not understand quantum mechanics.” If we
-              can’t even comprehend something that small, how can we with
-              something so big? (That’s a joke, by the way — the statement, not
-              quantum mechanics. Quantum mechanics is no joke.)
+              infinite God. It’s not possible — he says so Himself
+              <Reference number={4} />. I mean, our greatest minds say that “if
+              you think you understand quantum mechanics, you do not understand
+              quantum mechanics.” If we can’t even comprehend something that
+              small, how can we with something so big? (That’s a joke, by the
+              way — the statement, not quantum mechanics. Quantum mechanics is
+              no joke.)
             </p>
             <p>
               However, God has <em>chosen </em>to help us understand Him,
@@ -481,8 +470,8 @@ export default async function Article() {
             </p>
             <p>
               No, it’s not. We’re called to seek <em>first </em>the Kingdom of
-              God and his righteousness[5]***** — not second, not third.{" "}
-              <em>First</em>.
+              God and his righteousness
+              <Reference number={5} /> — not second, not third. <em>First</em>.
             </p>
             <p>
               By the way, all those examples I gave — those are just the
@@ -490,10 +479,12 @@ export default async function Article() {
               often the Bible says we should be with Him?
             </p>
             <p>
-              <em>Continually</em>[6]*****.
+              <em>Continually</em>
+              <Reference number={6} />.
             </p>
             <p>
-              <em>Always</em>[7]*****.
+              <em>Always</em>
+              <Reference number={7} />.
             </p>
             <p>Is that possible? Obviously not.</p>
             <p>
@@ -526,7 +517,7 @@ export default async function Article() {
                 love for those who fear him; as far as the east is from the
                 west, so far has he removed our transgressions from us.
               </em>
-              [8]*****
+              <Reference number={8} />
             </p>
             <p>
               David gives us not one, but two unquantifiable metrics of God’s
@@ -545,16 +536,21 @@ export default async function Article() {
             </p>
             <p>
               He loves us so much that He knows the number of{" "}
-              <em>hairs on our head</em>[9]*****. He is the one who seeks us
-              out[10]*****. He is the God who leaves the ninety-nine
-              sheep[11]***** and goes to find the one lost lamb. That lamb?
-              That’s me and you.
+              <em>hairs on our head</em>
+              <Reference number={9} />. He is the one who seeks us out
+              <Reference number={10} />. He is the God who leaves the
+              ninety-nine sheep
+              <Reference number={11} /> and goes to find the one lost lamb. That
+              lamb? That’s me and you.
             </p>
             <p>
               And when does He do this? Not just when we’re lost, but all the
-              time. God is <em>always </em>by our side[12]*****, whether we’re
-              in the green pastures and still waters or in the valley of the
-              shadow of death[13]*****. <em>No matter what</em>, He is with us.
+              time. God is <em>always </em>by our side
+              <Reference number={12} />
+              *, whether we’re in the green pastures and still waters or in the
+              valley of the shadow of death
+              <Reference number={13} />
+              *. <em>No matter what</em>, He is with us.
             </p>
             <p>So you see?</p>
             <p>
@@ -568,11 +564,11 @@ export default async function Article() {
             <p>
               It’s not a matter of making more time for God. We can’t — because
               He has already made all the time to be with us. Instead, what we
-              need to do is acknowledge Him[14]*****<sup> </sup>more and more,
-              because He is always there, directing the path. And not just your
-              path and my path. Whether it’s your friend or your enemy, He is
-              there, walking with them. He is <em>always by</em>{" "}
-              <em>everyone’s </em>side.
+              need to do is acknowledge Him
+              <Reference number={14} /> more and more, because He is always
+              there, directing the path. And not just your path and my path.
+              Whether it’s your friend or your enemy, He is there, walking with
+              them. He is <em>always by</em> <em>everyone’s </em>side.
             </p>
             <p>But how?</p>
             <p>
@@ -580,7 +576,7 @@ export default async function Article() {
             </p>
             <p>
               <em>In the beginning, God created the heavens and the earth</em>
-              [15]*****.
+              <Reference number={15} />.
             </p>
             <p>
               This might be the most famous Bible verse ever. Or at least, in
@@ -591,9 +587,9 @@ export default async function Article() {
               It doesn’t say, “In the beginning, God became,” or “In the
               beginning, God arrived.” Instead, God already was. “In the
               beginning, God created.” He already was, and He was already doing.
-              Need more convincing? “In the beginning was the Word.”[16]*****
-              The Word <em>already was</em>. So how can it be a beginning, if
-              God was clearly there before that?
+              Need more convincing? “In the beginning was the Word.”
+              <Reference number={16} /> The Word <em>already was</em>. So how
+              can it be a beginning, if God was clearly there before that?
             </p>
             <p>
               Well, once again, I think this requires a bit of a perspective
@@ -603,8 +599,9 @@ export default async function Article() {
               gone — you can’t go back.
             </p>
             <p>
-              God, of course, is not constrained by time[17]*****. How do we
-              know this? Well for one thing, He’s the one who made it.
+              God, of course, is not constrained by time
+              <Reference number={17} />. How do we know this? Well for one
+              thing, He’s the one who made it.
             </p>
             <p>Don’t believe me?</p>
             <p>
@@ -615,14 +612,15 @@ export default async function Article() {
                 called Night. And there was evening and there was morning, the
                 first day.
               </em>
-              [18]*****
+              <Reference number={18} />
             </p>
             <p>
               It’s interesting because God doesn’t create the sun and the moon,
               or any of the celestial bodies for that matter, until the fourth
               day. When He makes them, He even says they will be used to
-              separate the day from the night[19]*****. So what’s the deal with
-              the light and the dark from the first day?
+              separate the day from the night
+              <Reference number={19} />. So what’s the deal with the light and
+              the dark from the first day?
             </p>
             <p>
               It’s not just light and dark God created. On the first day, God
@@ -631,11 +629,11 @@ export default async function Article() {
             </p>
             <p>
               In ancient days time was measured a bit differently than it is
-              now. After all, the sundial wasn’t around until 1500 BC[20]*****.
-              Hours weren’t a precise measure of time, because it was mostly
-              gauged off of feel. The two constants when it came to the passing
-              of time, then, were sunset and sunrise- the evening, and the
-              morning.
+              now. After all, the sundial wasn’t around until 1500 BC
+              <Reference number={20} />. Hours weren’t a precise measure of
+              time, because it was mostly gauged off of feel. The two constants
+              when it came to the passing of time, then, were sunset and
+              sunrise- the evening, and the morning.
             </p>
             <p>
               You see? On day 1, by creating day 1, God created <em>time.</em>
@@ -659,8 +657,9 @@ export default async function Article() {
               At infinity, we see the true nature of things. At infinity, the
               true nature of God is revealed — and it’s crazy because there
               isn’t a descriptor for it. As God himself says, “
-              <strong>I AM WHO I AM</strong>.”[21]***** He just… is. Not was,
-              not will be — He is.
+              <strong>I AM WHO I AM</strong>.”
+              <Reference number={21} /> He just… is. Not was, not will be — He
+              is.
             </p>
             <p>
               <strong>An Infinite Omniscience</strong>
@@ -678,15 +677,16 @@ export default async function Article() {
               understand?
             </p>
             <p>
-              It’s true — God absolutely does work[22]***** in many ways, all
-              around us. But I am hoping that by now you see how limited of a
-              perspective we have when it comes to the matters of an infinite
-              God.
+              It’s true — God absolutely does work
+              <Reference number={22} /> in many ways, all around us. But I am
+              hoping that by now you see how limited of a perspective we have
+              when it comes to the matters of an infinite God.
             </p>
             <p>
               You know the verse, “and we know that for those who love God all
               things work together for good, for those who are called according
-              to His purpose?”[23]***** It doesn’t say, “and we know that for
+              to His purpose?”
+              <Reference number={23} /> It doesn’t say, “and we know that for
               you.” It says, “those who love God.” As in, plural. Let me give an
               example.
             </p>
@@ -712,10 +712,11 @@ export default async function Article() {
               shortsightedness, or our self-centeredness, but we try to make
               sense of what God is trying to do when that is both not within our
               rights and not within our capabilities. God’s thoughts are not our
-              thoughts, and His ways are not our ways[24]*****. This is a{" "}
-              <em>good thing</em>, by the way. The depths of His wisdom and
-              knowledge are infinite — His judgements are unsearchable, His ways
-              inscrutable[25]***** — while ours? They are very much finite,
+              thoughts, and His ways are not our ways
+              <Reference number={24} />. This is a <em>good thing</em>, by the
+              way. The depths of His wisdom and knowledge are infinite — His
+              judgements are unsearchable, His ways inscrutable
+              <Reference number={25} /> — while ours? They are very much finite,
               searchable, and scrutable.
             </p>
             <p>
@@ -723,11 +724,11 @@ export default async function Article() {
               larger scale than we could ever imagine. We are a tiny being on a
               tiny planet in an immeasurably large universe — a universe that
               God has planned <em>everything </em>in. The multitudes of stars
-              and their names are by His design[26]*****, the changing of the
-              tides and seasons all according to his command — and yet we wonder
-              whether that billboard on the highway is a sign from God to ask
-              out a girl, or that person who cut you off is meant to teach you a
-              life lesson.
+              and their names are by His design
+              <Reference number={26} />, the changing of the tides and seasons
+              all according to his command — and yet we wonder whether that
+              billboard on the highway is a sign from God to ask out a girl, or
+              that person who cut you off is meant to teach you a life lesson.
             </p>
             <p>
               I’m not saying these aren’t, by the way. They might very well be
@@ -745,8 +746,9 @@ export default async function Article() {
               way past our finite window of the world and anything we could hope
               to see with our limited perspective. Sometimes, we might catch a
               glimmer of it — a dim reflection in a mirror, just a part of the
-              full picture[27]***** — and it is in those moments that we give
-              thanks to the Lord, for He is good.
+              full picture
+              <Reference number={27} /> — and it is in those moments that we
+              give thanks to the Lord, for He is good.
             </p>
             <p>
               <strong>An Infinite God</strong>
@@ -763,9 +765,11 @@ export default async function Article() {
             </p>
             <p>
               Well, He answers this in scripture — as He does all things. He
-              tells us to approach Him with confidence,[28]***** and that if we
-              seek Him with our whole heart we will find Him[29]*****. But what
-              does it mean to approach with <em>confidence</em>?
+              tells us to approach Him with confidence,
+              <Reference number={28} /> and that if we seek Him with our whole
+              heart we will find Him
+              <Reference number={29} />. But what does it mean to approach with{" "}
+              <em>confidence</em>?
             </p>
             <p>
               The Greek word used in Hebrews for confidence is{" "}
@@ -779,10 +783,10 @@ export default async function Article() {
             <p>There is one problem.</p>
             <p>
               We are not just finite, we are broken<em>.</em> All of us have
-              sinned and fallen short of the glory of God[30]*****. There should
-              not be a way for us to approach a holy, perfect God, unless we
-              were ourselves holy and perfect. And yet because of His love for
-              us, we can.
+              sinned and fallen short of the glory of God
+              <Reference number={30} />. There should not be a way for us to
+              approach a holy, perfect God, unless we were ourselves holy and
+              perfect. And yet because of His love for us, we can.
             </p>
             <p>
               We needed a bridge between the imperfect and the perfect, between
@@ -802,7 +806,8 @@ export default async function Article() {
               — to <em>infinity</em>. Somehow, we can have an intimate, personal
               relationship with the everlasting God, the Creator of the ends of
               the earth (another immeasurable description, if you think about
-              it)[31]*****. Isn’t that <em>amazing?</em>
+              it)
+              <Reference number={31} />. Isn’t that <em>amazing?</em>
             </p>
             <p>So then, what should we do?</p>
             <p>Seek him with our whole heart. That’s it.</p>
@@ -828,19 +833,21 @@ export default async function Article() {
               God is good because it doesn’t stay this way. Of course it will be
               hard sometimes. Life is life, and faith is <em>not </em>a promise
               of heaven on earth. Yet as we draw near to God, he draws near to
-              us[32]*****. The more we seek Him, the more we find Him, and the
-              more we find Him, the more we love Him (yep, I took that straight
-              out of the song). It is, in the engineer’s world, a
+              us
+              <Reference number={32} />. The more we seek Him, the more we find
+              Him, and the more we find Him, the more we love Him (yep, I took
+              that straight out of the song). It is, in the engineer’s world, a
               positive-feedback loop. The more we look to God, the more we{" "}
               <em>want </em>to look to God.
             </p>
             <p>
               It might feel like your walk with God is a struggle. Trials come,
               and life really can seem so, so hard. But it does not have to be
-              hard — Jesus says his yoke is easy, and his burden is
-              light[33]*****. It is still a yoke, don’t get me wrong. Yokes are
-              heavy things. But it is easy and it is light because yokes are not
-              meant to be held by one person. They are meant to be held by two.
+              hard — Jesus says his yoke is easy, and his burden is light
+              <Reference number={33} />. It is still a yoke, don’t get me wrong.
+              Yokes are heavy things. But it is easy and it is light because
+              yokes are not meant to be held by one person. They are meant to be
+              held by two.
             </p>
             <p>
               On one side, there’s us — the 1/4th of a second species, the one
@@ -851,9 +858,87 @@ export default async function Article() {
               And He is <strong>infinite</strong>.
             </p>
           </div>
+          <p className="font-serif font-bold text-xl mt-10">Footnotes</p>
+          <div className="font-serif text-md whitespace-pre-line space-y-2">
+            <Footnote
+              number="a"
+              text="I want to add a little note here to
+              anyone who’s a young-earth creationist (For those of you
+              unfamiliar, YECs are those who have a literal interpretation of
+              the Bible and the creation story, placing Earth at around
+              6000-10,000 years old). Nothing but love, and I respect that you
+              have such a faithful view of the literal text of scripture. But as
+              someone who grew up loving dinosaurs, I’ll be talking about time
+              in the span of millions of years — which I think we can all agree
+              is a <em>long </em>time. Also, I <em>promise </em>that scientific
+              discoveries like these <em>do not </em>contradict what scripture
+              says — though if you are a YEC, I’m sure you’ve had that said to
+              you many times before."
+            />
+            <Footnote
+              number="b"
+              text="Side note — within infinity, there
+              are actually even more infinities. Kind of. We can form numbers
+              into “infinite sets” — for example, the “infinite set of all whole
+              numbers,” or “the infinite set of all real numbers” — and they
+              would have different magnitudes. The infinity that represents all
+              real numbers, is infinitely larger than the infinity that
+              represents all whole numbers. But both of them are still infinity
+              — they are already an unquantifiable amount. One is just…
+              unquantifiably more unquantifiable than the other."
+            />
+            <Footnote
+              number={1}
+              text="www.princeton.edu/~mjs3/mccormick_salganik_zheng10.pdf"
+            />
+            <Footnote number={2} text="Genesis 29" />
+            <Footnote
+              number={3}
+              text="joshworth.com/dev/pixelspace/pixelspace_solarsystem.html"
+            />
+            <Footnote number={4} text="Ecclesiastes 3:11" />
+            <Footnote number={5} text="Matthew 6:33" />
+            <Footnote
+              number={6}
+              text="1 Chronicles 16:11, Joshua 1:8, 1 Thessalonians 5:17, Psalm 1:2"
+            />
+            <Footnote
+              number={7}
+              text="Psalm 16:8, Psalm 34:1, Psalm 62:8, Psalm 105:4"
+            />
+            <Footnote number={8} text="Psalm 103:11-12" />
+            <Footnote number={9} text="Matthew 10:30" />
+            <Footnote number={10} text="Ezekiel 34:11" />
+            <Footnote number={11} text="Luke 15:4-7" />
+            <Footnote
+              number={12}
+              text="Psalm 118:6, Deuteronomy 31:6, Isaiah 41:10"
+            />
+            <Footnote number={13} text="Psalm 23:1-4" />
+            <Footnote number={14} text="Proverbs 3:5-6" />
+            <Footnote number={15} text="Genesis 1:1" />
+            <Footnote number={16} text="John 1:1" />
+            <Footnote number={17} text="Psalm 90:4, 2 Peter 3:8" />
+            <Footnote number={18} text="Genesis 1:3-5" />
+            <Footnote number={19} text="Genesis 1:14" />
+            <Footnote number={20} text="www.cabinet.ox.ac.uk/oldest-sundials" />
+            <Footnote number={21} text="Exodus 3:14" />
+            <Footnote number={22} text="John 5:17" />
+            <Footnote number={23} text="Romans 8:28" />
+            <Footnote number={24} text="Isaiah 55:8" />
+            <Footnote number={25} text="Romans 11:33" />
+            <Footnote number={26} text="Psalm 147:4" />
+            <Footnote number={27} text="1 Corinthians 13:12" />
+            <Footnote number={28} text="Hebrews 4:16" />
+            <Footnote number={29} text="Jeremiah 29:13" />
+            <Footnote number={30} text="Romans 3:23" />
+            <Footnote number={31} text="Isaiah 40:28" />
+            <Footnote number={32} text="James 4:8" />
+            <Footnote number={33} text="Matthew 11:30" />
+          </div>
         </div>
       </div>
-      <div className={styles.footer}>
+      <div className="w-full">
         <Footer />
       </div>
     </div>
