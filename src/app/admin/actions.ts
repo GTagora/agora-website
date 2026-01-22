@@ -284,3 +284,22 @@ export async function getIssues() {
     return [];
   }
 }
+
+export async function getIssue(slug: string) {
+  try {
+    const { data, error } = await supabaseAdmin
+      .from("issues")
+      .select("*")
+      .eq("slug", slug)
+      .single();
+
+    if (error) {
+       console.error("Error fetching issue:", error);
+       return null;
+    }
+    return data;
+  } catch (e) {
+    console.error("Server API Error:", e);
+    return null;
+  }
+}
