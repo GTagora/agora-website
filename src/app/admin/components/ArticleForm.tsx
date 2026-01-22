@@ -24,71 +24,85 @@ const initialState = {
 function ActionButtons({
   isEditing,
   isPublished,
+  previewUrl,
 }: {
   isEditing: boolean;
   isPublished: boolean;
+  previewUrl?: string;
 }) {
   const { pending } = useFormStatus();
 
-  if (isPublished) {
-    return (
-      <div className="flex flex-col gap-2 w-full">
-        <button
-          type="submit"
-          name="isPublished"
-          value="on"
-          disabled={pending}
-          className="bg-black text-white px-6 py-2 rounded-md hover:bg-neutral-800 disabled:opacity-50 w-full"
-        >
-          {pending ? "Saving..." : "Save Changes"}
-        </button>
-        <button
-          type="submit"
-          name="isPublished"
-          value="off"
-          disabled={pending}
-          onClick={(e) => {
-            if (!confirm("Are you sure you want to unpublish this article?")) {
-              e.preventDefault();
-            }
-          }}
-          className="bg-yellow-50 text-yellow-700 border border-yellow-200 px-6 py-2 rounded-md hover:bg-yellow-100 disabled:opacity-50 w-full text-sm font-medium"
-        >
-          {pending ? "Unpublishing..." : "Unpublish"}
-        </button>
-      </div>
-    );
-  }
-
   return (
     <div className="flex flex-col gap-2 w-full">
-      <button
-        type="submit"
-        name="isPublished"
-        value="on"
-        disabled={pending}
-        onClick={(e) => {
-          if (
-            !confirm(
-              "Are you sure you want to publish this article immediately?",
-            )
-          ) {
-            e.preventDefault();
-          }
-        }}
-        className="bg-black text-white px-6 py-2 rounded-md hover:bg-neutral-800 disabled:opacity-50 w-full font-medium"
-      >
-        {pending ? "Publishing..." : "Publish"}
-      </button>
-      <button
-        type="submit"
-        name="isPublished"
-        value="off"
-        disabled={pending}
-        className="bg-neutral-200 text-neutral-700 px-6 py-2 rounded-md hover:bg-neutral-300 disabled:opacity-50 w-full text-sm font-medium"
-      >
-        {pending ? "Saving..." : "Save Draft"}
-      </button>
+      {previewUrl && (
+        <a
+          href={previewUrl}
+          target="_blank"
+          className="flex items-center justify-center w-full px-6 py-2 mb-2 text-sm font-medium text-neutral-600 bg-white border border-neutral-200 rounded-md hover:bg-neutral-50 hover:text-black transition-colors"
+        >
+          <Eye className="w-4 h-4 mr-2" /> Preview Page
+        </a>
+      )}
+
+      {isPublished ? (
+        <>
+          <button
+            type="submit"
+            name="isPublished"
+            value="on"
+            disabled={pending}
+            className="bg-black text-white px-6 py-2 rounded-md hover:bg-neutral-800 disabled:opacity-50 w-full"
+          >
+            {pending ? "Saving..." : "Save Changes"}
+          </button>
+          <button
+            type="submit"
+            name="isPublished"
+            value="off"
+            disabled={pending}
+            onClick={(e) => {
+              if (
+                !confirm("Are you sure you want to unpublish this article?")
+              ) {
+                e.preventDefault();
+              }
+            }}
+            className="bg-yellow-50 text-yellow-700 border border-yellow-200 px-6 py-2 rounded-md hover:bg-yellow-100 disabled:opacity-50 w-full text-sm font-medium"
+          >
+            {pending ? "Unpublishing..." : "Unpublish"}
+          </button>
+        </>
+      ) : (
+        <>
+          <button
+            type="submit"
+            name="isPublished"
+            value="on"
+            disabled={pending}
+            onClick={(e) => {
+              if (
+                !confirm(
+                  "Are you sure you want to publish this article immediately?",
+                )
+              ) {
+                e.preventDefault();
+              }
+            }}
+            className="bg-black text-white px-6 py-2 rounded-md hover:bg-neutral-800 disabled:opacity-50 w-full font-medium"
+          >
+            {pending ? "Publishing..." : "Publish"}
+          </button>
+          <button
+            type="submit"
+            name="isPublished"
+            value="off"
+            disabled={pending}
+            className="bg-neutral-200 text-neutral-700 px-6 py-2 rounded-md hover:bg-neutral-300 disabled:opacity-50 w-full text-sm font-medium"
+          >
+            {pending ? "Saving..." : "Save Draft"}
+          </button>
+        </>
+      )}
     </div>
   );
 }
@@ -429,6 +443,11 @@ export default function ArticleForm({
           <ActionButtons
             isPublished={!!initialData?.is_published}
             isEditing={!!initialData}
+            previewUrl={
+              initialData?.slug
+                ? `/${initialData.issue_slug || "blog"}/${initialData.slug}`
+                : undefined
+            }
           />
 
           {initialData?.id && (
