@@ -4,7 +4,7 @@ import { useFormState, useFormStatus } from "react-dom";
 import { submitIssue } from "../actions";
 import { useState, useRef, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
-import { Upload, FileText, Layout, Hash, BookOpen } from "lucide-react";
+import { FileText, Layout, Hash, BookOpen } from "lucide-react";
 
 const initialState = {
   message: "",

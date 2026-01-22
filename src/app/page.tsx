@@ -1,16 +1,46 @@
 import Image from "next/image";
 import Link from "next/link";
-import { HomeCard } from "./components/cards";
 import Footer from "./components/footer";
 import { getIssues, getArticles } from "@/app/admin/actions";
 import ReactMarkdown from "react-markdown";
 
 export const revalidate = 60;
 
+interface IssueSummary {
+  theme: string;
+  slug: string;
+  cover_image_url?: string;
+  letter_from_eic?: string;
+  semester?: string;
+  volume?: number;
+  issue_number?: number;
+}
+
+interface ArticleSummary {
+  id: number;
+  title: string;
+  image_url: string;
+  genre: string;
+  author: string;
+  slug: string;
+}
+
+interface MappedArticle {
+  id: number;
+  title: string;
+  image: string;
+  genre: string;
+  author: string;
+  issue: string;
+  link: string;
+}
+
 export default async function Home() {
   const issues = await getIssues();
   const validIssues =
-    issues?.filter((i: any) => i.theme !== "Blog" && i.slug !== "blog") || [];
+    issues?.filter(
+      (i: IssueSummary) => i.theme !== "Blog" && i.slug !== "blog",
+    ) || [];
   const latestIssue = validIssues.length > 0 ? validIssues[0] : null;
 
   if (!latestIssue) {
@@ -24,15 +54,17 @@ export default async function Home() {
 
   const articles = await getArticles(latestIssue.slug);
 
-  const mappedArticles = articles.map((article: any) => ({
-    id: article.id,
-    title: article.title,
-    image: article.image_url,
-    genre: article.genre,
-    author: article.author,
-    issue: latestIssue.theme,
-    link: `/${latestIssue.slug}/${article.slug}`,
-  }));
+  const mappedArticles: MappedArticle[] = articles.map(
+    (article: ArticleSummary) => ({
+      id: article.id,
+      title: article.title,
+      image: article.image_url,
+      genre: article.genre,
+      author: article.author,
+      issue: latestIssue.theme,
+      link: `/${latestIssue.slug}/${article.slug}`,
+    }),
+  );
 
   return (
     <main className="flex flex-col items-center justify-start pt-24 px-10">
@@ -93,7 +125,7 @@ export default async function Home() {
 
       {/* ARTICLES */}
       <div className="py-14 w-full lg:w-[80vw] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-8">
-        {mappedArticles.map((article: any) => (
+        {mappedArticles.map((article: MappedArticle) => (
           <Link
             key={article.id}
             href={article.link}

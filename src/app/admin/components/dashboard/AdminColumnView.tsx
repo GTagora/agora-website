@@ -10,10 +10,8 @@ import {
   deleteIssue,
 } from "../../actions";
 import {
-  Plus,
   ChevronRight,
   FileText,
-  Folder,
   Edit,
   ExternalLink,
   Globe,
@@ -23,7 +21,6 @@ import {
   Trash2,
 } from "lucide-react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 // Types
@@ -48,8 +45,6 @@ type Article = {
 };
 
 export default function AdminColumnView() {
-  const router = useRouter();
-
   // Data State
   const [issues, setIssues] = useState<Issue[]>([]);
   const [articles, setArticles] = useState<Article[]>([]);

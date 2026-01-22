@@ -5,7 +5,6 @@ import { submitArticle, deleteArticle } from "../actions";
 import { useState, useRef, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import {
-  Upload,
   FileText,
   Layout,
   Calendar,
@@ -14,7 +13,6 @@ import {
   Trash2,
   Eye,
 } from "lucide-react";
-import { useRouter } from "next/navigation";
 
 const initialState = {
   message: "",
@@ -22,11 +20,9 @@ const initialState = {
 };
 
 function ActionButtons({
-  isEditing,
   isPublished,
   previewUrl,
 }: {
-  isEditing: boolean;
   isPublished: boolean;
   previewUrl?: string;
 }) {
@@ -442,7 +438,6 @@ export default function ArticleForm({
         <div className="flex flex-col justify-end gap-2">
           <ActionButtons
             isPublished={!!initialData?.is_published}
-            isEditing={!!initialData}
             previewUrl={
               initialData?.slug
                 ? `/${initialData.issue_slug || "blog"}/${initialData.slug}`

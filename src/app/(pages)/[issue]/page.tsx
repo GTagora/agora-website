@@ -2,7 +2,7 @@ import { getIssue, getArticles } from "@/app/admin/actions";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, Clock, User } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 
 export const revalidate = 60; // Revalidate every minute
@@ -134,41 +134,50 @@ export default async function DynamicIssuePage({
           {/* Grid of Remaining Articles */}
           {standardArticles.length > 0 && (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-              {standardArticles.map((article: any) => (
-                <Link
-                  key={article.id}
-                  href={`/${params.issue}/${article.slug}`}
-                  className="group space-y-4 block"
-                >
-                  <div className="relative aspect-[3/2] w-full overflow-hidden rounded-md bg-neutral-100 shadow-sm">
-                    {article.image_url ? (
-                      <Image
-                        src={article.image_url}
-                        alt={article.title}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                    ) : (
-                      <div className="flex items-center justify-center h-full text-neutral-300">
-                        <span className="text-2xl font-serif italic">
-                          Agora
-                        </span>
-                      </div>
-                    )}
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-neutral-400 mb-2">
-                      <span>{article.genre}</span>
+              {standardArticles.map(
+                (article: {
+                  id: string;
+                  slug: string;
+                  image_url: string;
+                  title: string;
+                  genre: string;
+                  author: string;
+                }) => (
+                  <Link
+                    key={article.id}
+                    href={`/${params.issue}/${article.slug}`}
+                    className="group space-y-4 block"
+                  >
+                    <div className="relative aspect-[3/2] w-full overflow-hidden rounded-md bg-neutral-100 shadow-sm">
+                      {article.image_url ? (
+                        <Image
+                          src={article.image_url}
+                          alt={article.title}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      ) : (
+                        <div className="flex items-center justify-center h-full text-neutral-300">
+                          <span className="text-2xl font-serif italic">
+                            Agora
+                          </span>
+                        </div>
+                      )}
                     </div>
-                    <h3 className="text-2xl font-serif font-bold leading-snug group-hover:underline decoration-1 underline-offset-4 mb-2">
-                      {article.title}
-                    </h3>
-                    <p className="text-sm font-medium text-neutral-500">
-                      {article.author}
-                    </p>
-                  </div>
-                </Link>
-              ))}
+                    <div>
+                      <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-neutral-400 mb-2">
+                        <span>{article.genre}</span>
+                      </div>
+                      <h3 className="text-2xl font-serif font-bold leading-snug group-hover:underline decoration-1 underline-offset-4 mb-2">
+                        {article.title}
+                      </h3>
+                      <p className="text-sm font-medium text-neutral-500">
+                        {article.author}
+                      </p>
+                    </div>
+                  </Link>
+                ),
+              )}
             </div>
           )}
 

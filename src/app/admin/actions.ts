@@ -4,7 +4,7 @@ import { supabaseAdmin } from '@/lib/supabaseAdmin';
 import { revalidatePath } from 'next/cache';
 
 
-export async function submitArticle(prevState: any, formData: FormData) {
+export async function submitArticle(prevState: unknown, formData: FormData) {
   try {
     const id = formData.get("id") as string;
     const title = formData.get("title") as string;
@@ -32,7 +32,7 @@ export async function submitArticle(prevState: any, formData: FormData) {
       const fileName = `${slug}-${Date.now()}.${fileExt}`;
       const filePath = `${fileName}`;
 
-      const { data: uploadData, error: uploadError } =
+      const { error: uploadError } =
         await supabaseAdmin.storage
           .from("article-images")
           .upload(filePath, buffer, {
@@ -57,6 +57,7 @@ export async function submitArticle(prevState: any, formData: FormData) {
     }
 
     // 2. Prepare Payload
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const payload: any = {
       slug,
       issue_slug: issueSlug,
@@ -99,9 +100,9 @@ export async function submitArticle(prevState: any, formData: FormData) {
     if(slug) revalidatePath(`/articles/${slug}`);
     
     return { message: "Draft saved successfully!", success: true };
-  } catch (e: any) {
+  } catch (e: unknown) {
     console.error("Server Error:", e);
-    return { message: `Server error: ${e.message}`, success: false };
+    return { message: `Server error: ${(e as Error).message}`, success: false };
   }
 }
 
@@ -114,9 +115,9 @@ export async function deleteArticle(id: string) {
     
     revalidatePath('/admin');
     return { success: true, message: 'Article deleted successfully' };
-  } catch (e: any) {
+  } catch (e: unknown) {
     console.error("Delete Error:", e);
-    return { success: false, message: `Error deleting article: ${e.message}` };
+    return { success: false, message: `Error deleting article: ${(e as Error).message}` };
   }
 }
 
@@ -133,9 +134,9 @@ export async function publishIssueArticles(issueSlug: string) {
 
     revalidatePath("/admin");
     return { success: true, message: "All articles in issue published successfully" };
-  } catch (e: any) {
+  } catch (e: unknown) {
     console.error("Publish Issue Error:", e);
-    return { success: false, message: `Error publishing issue articles: ${e.message}` };
+    return { success: false, message: `Error publishing issue articles: ${(e as Error).message}` };
   }
 }
 
@@ -150,9 +151,9 @@ export async function unpublishIssueArticles(issueSlug: string) {
 
     revalidatePath("/admin");
     return { success: true, message: "All articles in issue unpublished successfully" };
-  } catch (e: any) {
+  } catch (e: unknown) {
     console.error("Unpublish Issue Error:", e);
-    return { success: false, message: `Error unpublishing issue articles: ${e.message}` };
+    return { success: false, message: `Error unpublishing issue articles: ${(e as Error).message}` };
   }
 }
 
@@ -166,9 +167,9 @@ export async function deleteIssue(slug: string) {
     
     revalidatePath('/admin');
     return { success: true, message: 'Issue deleted successfully' };
-  } catch (e: any) {
+  } catch (e: unknown) {
     console.error("Delete Issue Error:", e);
-    return { success: false, message: `Error deleting issue: ${e.message}` };
+    return { success: false, message: `Error deleting issue: ${(e as Error).message}` };
   }
 }
 
@@ -183,13 +184,13 @@ export async function updateArticleStatus(id: string, isPublished: boolean) {
     
     revalidatePath("/admin");
     return { success: true, message: `Article ${isPublished ? 'published' : 'unpublished'} successfully` };
-  } catch (e: any) {
+  } catch (e: unknown) {
     console.error("Status Update Error:", e);
-    return { success: false, message: `Error updating status: ${e.message}` };
+    return { success: false, message: `Error updating status: ${(e as Error).message}` };
   }
 }
 
-export async function submitIssue(prevState: any, formData: FormData) {
+export async function submitIssue(prevState: unknown, formData: FormData) {
   const semester = formData.get("semester") as string;
   const theme = formData.get("theme") as string;
   const slug = formData.get("slug") as string;
@@ -210,7 +211,7 @@ export async function submitIssue(prevState: any, formData: FormData) {
       const buffer = Buffer.from(arrayBuffer);
       const fileExt = coverImage.name.split(".").pop();
       const fileName = `${slug}-cover-${Date.now()}.${fileExt}`;
-      const { data: uploadData, error: uploadError } = await supabaseAdmin.storage
+      const { error: uploadError } = await supabaseAdmin.storage
         .from("article-images") 
         .upload(`covers/${fileName}`, buffer, {
           contentType: coverImage.type,
@@ -242,9 +243,9 @@ export async function submitIssue(prevState: any, formData: FormData) {
     revalidatePath("/admin");
     return { message: "Issue created successfully!", success: true };
 
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Error submitting issue:", error);
-    return { message: `Error: ${error.message}`, success: false };
+    return { message: `Error: ${(error as Error).message}`, success: false };
   }
 }
 
