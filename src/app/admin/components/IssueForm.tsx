@@ -205,8 +205,25 @@ export default function IssueForm() {
           </div>
         </div>
 
+        {/* Date Published */}
+        <div>
+          <label className="block text-sm font-medium mb-1 text-black">
+            Date Published
+          </label>
+          <input
+            name="date_published"
+            type="date"
+            className="w-full border rounded-md p-2 bg-white text-black border-gray-300"
+          />
+        </div>
+
+        {/* Submit */}
+        <div className="flex items-end">
+          <SubmitButton />
+        </div>
+
         {/* Cover Image */}
-        <div className="md:col-span-2">
+        <div className="col-span-full">
           <label className="block text-sm font-medium mb-1 text-black">
             Issue Cover
           </label>
@@ -216,11 +233,6 @@ export default function IssueForm() {
             accept="image/*"
             className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-100 hover:file:bg-gray-200 file:text-black border border-gray-300 rounded-md"
           />
-        </div>
-
-        {/* Submit */}
-        <div className="col-span-full md:col-start-4 flex items-end">
-          <SubmitButton />
         </div>
       </div>
 

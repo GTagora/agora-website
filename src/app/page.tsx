@@ -1,174 +1,49 @@
 import Image from "next/image";
-
+import Link from "next/link";
 import { HomeCard } from "./components/cards";
 import Footer from "./components/footer";
+import { getIssues, getArticles } from "@/app/admin/actions";
+import ReactMarkdown from "react-markdown";
 
-const articles = [
-  {
-    id: 1,
-    title: "guidance for a seed",
-    image: "/issues/25s/guidance-for-a-seed.webp",
-    genre: "poem",
-    author: "Lorien Cho",
-    issue: "Garden",
-    link: "/25s-garden/1-guidance-for-a-seed",
-  },
-  {
-    id: 3,
-    title: "Between the Two Gardens",
-    image: "/issues/25s/between-the-two-gardens.webp",
-    genre: "academic essay",
-    author: "Michael Pitts",
-    issue: "Garden",
-    link: "/25s-garden/3-between-the-two-gardens",
-  },
-  {
-    id: 4,
-    title: "The Perennial Plant",
-    image: "/issues/25s/the-perennial-plant.webp",
-    genre: "poem",
-    author: "Sean Kim",
-    issue: "Garden",
-    link: "/25s-garden/4-the-perennial-plant",
-  },
-  {
-    id: 5,
-    title: "Anecdote of the Crop",
-    image: "/issues/25s/anecdote-of-the-crop.webp",
-    genre: "essay",
-    author: "Daeyong Kwon",
-    issue: "Garden",
-    link: "/25s-garden/5-anecdote-of-the-crop",
-  },
-  {
-    id: 6,
-    title: "Running Out of Time",
-    image: "/issues/25s/running-out-of-time.webp",
-    genre: "essay",
-    author: "Catherine Tian",
-    issue: "Garden",
-    link: "/25s-garden/6-running-out-of-time",
-  },
-  {
-    id: 7,
-    title: "The Hoe-Ly Spirit",
-    image: "/issues/25s/the-hoe-ly-spirit.webp",
-    genre: "essay",
-    author: "Raphael Cheng",
-    issue: "Garden",
-    link: "/25s-garden/7-the-hoe-ly-spirit",
-  },
-  {
-    id: 8,
-    title: "Hiding",
-    image: "/issues/25s/hiding.webp",
-    genre: "poem",
-    author: "Simon Ruiz",
-    issue: "Garden",
-    link: "/25s-garden/8-hiding",
-  },
-  {
-    id: 9,
-    title: "Broken Vessel",
-    image: "/issues/25s/broken-vessel.webp",
-    genre: "poem",
-    author: "Joshua Chung",
-    issue: "Garden",
-    link: "/25s-garden/9-broken-vessel",
-  },
-  {
-    id: 10,
-    title: "Our Gardener",
-    image: "/issues/25s/our-gardener.webp",
-    genre: "essay",
-    author: "Lois Lee",
-    issue: "Garden",
-    link: "/25s-garden/10-our-gardener",
-  },
-  {
-    id: 11,
-    title: "His story & mine",
-    image: "/issues/25s/his-story-and-mine.webp",
-    genre: "essay",
-    author: "Olivia Hu",
-    issue: "Garden",
-    link: "/25s-garden/11-his-story-and-mine",
-  },
-  {
-    id: 2,
-    title: "The Gardener's Whisper",
-    image: "/issues/25s/the-gardeners-whisper.webp",
-    genre: "short story",
-    author: "Taylor Maerlender",
-    issue: "Garden",
-    link: "/25s-garden/2-the-gardeners-whisper",
-  },
-  {
-    id: 12,
-    title: "The Source",
-    image: "/issues/25s/the-source/14_panel.webp",
-    genre: "comic",
-    author: "Tammy Pham",
-    issue: "Garden",
-    link: "/25s-garden/12-the-source",
-  },
-  {
-    id: 13,
-    title: "Do It for the Vine",
-    image: "/issues/25s/do-it-for-the-vine.webp",
-    genre: "essay",
-    author: "Andy Ouyang",
-    issue: "Garden",
-    link: "/25s-garden/13-do-it-for-the-vine",
-  },
-  {
-    id: 14,
-    title: "Under the Sun",
-    image: "/issues/25s/under-the-sun.webp",
-    genre: "essay",
-    author: "Esther Shen",
-    issue: "Garden",
-    link: "/25s-garden/14-under-the-sun",
-  },
-  {
-    id: 15,
-    title: "Garden of Graves",
-    image: "/issues/25s/garden-of-graves.webp",
-    genre: "essay",
-    author: "Elliott Chen",
-    issue: "Garden",
-    link: "/25s/15-garden-of-graves",
-  },
-  {
-    id: 16,
-    title: "Under the Fig Tree",
-    image: "/issues/25s/under-the-fig-tree.webp",
-    genre: "poem",
-    author: "Chelsea Ekwegh",
-    issue: "Garden",
-    link: "/25s-garden/16-under-the-fig-tree",
-  },
-  {
-    id: 17,
-    title: "Eden to Gethsemane",
-    image: "/issues/25s/eden-to-gethsemane.webp",
-    genre: "essay",
-    author: "Ansley Cheng",
-    issue: "Garden",
-    link: "/25s-garden/17-eden-to-gethsemane",
-  },
-];
+export const revalidate = 60;
 
-export default function Home() {
+export default async function Home() {
+  const issues = await getIssues();
+  const validIssues =
+    issues?.filter((i: any) => i.theme !== "Blog" && i.slug !== "blog") || [];
+  const latestIssue = validIssues.length > 0 ? validIssues[0] : null;
+
+  if (!latestIssue) {
+    return (
+      <main className="flex flex-col items-center justify-center min-h-screen pt-24 px-10">
+        <h1 className="text-2xl font-bold">No issues found.</h1>
+        <p>Please check back later.</p>
+      </main>
+    );
+  }
+
+  const articles = await getArticles(latestIssue.slug);
+
+  const mappedArticles = articles.map((article: any) => ({
+    id: article.id,
+    title: article.title,
+    image: article.image_url,
+    genre: article.genre,
+    author: article.author,
+    issue: latestIssue.theme,
+    link: `/${latestIssue.slug}/${article.slug}`,
+  }));
+
   return (
     <main className="flex flex-col items-center justify-start pt-24 px-10">
+      {/* Header Logo Section */}
       <div className="flex flex-row justify-center items-center gap-5">
         <Image
           className="w-16 object-cover"
           src="/logo-black.png"
           width={400}
           height={400}
-          alt="article image"
+          alt="Agora Logo"
         />
         <p className="font-playfairsc font-bold text-black text-[40pt] md:text-[60pt] tracking-tighter">
           AGORA
@@ -182,85 +57,75 @@ export default function Home() {
 
       {/* LATEST ISSUE */}
       <div
-        className="mt-12 bg-neutralTan py-20 w-[100vw] px-14
+        className="mt-12 bg-neutralTan py-20 w-[100vw] px-8
 						lg:px-28 lg:grid lg:grid-cols-5 gap-12 lg:w-[80vw]"
       >
         <div className="col-span-2">
-          <Image
-            className="hidden lg:block w-full h-full object-cover"
-            src="/issues/25s/25s-garden-cover.webp"
-            width={400}
-            height={400}
-            alt="article image"
-          />
+          {latestIssue.cover_image_url ? (
+            <Image
+              className="hidden lg:block w-full h-full object-cover shadow-sm"
+              src={latestIssue.cover_image_url}
+              width={500}
+              height={700}
+              alt={`${latestIssue.theme} Cover`}
+            />
+          ) : (
+            <div className="hidden lg:flex w-full h-full bg-neutral-200 items-center justify-center">
+              <span className="text-neutral-400 font-serif italic text-2xl">
+                No Cover
+              </span>
+            </div>
+          )}
         </div>
         <div className="col-span-3 flex flex-col text-left">
           <p className="font-bold text-xl">LATEST ISSUE:</p>
-          <p className="font-playfair italic font-black text-[60pt] lg:text-[80pt] lg:-mt-8 -ml-3">
-            GARDEN
+          <p className="font-playfair italic font-black text-[60pt] lg:text-[80pt] -ml-3 uppercase leading-none">
+            {latestIssue.theme}
           </p>
-          <div className="pt-1 border-t-2 border-black flex flex-row justify-between">
-            <p className="font-cormorant">Dear Reader,</p>
+          <div className="pt-1 border-t-2 border-black flex flex-row justify-between mt-4">
             <p className="font-bold text-xs text-right">LETTER FROM THE EICS</p>
           </div>
-          <div className="font-cormorant">
-            <br />
-            The seasons have turned again. It’s in the rush of spring’s coming,
-            as nature swiftly and brilliantly reveals its color, as classes
-            accelerate toward a hectic close, and as the pollen haze settles
-            around us, that we bring you this fourth issue of <i>Agora</i>. In
-            whatever season you’re in, Reader, we’re so glad to share this
-            journal with you today.
-            <br />
-            <br />
-            Over the past two years, we have seen <i>Agora</i> grow: what began
-            as a mere seed — a ‘What if?’, a vision, and a leap of faith — is
-            now a promising sprout. God’s hand has been tender and faithful, and
-            this semester, we saw fruit in new writers, perspectives, and a
-            powerful momentum that pushed this issue forward. We’re endlessly
-            grateful to all who have supported this journal, from our current
-            and alumni staff to Augustine Collective to our many donors. At the
-            same time, we firmly believe that <i>Agora</i> is a living testament
-            that it’s “only God who gives the growth” (1 Corinthians 3:6). As He
-            has poured in, our staff and writers have grown and flourished, all
-            so that His many blessings may be put on full display.
-            <br />
-            <br />
-            In preparation for this publication, our staff collectively chose
-            the theme Garden, as befit the warming weather around us. Gardens at
-            any scale, from towering forests to humble plots, provide a home to
-            all sorts of plants and tiny creatures. Our individual faith walks
-            reflect a similar diversity, and yet we’re all united in one
-            ecosystem, growing toward the same source.
-            <br />
-            <br />
-            We invite you in to enjoy the beauty and freshness of His garden as
-            you spend time with these pages. Just as a garden is composed of
-            many different flora and fauna, each writer embodies an individual
-            story, voice, and reflection of God’s work and beauty. We hope that
-            this journal provides a space of physical and spiritual rest — take
-            a break, give yourself time, maybe even take this booklet outside
-            (touch grass!) as you wander through this garden with us. After all,
-            spring is here! So pause to admire His beauty, and He will surely
-            meet you, wherever your garden may be.
-            <br />
-            <br />
-            Blessings,
-            <br />
-            Olivia and Catherine
+          <div className="font-cormorant mt-4 prose prose-neutral max-w-none text-black leading-relaxed">
+            <ReactMarkdown>{latestIssue.letter_from_eic || ""}</ReactMarkdown>
           </div>
         </div>
       </div>
 
       {/* ARTICLES */}
-      <div
-        className="py-14 w-full flex flex-col gap-12
-						md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-14
-						lg:w-[80vw] lg:grid xl:grid-cols-3"
-      >
-        {articles.map((article) => {
-          return <HomeCard key={article.id} article={article} />;
-        })}
+      <div className="py-14 w-full lg:w-[80vw] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-8">
+        {mappedArticles.map((article: any) => (
+          <Link
+            key={article.id}
+            href={article.link}
+            className="group space-y-4 block text-left"
+          >
+            <div className="relative aspect-[3/2] w-full overflow-hidden rounded-md bg-neutral-100 shadow-sm">
+              {article.image ? (
+                <Image
+                  src={article.image}
+                  alt={article.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              ) : (
+                <div className="flex items-center justify-center h-full text-neutral-300">
+                  <span className="text-2xl font-serif italic">Agora</span>
+                </div>
+              )}
+            </div>
+            <div>
+              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-neutral-400 mb-2">
+                <span>{article.genre || "Article"}</span>
+              </div>
+              <h3 className="text-2xl font-serif font-bold leading-snug group-hover:underline decoration-1 underline-offset-4 mb-2 text-black">
+                {article.title}
+              </h3>
+              <p className="text-sm font-medium text-neutral-500">
+                {article.author}
+              </p>
+            </div>
+          </Link>
+        ))}
       </div>
       <Footer />
     </main>

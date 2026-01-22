@@ -233,7 +233,8 @@ export async function submitIssue(prevState: any, formData: FormData) {
        volume,
        issue_number,
        letter_from_eic,
-       cover_image_url: image_url
+       cover_image_url: image_url,
+       date_published: formData.get("date_published") as string,
     });
 
     if (dbError) throw dbError;
@@ -272,6 +273,7 @@ export async function getIssues() {
     const { data, error } = await supabaseAdmin
       .from("issues")
       .select("*")
+      .order("date_published", { ascending: false })
       .order("slug", { ascending: false });
 
     if (error) {

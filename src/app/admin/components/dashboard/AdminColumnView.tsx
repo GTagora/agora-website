@@ -190,12 +190,11 @@ export default function AdminColumnView() {
                       >
                         {article.author}
                       </span>
-                      {article.published_at && (
+                      {article.genre && (
                         <span
                           className={`text-[10px] ${selectedArticleId === article.id ? "text-blue-200" : "text-neutral-400"}`}
                         >
-                          •{" "}
-                          {new Date(article.published_at).toLocaleDateString()}
+                          • {article.genre}
                         </span>
                       )}
                     </div>
