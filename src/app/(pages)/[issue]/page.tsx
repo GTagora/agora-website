@@ -36,13 +36,13 @@ export default async function DynamicIssuePage({
   }
 
   const featuredArticle = false ? articles[0] : null;
-  const standardArticles = articles.length > 0 ? articles.slice(1) : [];
+  const standardArticles = articles; //articles.length > 0 ? articles.slice(1) : [];
 
   return (
-    <div className="min-h-screen bg-neurtal-100 text-neutral-900 font-sans pt-8 md:pt-16 pb-20">
+    <div className="min-h-screen bg-neurtal-100 text-neutral-900 font-sans pt-32 md:pt-16 pb-20">
       <div className="max-w-7xl mx-auto px-6">
         {/* Top Section: Header & Letter HBox */}
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 mb-20 lg:h-[60vh] lg:items-center">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 md:mb-20 lg:h-[60vh] lg:items-center lg:px-10 xl:px-0 text-center lg:text-left">
           {/* Left: Header & Metadata */}
           <div className="flex-1 flex flex-col justify-center space-y-6 lg:space-y-10">
             <Link
@@ -53,10 +53,10 @@ export default async function DynamicIssuePage({
             </Link>
 
             <div className="space-y-4">
-              <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif font-black tracking-tighter text-black leading-none">
+              <h1 className="text-7xl md:text-8xl lg:text-9xl font-serif font-black tracking-tighter text-black leading-none">
                 {issueData.theme}
               </h1>
-              <h2 className="text-lg md:text-lg font-medium tracking-wide text-neutral-500 font-sans uppercase">
+              <h2 className="text-md md:text-lg font-medium tracking-wide text-neutral-500 font-sans uppercase">
                 {issueData.semester} | Vol. {issueData.volume}, No.{" "}
                 {issueData.issue_number}
               </h2>
@@ -65,7 +65,7 @@ export default async function DynamicIssuePage({
 
           {/* Right: Letter from Editors (Scrolling) */}
           {issueData.letter_from_eic && (
-            <div className="flex-1 lg:max-w-xl md:mt-20 h-[400px] lg:h-full overflow-y-auto bg-neutral-50 p-8 rounded-2xl border border-neutral-100 shadow-sm scrollbar-hide">
+            <div className="flex-1 lg:max-w-xl lg:mt-20 h-[400px] lg:h-full overflow-y-auto bg-neutral-50 p-8 rounded-2xl border border-neutral-100 shadow-sm scrollbar-hide">
               <h3 className="font-serif font-bold text-2xl mb-6 text-neutral-900 border-b border-neutral-200 pb-4">
                 Letter from the Editors
               </h3>
@@ -140,7 +140,7 @@ export default async function DynamicIssuePage({
                   href={`/${params.issue}/${article.slug}`}
                   className="group space-y-4 block"
                 >
-                  <div className="relative aspect-[3/2] w-full overflow-hidden rounded-lg bg-neutral-100 shadow-sm">
+                  <div className="relative aspect-[3/2] w-full overflow-hidden rounded-md bg-neutral-100 shadow-sm">
                     {article.image_url ? (
                       <Image
                         src={article.image_url}
