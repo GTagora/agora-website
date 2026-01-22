@@ -1,14 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import ArticleForm from "./components/ArticleForm";
-import IssueForm from "./components/IssueForm";
+import AdminColumnView from "./components/dashboard/AdminColumnView";
+import Link from "next/link";
+import { Plus } from "lucide-react";
 
 export default function AdminPage() {
-  const [activeTab, setActiveTab] = useState<"article" | "issue">("article");
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-neutral-50 p-8 mt-20">
+    <div className="min-h-screen bg-neutral-50 p-8 pt-20">
       <div className="max-w-7xl mx-auto">
         <header className="mb-8 flex items-center justify-between">
           <div>
@@ -17,32 +18,45 @@ export default function AdminPage() {
             </h1>
             <p className="text-neutral-500">Manage articles and issues.</p>
           </div>
-          <div className="flex items-center gap-4">
-            <div className="flex p-1 bg-white border border-gray-200 rounded-lg">
-              <button
-                onClick={() => setActiveTab("article")}
-                className={`px-4 py-1.5 text-sm font-medium rounded-md transition-all ${activeTab === "article" ? "bg-black text-white shadow-sm" : "text-neutral-500 hover:text-black"}`}
-              >
-                Articles
-              </button>
-              <button
-                onClick={() => setActiveTab("issue")}
-                className={`px-4 py-1.5 text-sm font-medium rounded-md transition-all ${activeTab === "issue" ? "bg-black text-white shadow-sm" : "text-neutral-500 hover:text-black"}`}
-              >
-                Issues
-              </button>
-            </div>
-            <a
-              href="/"
-              className="text-sm underline text-neutral-500 hover:text-black"
+
+          <div className="relative">
+            <button
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+              className="flex items-center gap-2 px-4 py-2 bg-black text-white rounded-md hover:bg-neutral-800 transition-colors shadow-sm font-medium"
             >
-              Back to Site
-            </a>
+              <Plus className="w-4 h-4" /> Create New...
+            </button>
+
+            {dropdownOpen && (
+              <div className="absolute right-0 mt-2 w-48 bg-white border border-neutral-200 rounded-md shadow-lg py-1 z-50">
+                <Link
+                  href="/admin/new/article"
+                  className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50 hover:text-black"
+                >
+                  New Article
+                </Link>
+                <Link
+                  href="/admin/new/issue"
+                  className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50 hover:text-black"
+                >
+                  New Issue
+                </Link>
+              </div>
+            )}
           </div>
         </header>
 
-        <main>{activeTab === "article" ? <ArticleForm /> : <IssueForm />}</main>
+        <main>
+          <AdminColumnView />
+        </main>
       </div>
+      {/* Overlay to close dropdown */}
+      {dropdownOpen && (
+        <div
+          className="fixed inset-0 z-40"
+          onClick={() => setDropdownOpen(false)}
+        />
+      )}
     </div>
   );
 }

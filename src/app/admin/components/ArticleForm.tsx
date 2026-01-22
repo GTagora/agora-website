@@ -1,42 +1,149 @@
 "use client";
 
 import { useFormState, useFormStatus } from "react-dom";
-import { submitArticle } from "../actions";
+import { submitArticle, deleteArticle } from "../actions";
 import { useState, useRef, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
-import { Upload, FileText, Layout, Calendar, User, Type } from "lucide-react";
+import {
+  Upload,
+  FileText,
+  Layout,
+  Calendar,
+  User,
+  Type,
+  Trash2,
+} from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const initialState = {
   message: "",
   success: false,
 };
 
-function SubmitButton() {
+function ActionButtons({
+  isEditing,
+  isPublished,
+}: {
+  isEditing: boolean;
+  isPublished: boolean;
+}) {
   const { pending } = useFormStatus();
+
+  if (isPublished) {
+    return (
+      <div className="flex flex-col gap-2 w-full">
+        <button
+          type="submit"
+          name="isPublished"
+          value="on"
+          disabled={pending}
+          className="bg-black text-white px-6 py-2 rounded-md hover:bg-neutral-800 disabled:opacity-50 w-full"
+        >
+          {pending ? "Saving..." : "Save Changes"}
+        </button>
+        <button
+          type="submit"
+          name="isPublished"
+          value="off"
+          disabled={pending}
+          onClick={(e) => {
+            if (!confirm("Are you sure you want to unpublish this article?")) {
+              e.preventDefault();
+            }
+          }}
+          className="bg-yellow-50 text-yellow-700 border border-yellow-200 px-6 py-2 rounded-md hover:bg-yellow-100 disabled:opacity-50 w-full text-sm font-medium"
+        >
+          {pending ? "Unpublishing..." : "Unpublish"}
+        </button>
+      </div>
+    );
+  }
+
   return (
-    <button
-      type="submit"
-      disabled={pending}
-      className="bg-black text-white px-6 py-2 rounded-md hover:bg-neutral-800 disabled:opacity-50 w-full"
-    >
-      {pending ? "Submitting..." : "Upload Article"}
-    </button>
+    <div className="flex flex-col gap-2 w-full">
+      <button
+        type="submit"
+        name="isPublished"
+        value="on"
+        disabled={pending}
+        onClick={(e) => {
+          if (
+            !confirm(
+              "Are you sure you want to publish this article immediately?",
+            )
+          ) {
+            e.preventDefault();
+          }
+        }}
+        className="bg-black text-white px-6 py-2 rounded-md hover:bg-neutral-800 disabled:opacity-50 w-full font-medium"
+      >
+        {pending ? "Publishing..." : "Publish"}
+      </button>
+      <button
+        type="submit"
+        name="isPublished"
+        value="off"
+        disabled={pending}
+        className="bg-neutral-200 text-neutral-700 px-6 py-2 rounded-md hover:bg-neutral-300 disabled:opacity-50 w-full text-sm font-medium"
+      >
+        {pending ? "Saving..." : "Save Draft"}
+      </button>
+    </div>
   );
 }
 
-export default function ArticleForm() {
+type ArticleData = {
+  id?: string;
+  title: string;
+  slug: string;
+  author: string;
+  issue_slug?: string;
+  genre?: string;
+  genre_custom?: string; // Implicitly handled if genre is Custom
+  published_at?: string;
+  excerpt?: string;
+  content?: string;
+  image_url?: string;
+  image_credit?: string;
+  is_published?: boolean;
+};
+
+export default function ArticleForm({
+  initialData,
+}: {
+  initialData?: ArticleData;
+}) {
   const [state, formAction] = useFormState(submitArticle, initialState);
-  const [content, setContent] = useState("");
-  const [selectedGenre, setSelectedGenre] = useState("Academic Essay");
+  const [content, setContent] = useState(initialData?.content || "");
+
+  // Logic for initial genre selection
+  const knownGenres = [
+    "Academic Essay",
+    "Essay",
+    "Poem",
+    "Prose",
+    "Testimony",
+    "Illustration",
+    "Review",
+  ];
+  const isCustomGenre =
+    initialData?.genre && !knownGenres.includes(initialData?.genre);
+
+  const [selectedGenre, setSelectedGenre] = useState(
+    isCustomGenre ? "Custom" : initialData?.genre || "Academic Essay",
+  );
+
   const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
-    if (state.success) {
+    // Only reset on success IF we are creating new (no initialData)
+    // If we are editing, we probably want to keep the form populated or maybe show a toast
+    if (state.success && !initialData) {
       formRef.current?.reset();
       setContent("");
       setSelectedGenre("Academic Essay");
     }
-  }, [state]);
+  }, [state, initialData]);
 
   // Generate Issue Options
   const issues = [{ value: "blog", label: "Blog" }];
@@ -61,7 +168,7 @@ export default function ArticleForm() {
   issues.reverse(); // Newest first
   issues.push({ value: "custom", label: "Create New Issue..." });
 
-  const defaultIssue = issues[0]?.value || "blog";
+  const defaultIssue = initialData?.issue_slug || issues[0]?.value || "blog";
 
   return (
     <form
@@ -69,6 +176,8 @@ export default function ArticleForm() {
       action={formAction}
       className="flex flex-col gap-8 h-[calc(100vh-100px)]"
     >
+      <input type="hidden" name="id" value={initialData?.id || ""} />
+
       {/* Top Section: Metadata Grid */}
       <div className="bg-white p-6 rounded-xl border border-neutral-200 shadow-sm grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 shrink-0">
         {/* Status Message */}
@@ -91,9 +200,13 @@ export default function ArticleForm() {
               required
               name="title"
               type="text"
+              defaultValue={initialData?.title}
               className="pl-10 w-full border rounded-md p-2 bg-white text-black border-gray-300"
               placeholder="Article Title"
               onChange={(e) => {
+                // Only auto-update slug if creating new
+                if (initialData) return;
+
                 const val = e.target.value;
                 const generatedSlug = val
                   .toLowerCase()
@@ -118,7 +231,9 @@ export default function ArticleForm() {
             required
             name="slug"
             type="text"
-            className="w-full border rounded-md p-2 bg-gray-100 text-black border-gray-300"
+            defaultValue={initialData?.slug}
+            readOnly={!!initialData} // Read-only if editing
+            className={`w-full border rounded-md p-2 text-black border-gray-300 ${initialData ? "bg-gray-100" : "bg-gray-50"}`}
             placeholder="article-slug"
           />
         </div>
@@ -134,6 +249,7 @@ export default function ArticleForm() {
               required
               name="author"
               type="text"
+              defaultValue={initialData?.author}
               className="pl-10 w-full border rounded-md p-2 bg-white text-black border-gray-300"
               placeholder="Author Name"
             />
@@ -150,6 +266,11 @@ export default function ArticleForm() {
             <input
               name="date"
               type="date"
+              defaultValue={
+                initialData?.published_at
+                  ? initialData.published_at.split("T")[0]
+                  : ""
+              }
               className="pl-10 w-full border rounded-md p-2 bg-white text-black border-gray-300"
             />
           </div>
@@ -232,6 +353,7 @@ export default function ArticleForm() {
                 required
                 name="genre_custom"
                 type="text"
+                defaultValue={initialData?.genre} // Populate custom genre if editing
                 className="w-full border rounded-md p-2 bg-white text-black border-gray-300"
                 placeholder="Enter custom genre"
               />
@@ -254,10 +376,23 @@ export default function ArticleForm() {
             <input
               name="imageCredit"
               type="text"
+              defaultValue={initialData?.image_credit}
               className="w-full border rounded-md p-2 text-sm bg-white text-black border-gray-300"
               placeholder="Credit / Caption"
             />
           </div>
+          {initialData?.image_url && (
+            <p className="text-xs text-neutral-400 mt-1">
+              Current Image:{" "}
+              <a
+                href={initialData.image_url}
+                target="_blank"
+                className="underline"
+              >
+                View
+              </a>
+            </p>
+          )}
         </div>
 
         {/* Excerpt - Span 2 or 3 */}
@@ -267,6 +402,7 @@ export default function ArticleForm() {
           </label>
           <input
             name="excerpt"
+            defaultValue={initialData?.excerpt}
             className="w-full border rounded-md p-2 bg-white text-black border-gray-300"
             placeholder="Short summary..."
           />
@@ -274,18 +410,29 @@ export default function ArticleForm() {
 
         {/* Submit - Span 1 */}
         <div className="flex flex-col justify-end gap-2">
-          <div className="flex items-center gap-2 mb-2">
-            <input
-              name="isPublished"
-              type="checkbox"
-              id="pub"
-              className="w-4 h-4 accent-black bg-white border-gray-300"
-            />
-            <label htmlFor="pub" className="text-sm font-medium text-black">
-              Publish?
-            </label>
-          </div>
-          <SubmitButton />
+          <ActionButtons
+            isPublished={!!initialData?.is_published}
+            isEditing={!!initialData}
+          />
+
+          {initialData?.id && (
+            <button
+              type="button"
+              onClick={async () => {
+                if (confirm("Are you sure you want to delete this article?")) {
+                  const res = await deleteArticle(initialData.id!);
+                  if (res.success) {
+                    window.location.href = "/admin";
+                  } else {
+                    alert(res.message);
+                  }
+                }
+              }}
+              className="flex items-center justify-center gap-2 p-2 text-red-600 hover:bg-neutral-100 rounded-md border border-neutral-200 w-full text-sm font-medium mt-2"
+            >
+              <Trash2 className="w-4 h-4" /> Delete Article
+            </button>
+          )}
         </div>
       </div>
 
