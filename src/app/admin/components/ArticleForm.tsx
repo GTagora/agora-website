@@ -2,7 +2,7 @@
 
 import { useFormState, useFormStatus } from "react-dom";
 import { submitArticle } from "../actions";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import { Upload, FileText, Layout, Calendar, User, Type } from "lucide-react";
 
@@ -27,7 +27,16 @@ function SubmitButton() {
 export default function ArticleForm() {
   const [state, formAction] = useFormState(submitArticle, initialState);
   const [content, setContent] = useState("");
-  const [selectedGenre, setSelectedGenre] = useState("Essay");
+  const [selectedGenre, setSelectedGenre] = useState("Academic Essay");
+  const formRef = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    if (state.success) {
+      formRef.current?.reset();
+      setContent("");
+      setSelectedGenre("Academic Essay");
+    }
+  }, [state]);
 
   // Generate Issue Options
   const issues = [{ value: "blog", label: "Blog" }];
@@ -56,6 +65,7 @@ export default function ArticleForm() {
 
   return (
     <form
+      ref={formRef}
       action={formAction}
       className="flex flex-col gap-8 h-[calc(100vh-100px)]"
     >

@@ -2,7 +2,7 @@
 
 import { useFormState, useFormStatus } from "react-dom";
 import { submitIssue } from "../actions";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import { Upload, FileText, Layout, Hash, BookOpen } from "lucide-react";
 
@@ -27,6 +27,14 @@ function SubmitButton() {
 export default function IssueForm() {
   const [state, formAction] = useFormState(submitIssue, initialState);
   const [letter, setLetter] = useState("");
+  const formRef = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    if (state.success) {
+      formRef.current?.reset();
+      setLetter("");
+    }
+  }, [state]);
 
   // Semester generation logic
   const semesters = [];
@@ -48,6 +56,7 @@ export default function IssueForm() {
 
   return (
     <form
+      ref={formRef}
       action={formAction}
       className="flex flex-col gap-8 h-[calc(100vh-140px)]"
     >
