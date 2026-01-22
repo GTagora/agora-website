@@ -80,3 +80,61 @@ export async function submitArticle(prevState: any, formData: FormData) {
     return { message: `Server error: ${e.message}`, success: false };
   }
 }
+
+export async function submitIssue(prevState: any, formData: FormData) {
+  const semester = formData.get("semester") as string;
+  const theme = formData.get("theme") as string;
+  const slug = formData.get("slug") as string;
+  const volume = parseInt(formData.get("volume") as string);
+  const issue_number = parseInt(formData.get("issue_number") as string);
+  const letter_from_eic = formData.get("letter_from_eic") as string;
+  const coverImage = formData.get("coverImage") as File;
+
+  let image_url = null;
+
+  try {
+     if (coverImage && coverImage.size > 0) {
+      if (!coverImage.type.startsWith("image/")) {
+        return { message: "Invalid file type. Please upload an image.", success: false };
+      }
+      
+      const arrayBuffer = await coverImage.arrayBuffer();
+      const buffer = Buffer.from(arrayBuffer);
+      const fileExt = coverImage.name.split(".").pop();
+      const fileName = `${slug}-cover-${Date.now()}.${fileExt}`;
+      const { data: uploadData, error: uploadError } = await supabaseAdmin.storage
+        .from("article-images") 
+        .upload(`covers/${fileName}`, buffer, {
+          contentType: coverImage.type,
+          upsert: false,
+        });
+
+      if (uploadError) throw uploadError;
+
+      const { data: publicUrlData } = supabaseAdmin.storage
+        .from("article-images")
+        .getPublicUrl(`covers/${fileName}`);
+
+      image_url = publicUrlData.publicUrl;
+    }
+
+    const { error: dbError } = await supabaseAdmin.from("issues").upsert({
+       slug,
+       semester,
+       theme,
+       volume,
+       issue_number,
+       letter_from_eic,
+       cover_image_url: image_url
+    });
+
+    if (dbError) throw dbError;
+
+    revalidatePath("/admin");
+    return { message: "Issue created successfully!", success: true };
+
+  } catch (error: any) {
+    console.error("Error submitting issue:", error);
+    return { message: `Error: ${error.message}`, success: false };
+  }
+}
