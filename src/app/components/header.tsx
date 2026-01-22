@@ -1,120 +1,101 @@
 "use client";
-import Link from 'next/link'
-import Image from 'next/image'
-import { motion } from 'framer-motion'
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
+  return (
+    <header className="hidden md:flex fixed top-0 w-full z-40 bg-[#F5F5F5]/90 backdrop-blur-sm h-24 px-12 items-start pt-6 font-cormorant text-lg tracking-[0.1em] text-neutral-800 shadow-sm transition-all">
+      {/* Logo */}
+      <Link
+        href="/"
+        className="mr-12 shrink-0 hover:opacity-80 transition-opacity"
+      >
+        <Image
+          className="w-12 h-auto"
+          src="/logo-black-box.png"
+          width={75}
+          height={75}
+          alt="Agora logo"
+        />
+      </Link>
 
-    const itemVars= {
-        initial: {
-            opacity: 1,
-        },
-        hover: {
-            opacity: 1,
-            transition: {
-                duration: .7,
-                staggerChildren: .1,
-            }
-        },
-    }
-
-    const dropdownVars= {
-        initial: {
-            opacity: 0,
-        },
-        hover: {
-            opacity: 1,
-            y:5,
-            transition: { duration: .2 },
-        },
-    }
-
-    return (
-    <div className={"hidden md:flex flex-row w-[100%] pl-10 text-[13pt] fixed top-0 z-10 py-5 h-20 bg-[whitesmoke]"}>
-    {/* LOGO */}
-        <Link href="/">
-            <Image
-                className="w-11"
-                src="/logo-black-box.png"
-                width={75}
-                height={75}
-                alt='Agora logo'
-            />
-        </Link>
-        <div className="hidden md:flex md:flex-row pl-10 font-cormorant tracking-[.1rem]">
-
-        {/* ABOUT */}
-            <motion.div 
-                className="mt-2"
-                variants={itemVars}
-                initial="initial"
-                whileHover="hover">
-                <Link href="/about"><div className="text-left mx-6 hover:underline underline-offset-8 transition duration-200" >ABOUT</div></Link>
-
-            {/* MISSION */}
-                <Link href="/about">
-                    <motion.div 
-                        className="bg-[whitesmoke] ml-4 px-2 py-1 hover:underline underline-offset-4"
-                        variants={dropdownVars}>
-                    Mission</motion.div></Link>
-            {/* STAFF */}
-                <Link href="/about/staff">
-                    <motion.div 
-                        className="bg-[whitesmoke] ml-4 px-2 py-1 hover:underline underline-offset-4"
-                        variants={dropdownVars}>
-                    Staff</motion.div></Link>
-            </motion.div>
-
-        {/* ARCHIVE */}
-            <motion.div 
-                className="mt-2"
-                variants={itemVars}
-                initial="initial"
-                whileHover="hover">
-                <Link href="/archive"><div className="text-left mx-6 hover:underline underline-offset-8 transition duration-200" >ARCHIVE</div></Link>
-
-            {/* CURRENT ISSUE */}
-                <Link href="/">
-                    <motion.div 
-                        className="bg-[whitesmoke] ml-4 px-2 py-1 hover:underline underline-offset-4"
-                        variants={dropdownVars}>
-                    Latest Issue</motion.div></Link>
-            {/* PAST ISSUES */}
-                <Link href="/archive">
-                    <motion.div 
-                        className="bg-[whitesmoke] ml-4 px-2 py-1 hover:underline underline-offset-4"
-                        variants={dropdownVars}>
-                    Past Issues</motion.div></Link>
-            </motion.div>
-
-        {/* BLOG */}
-            <motion.div 
-                className="mt-2"
-                variants={itemVars}
-                initial="initial"
-                whileHover="hover">
-                <Link href="/blog"><div className="text-left mx-6 hover:underline underline-offset-8 transition duration-200" >BLOG</div></Link>
-            </motion.div>
-
-        {/* CONTACT */}
-            <motion.div
-                className="mt-2"
-                variants={itemVars}
-                initial="initial"
-                whileHover="hover">
-                <Link href="/contact"><div className="text-left mx-6 hover:underline underline-offset-8 transition duration-200" >CONTACT</div></Link>
-            </motion.div>
-        
-        {/* GIVE */}
-            <motion.div
-                className="mt-2"
-                variants={itemVars}
-                initial="initial"
-                whileHover="hover">
-                <Link href="/give"><div className="text-left mx-6 hover:underline underline-offset-8 transition duration-200" >GIVE</div>
-                </Link>
-            </motion.div>
-        
+      {/* Nav Menu */}
+      <div className="flex gap-10 items-start">
+        {/* ABOUT Group */}
+        <div className="group relative">
+          <Link
+            href="/about"
+            className="block py-2 hover:text-black hover:underline underline-offset-8 decoration-1 transition-all"
+          >
+            ABOUT
+          </Link>
+          {/* Dropdown */}
+          <div className="absolute top-full left-0 pt-2 opacity-0 invisible -translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out z-50">
+            <div className="bg-[#F5F5F5]/90 backdrop-blur-md shadow-sm rounded-md p-4 flex flex-col gap-2 min-w-[140px] border border-neutral-100/50">
+              <Link
+                href="/about"
+                className="text-base text-neutral-600 hover:text-black hover:underline underline-offset-4 decoration-1 transition-colors"
+              >
+                Mission
+              </Link>
+              <Link
+                href="/about/staff"
+                className="text-base text-neutral-600 hover:text-black hover:underline underline-offset-4 decoration-1 transition-colors"
+              >
+                Staff
+              </Link>
+            </div>
+          </div>
         </div>
-    </div>
-)}
+
+        {/* ARCHIVE Group */}
+        <div className="group relative">
+          <Link
+            href="/archive"
+            className="block py-2 hover:text-black hover:underline underline-offset-8 decoration-1 transition-all"
+          >
+            ARCHIVE
+          </Link>
+          <div className="absolute top-full left-0 pt-2 opacity-0 invisible -translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out z-50">
+            <div className="bg-[#F5F5F5]/90 backdrop-blur-md shadow-sm rounded-md p-4 flex flex-col gap-2 min-w-[160px] border border-neutral-100/50">
+              <Link
+                href="/#latest-issue"
+                className="text-base text-neutral-600 hover:text-black hover:underline underline-offset-4 decoration-1 transition-colors"
+              >
+                Latest Issue
+              </Link>
+              <Link
+                href="/archive"
+                className="text-base text-neutral-600 hover:text-black hover:underline underline-offset-4 decoration-1 transition-colors"
+              >
+                Past Issues
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Other Links */}
+        <Link
+          href="/blog"
+          className="block py-2 hover:text-black hover:underline underline-offset-8 decoration-1 transition-all"
+        >
+          BLOG
+        </Link>
+
+        <Link
+          href="/contact"
+          className="block py-2 hover:text-black hover:underline underline-offset-8 decoration-1 transition-all"
+        >
+          CONTACT
+        </Link>
+
+        <Link
+          href="/give"
+          className="block py-2 hover:text-black hover:underline underline-offset-8 decoration-1 transition-all"
+        >
+          GIVE
+        </Link>
+      </div>
+    </header>
+  );
+}
