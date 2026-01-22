@@ -4,7 +4,7 @@ import { ArrowLeft } from "lucide-react";
 
 export default function NewArticlePage() {
   return (
-    <div className="min-h-screen bg-neutral-50 p-8 mt-20">
+    <div className="min-h-screen bg-neutral-50 p-8 pt-20">
       <div className="max-w-7xl mx-auto">
         <div className="mb-8">
           <Link

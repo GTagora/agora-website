@@ -12,6 +12,7 @@ import {
   User,
   Type,
   Trash2,
+  Eye,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 
@@ -106,6 +107,7 @@ type ArticleData = {
   image_url?: string;
   image_credit?: string;
   is_published?: boolean;
+  custom_order?: number;
 };
 
 export default function ArticleForm({
@@ -174,7 +176,7 @@ export default function ArticleForm({
     <form
       ref={formRef}
       action={formAction}
-      className="flex flex-col gap-8 h-[calc(100vh-100px)]"
+      className="flex flex-col gap-8 h-[[calc(100vh-100px)]]"
     >
       <input type="hidden" name="id" value={initialData?.id || ""} />
 
@@ -274,6 +276,20 @@ export default function ArticleForm({
               className="pl-10 w-full border rounded-md p-2 bg-white text-black border-gray-300"
             />
           </div>
+        </div>
+
+        {/* Order */}
+        <div>
+          <label className="block text-sm font-medium mb-1 text-black">
+            Order Index
+          </label>
+          <input
+            name="custom_order"
+            type="number"
+            defaultValue={initialData?.custom_order}
+            className="w-full border rounded-md p-2 bg-white text-black border-gray-300"
+            placeholder="e.g. 1, 2, 3"
+          />
         </div>
 
         {/* Issue */}
@@ -437,7 +453,7 @@ export default function ArticleForm({
       </div>
 
       {/* Bottom Section: Editor & Preview */}
-      <div className="flex flex-col lg:flex-row gap-8 flex-1 min-h-0">
+      <div className="flex flex-col lg:flex-row gap-8 flex-1 min-h-[400px] max-h-[700px]">
         {/* Editor */}
         <div className="flex-1 flex flex-col bg-white rounded-xl border border-neutral-200 shadow-sm overflow-hidden">
           <div className="p-3 border-b border-gray-200 bg-gray-50 flex items-center justify-between">

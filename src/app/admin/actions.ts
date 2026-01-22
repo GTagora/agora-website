@@ -68,6 +68,7 @@ export async function submitArticle(prevState: any, formData: FormData) {
       content,
       image_credit: imageCredit,
       is_published: isPublished,
+      custom_order: formData.get("custom_order") ? parseInt(formData.get("custom_order") as string) : null,
     };
 
     if(imageUrl) {
@@ -97,7 +98,7 @@ export async function submitArticle(prevState: any, formData: FormData) {
     // Also revalidate the article page if it exists
     if(slug) revalidatePath(`/articles/${slug}`);
     
-    return { message: "Article submitted successfully!", success: true };
+    return { message: "Draft saved successfully!", success: true };
   } catch (e: any) {
     console.error("Server Error:", e);
     return { message: `Server error: ${e.message}`, success: false };
@@ -135,6 +136,39 @@ export async function publishIssueArticles(issueSlug: string) {
   } catch (e: any) {
     console.error("Publish Issue Error:", e);
     return { success: false, message: `Error publishing issue articles: ${e.message}` };
+  }
+}
+
+export async function unpublishIssueArticles(issueSlug: string) {
+  try {
+    const { error } = await supabaseAdmin
+      .from("articles")
+      .update({ is_published: false })
+      .eq("issue_slug", issueSlug);
+
+    if (error) throw error;
+
+    revalidatePath("/admin");
+    return { success: true, message: "All articles in issue unpublished successfully" };
+  } catch (e: any) {
+    console.error("Unpublish Issue Error:", e);
+    return { success: false, message: `Error unpublishing issue articles: ${e.message}` };
+  }
+}
+
+export async function deleteIssue(slug: string) {
+  try {
+    // 1. Delete associated articles first (to be safe if no cascade)
+    // Actually, let's just delete the issue. If it fails, we know.
+    const { error } = await supabaseAdmin.from('issues').delete().eq('slug', slug);
+    
+    if (error) throw error;
+    
+    revalidatePath('/admin');
+    return { success: true, message: 'Issue deleted successfully' };
+  } catch (e: any) {
+    console.error("Delete Issue Error:", e);
+    return { success: false, message: `Error deleting issue: ${e.message}` };
   }
 }
 
@@ -217,8 +251,9 @@ export async function getArticles(issueSlug: string) {
   try {
     const { data, error } = await supabaseAdmin
       .from("articles")
-      .select("id, title, slug, author, is_published, issue_slug, published_at")
+      .select("id, title, slug, author, is_published, issue_slug, published_at, image_url, genre, custom_order")
       .eq("issue_slug", issueSlug)
+      .order("custom_order", { ascending: true })
       .order("created_at", { ascending: false });
 
     if (error) {
@@ -237,7 +272,7 @@ export async function getIssues() {
     const { data, error } = await supabaseAdmin
       .from("issues")
       .select("*")
-      .order("created_at", { ascending: false });
+      .order("slug", { ascending: false });
 
     if (error) {
        console.error("Error fetching issues:", error);
