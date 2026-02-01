@@ -95,18 +95,14 @@ export default async function Home() {
         <div className="col-span-2">
           {latestIssue.cover_image_url ? (
             <Image
-              className="hidden lg:block w-full h-full object-cover shadow-sm"
+              className="hidden lg:block w-full h-full object-cover shadow-sm lg:max-h-[80vh]"
               src={latestIssue.cover_image_url}
               width={500}
               height={700}
               alt={`${latestIssue.theme} Cover`}
             />
           ) : (
-            <div className="hidden lg:flex w-full h-full bg-neutral-200 items-center justify-center">
-              <span className="text-neutral-400 font-serif italic text-2xl">
-                No Cover
-              </span>
-            </div>
+            <div className="hidden lg:flex w-full h-full bg-neutral-200 items-center justify-center"></div>
           )}
         </div>
         <div className="col-span-3 flex flex-col text-left">
@@ -117,7 +113,7 @@ export default async function Home() {
           <div className="pt-1 border-t-2 border-black flex flex-row justify-between mt-4">
             <p className="font-bold text-xs text-right">LETTER FROM THE EICS</p>
           </div>
-          <div className="font-cormorant mt-4 prose prose-neutral max-w-none text-black leading-relaxed">
+          <div className="font-cormorant mt-4 prose prose-neutral max-w-none text-black leading-relaxed lg:max-h-[60vh] overflow-y-auto">
             <ReactMarkdown>{latestIssue.letter_from_eic || ""}</ReactMarkdown>
           </div>
         </div>
