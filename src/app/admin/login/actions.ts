@@ -12,7 +12,7 @@ export async function login(prevState: unknown, formData: FormData) {
 
   if (password === CORRECT_PASSWORD) {
     // Set cookie
-    cookies().set('admin_session', 'true', {
+    (await cookies()).set('admin_session', 'true', {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       maxAge: 60 * 60 * 24 * 7, // 1 week
@@ -28,6 +28,6 @@ export async function login(prevState: unknown, formData: FormData) {
 }
 
 export async function logout() {
-  cookies().delete('admin_session')
+  (await cookies()).delete('admin_session')
   redirect('/admin/login')
 }

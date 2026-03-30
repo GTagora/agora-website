@@ -1,6 +1,7 @@
 "use client";
 
-import { useFormState, useFormStatus } from "react-dom";
+import { useActionState } from "react";
+import { useFormStatus } from "react-dom";
 import { submitIssue } from "../actions";
 import { useState, useRef, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
@@ -25,7 +26,7 @@ function SubmitButton() {
 }
 
 export default function IssueForm() {
-  const [state, formAction] = useFormState(submitIssue, initialState);
+  const [state, formAction] = useActionState(submitIssue, initialState);
   const [letter, setLetter] = useState("");
   const formRef = useRef<HTMLFormElement>(null);
 

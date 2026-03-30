@@ -2,6 +2,8 @@ import { supabaseAdmin } from "@/lib/supabaseAdmin";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
@@ -89,7 +91,12 @@ export default async function ArticlePage({
 
         {/* Content */}
         <article className="prose prose-lg prose-neutral max-w-none mx-auto md:mx-0 prose-headings:font-serif prose-headings:font-bold prose-p:leading-relaxed prose-a:text-black prose-a:underline hover:prose-a:text-neutral-600 prose-img:rounded-xl font-cormorant">
-          <ReactMarkdown>{article.content || ""}</ReactMarkdown>
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw]}
+          >
+            {article.content || ""}
+          </ReactMarkdown>
         </article>
 
         {/* Footer/Citation */}

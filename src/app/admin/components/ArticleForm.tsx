@@ -1,9 +1,13 @@
 "use client";
 
-import { useFormState, useFormStatus } from "react-dom";
+import { useActionState } from "react";
+import { useFormStatus } from "react-dom";
 import { submitArticle, deleteArticle } from "../actions";
 import { useState, useRef, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
+import EditorToolbar from "./EditorToolbar";
 import {
   FileText,
   Layout,
@@ -125,8 +129,9 @@ export default function ArticleForm({
 }: {
   initialData?: ArticleData;
 }) {
-  const [state, formAction] = useFormState(submitArticle, initialState);
+  const [state, formAction] = useActionState(submitArticle, initialState);
   const [content, setContent] = useState(initialData?.content || "");
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   // Logic for initial genre selection
   const knownGenres = [
@@ -475,7 +480,13 @@ export default function ArticleForm({
               <FileText className="w-4 h-4" /> Markdown Editor
             </label>
           </div>
+          <EditorToolbar
+            textareaRef={textareaRef}
+            onUpdate={setContent}
+            value={content}
+          />
           <textarea
+            ref={textareaRef}
             required
             name="content"
             className="flex-1 w-full p-4 font-mono text-sm bg-white text-black resize-none focus:outline-none"
@@ -493,7 +504,10 @@ export default function ArticleForm({
             </label>
           </div>
           <div className="flex-1 overflow-y-auto p-8 prose prose-neutral max-w-none">
-            <ReactMarkdown>
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              // rehypePlugins={[rehypeRaw]}
+            >
               {content || "*Preview will appear here...*"}
             </ReactMarkdown>
           </div>

@@ -3,6 +3,8 @@ import Link from "next/link";
 import Footer from "./components/footer";
 import { getIssues, getArticles } from "@/app/admin/actions";
 import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
 
 export const revalidate = 60;
 
@@ -114,7 +116,12 @@ export default async function Home() {
             <p className="font-bold text-xs text-right">LETTER FROM THE EICS</p>
           </div>
           <div className="font-cormorant mt-4 prose prose-neutral max-w-none text-black leading-relaxed lg:max-h-[60vh] overflow-y-auto">
-            <ReactMarkdown>{latestIssue.letter_from_eic || ""}</ReactMarkdown>
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              rehypePlugins={[rehypeRaw]}
+            >
+              {latestIssue.letter_from_eic || ""}
+            </ReactMarkdown>
           </div>
         </div>
       </div>
