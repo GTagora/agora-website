@@ -324,30 +324,30 @@ export default async function Article() {
             </p>
           </div>
         </div>
-        <div className="mt-8 leading-6">
-            <p className="mb-3 font-bold">Footnotes</p>
-            <Footnote number={1} text="The Problem of Pain, Chapter 4" />
-            <Footnote number={2} text="Matthew 5:39 ESV" />
-            <Footnote number={3} text="Matthew 5:44 ESV" />
-            <Footnote number={4} text="See Israel’s exile" />
-            <Footnote number={5} text="Genesis 19" />
-            <Footnote number={6} text="Exodus 32:29 ESV" />
-            <Footnote number={7} text="Ezekiel 5:11-12" />
-            <Footnote number={8} text="Mark 2:17" />
-            <Footnote number={9} text="Matthew 5:39" />
-            <Footnote number={10} text="Matthew 7:1" />
-            <Footnote number={11} text="Matthew 5:43" />
-            <Footnote number={12} text="John 8:11" />
-            <Footnote number={13} text="Luke 23:34" />
-            <Footnote number={14} text="Romans 12:21" />
-            <Footnote number={15} text="Acts 5" />
-            <Footnote number={16} text="1 Corinthians 11:30" />
-            <Footnote number={17} text="Luke 18:9" />
-            <Footnote number={18} text="Proverbs 25:21-22" />
-            <Footnote number={19} text="Romans 12:18 paraphrased" />
-            <Footnote number={20} text="Luke 7:47" />
-          </div>
+        <p className="font-serif font-bold text-xl mt-10">Footnotes</p>
+        <div className="font-serif text-md whitespace-pre-line space-y-2">
+          <Footnote number={1} text="The Problem of Pain, Chapter 4" />
+          <Footnote number={2} text="Matthew 5:39 ESV" />
+          <Footnote number={3} text="Matthew 5:44 ESV" />
+          <Footnote number={4} text="See Israel’s exile" />
+          <Footnote number={5} text="Genesis 19" />
+          <Footnote number={6} text="Exodus 32:29 ESV" />
+          <Footnote number={7} text="Ezekiel 5:11-12" />
+          <Footnote number={8} text="Mark 2:17" />
+          <Footnote number={9} text="Matthew 5:39" />
+          <Footnote number={10} text="Matthew 7:1" />
+          <Footnote number={11} text="Matthew 5:43" />
+          <Footnote number={12} text="John 8:11" />
+          <Footnote number={13} text="Luke 23:34" />
+          <Footnote number={14} text="Romans 12:21" />
+          <Footnote number={15} text="Acts 5" />
+          <Footnote number={16} text="1 Corinthians 11:30" />
+          <Footnote number={17} text="Luke 18:9" />
+          <Footnote number={18} text="Proverbs 25:21-22" />
+          <Footnote number={19} text="Romans 12:18 paraphrased" />
+          <Footnote number={20} text="Luke 7:47" />
         </div>
+      </div>
       <div className="w-full">
         <Footer />
       </div>
