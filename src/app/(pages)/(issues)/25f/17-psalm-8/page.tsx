@@ -47,23 +47,23 @@ export default async function Article() {
                         <br />
 
                         <p>Though we the chosen race of God</p>
-                        <p>Call not creation’s center home,</p>
+                        <p>Call not creation&rsquo;s center home,</p>
                         <p>Of no other people doth Heaven say</p>
-                        <p>“For God so loved the world”</p>
+                        <p>&ldquo;For God so loved the world&rdquo;</p>
 
                         <br />
 
                         <p>Though dark the deeds of men doth reign</p>
                         <p>And scarcely beats the heart of love</p>
                         <p>Of all mysteries most profound is this</p>
-                        <p>That Father’s love abidest still</p>
+                        <p>That Father&rsquo;s love abidest still</p>
 
                         <br />
 
                         <p>Son of dust, cease not to see</p>
                         <p>The relevance of thy relevance forever.</p>
                         <p>Though short dark days ere dust bound fate</p>
-                        <p>Sowed dust shall reap Heaven’s man!</p>
+                        <p>Sowed dust shall reap Heaven%rsquo;s man!</p>
 
                         <br />
 

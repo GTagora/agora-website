@@ -25,7 +25,7 @@ export default async function Article() {
                     <h2 className={styles.author}>BY {author.toUpperCase()}</h2>
                     <h3 className={styles.date}>{date}</h3>
                     <div className={styles.text}>
-                        <p>I’m a stranger in many spaces.</p>
+                        <p>I&rsquo;m a stranger in many spaces.</p>
                         <p>With culture, family, and friends</p>
                         <p>determining my identity for the day.</p>
                         <p>Constantly molded by people who were well meaning</p>
@@ -43,7 +43,7 @@ export default async function Article() {
                         <p>Hiding behind meaningless achievements and blind</p>
                         <p>obedience</p>
                         <p>while battling a consuming, isolating darkness.</p>
-                        <p>I just want to go back… back home.</p>
+                        <p>I just want to go back... back home.</p>
                         <p>A crisis of faith.</p>
 
                         <br />
@@ -61,10 +61,10 @@ export default async function Article() {
 
                         <br />
 
-                        <p>Why do you still call out despite everything I’ve done,</p>
+                        <p>Why do you still call out despite everything I&rsquo;ve done,</p>
                         <p>despite never responding. I know You are God,</p>
-                        <p>but there’s so much going on in the space within and around.</p>
-                        <p>How can I find You as I’m here shuffling through this crowd?</p>
+                        <p>but there&rsquo;s so much going on in the space within and around.</p>
+                        <p>How can I find You as I&rsquo;m here shuffling through this crowd?</p>
                         <p>You bring little things to memory.</p>
                         <p>The much needed vacations near the sea — His unchanging</p>
                         <p>character</p>
@@ -72,7 +72,7 @@ export default async function Article() {
                         <p>You give me everything I need but I manage to mess it up, time</p>
                         <p>and time again.</p>
                         <p>Yet in confronting all my deficiencies,</p>
-                        <p>I’ve seen how You strengthen and help me as I stumble in darkness.</p>
+                        <p>I&rsquo;ve seen how You strengthen and help me as I stumble in darkness.</p>
                         <p>How You pick me up each time I fall.</p>
                         <p>How You remind me that I’m not forgotten.</p>
 
@@ -81,14 +81,14 @@ export default async function Article() {
                         <p>Even with the way I am</p>
                         <p>You still want me to come?</p>
                         <p>the old hymn plays in my head.</p>
-                        <p>“Turn your eyes upon Jesus,”</p>
+                        <p>&ldquo;Turn your eyes upon Jesus,&rdquo;</p>
                         <p>Even though I have nothing to give,</p>
                         <p>You still paid the price —</p>
                         <p>bled and died on a cross for me —</p>
                         <p>the ultimate sacrifice.</p>
                         <p>I take my chances and lift up my head – our eyes meet.</p>
-                        <p>The taunts of the crowd don’t fade away</p>
-                        <p>“Stupid…Prostitute…Ugly…Sinner!”</p>
+                        <p>The taunts of the crowd don&rsquo;t fade away</p>
+                        <p>&ldquo;Stupid...Prostitute...Ugly...Sinner!&rdquo;</p>
                         <p>They intensify.</p>
                         <p>Defining me by my waning abilities,</p>
                         <p>calling me cruel names</p>
@@ -113,18 +113,18 @@ export default async function Article() {
 
                         <p>Each space I built and all the protests I made</p>
                         <p>though lost to time they were never lost to You.</p>
-                        <p>You kept every tear I’ve cried – every single one of them.</p>
+                        <p>You kept every tear I&rsquo;ve cried – every single one of them.</p>
                         <p>Every hair on my head – unruly as they are</p>
                         <p>You numbered them all.</p>
-                        <p>You ordered every step I’ve taken.</p>
+                        <p>You ordered every step I&rsquo;ve taken.</p>
                         <p>You watched over me before I was.</p>
                         <p>You are greater than Sunday mornings</p>
                         <p>and not limited to churches made by human hands.</p>
-                        <p>I don’t know when or how I got here</p>
-                        <p>but somehow I’m on my knees.</p>
-                        <p>I don’t hear the crowd’s cries anymore,</p>
+                        <p>I don&rsquo;t know when or how I got here</p>
+                        <p>but somehow I&rsquo;m on my knees.</p>
+                        <p>I don&rsquo;t hear the crowd&rsquo;s cries anymore,</p>
                         <p>and the tears in my eyes blur them out.</p>
-                        <p>No longer lost — I’m forgiven.</p>
+                        <p>No longer lost — I&rsquo;m forgiven.</p>
                         <p>Faith makes the way clear.</p>
 
                         <br />
