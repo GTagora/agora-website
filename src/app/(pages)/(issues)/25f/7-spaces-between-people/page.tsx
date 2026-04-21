@@ -26,39 +26,42 @@ export default async function Article() {
           <h3 className={styles.date}>{date}</h3>
           <div className={styles.text}>
             <p>
-              If you’re a regular church-goer, you’re probably familiar with
-              this unwritten yet unavoidable tradition: the post-service
-              loitering. I’ve observed this through-line at every church I’ve
-              attended, regardless of the size, denomination, or demographic
-              make-up — people <i>love</i> to loiter. <br />
+              If you&apos;re a regular church-goer, you&apos;re probably
+              familiar with this unwritten yet unavoidable tradition: the
+              post-service loitering. I&apos;ve observed this through-line at
+              every church I&apos;ve attended, regardless of the size,
+              denomination, or demographic make-up &mdash; people <i>love</i> to
+              loiter. <br />
               <br />
-              Over many years, I have grown fond of the post-service frenzy —
-              the cheerful hellos and hugs and how-are-yous scattered like
-              colorful wildflowers. Yet, I’m sure we’ve all experienced that
-              moment when all the scripted questions — what’s your name, what’s
-              your major? — run out, and a pause just a breath too long follows.
+              Over many years, I have grown fond of the post-service frenzy
+              &mdash; the cheerful hellos and hugs and how-are-yous scattered
+              like colorful wildflowers. Yet, I&apos;m sure we&apos;ve all
+              experienced that moment when all the scripted questions &mdash;
+              what&apos;s your name, what&apos;s your major? &mdash; run out,
+              and a pause just a breath too long follows.
               <br />
               <br />
               For some, these awkward moments are easy to brush off; for others
               they are stubborn memories that fester and seed dread for the next
-              social event. I admit I come to you from the latter group: I’ve
-              struggled a lot with social anxiety throughout my high school and
-              college years. Sunday mornings were steeped in a simmering
-              anxiousness — anticipation constricting my throat as we all filed
-              out of the sanctuary, hands sweaty and thoughts frantic as people
-              swarmed and coalesced in different circles. Failed interactions
-              brought a sense of defeat that bled deeply into my self-esteem,
-              and though I recognized these thought patterns as unsustainable, I
-              was stuck, unable to escape.
+              social event. I admit I come to you from the latter group:
+              I&apos;ve struggled a lot with social anxiety throughout my high
+              school and college years. Sunday mornings were steeped in a
+              simmering anxiousness &mdash; anticipation constricting my throat
+              as we all filed out of the sanctuary, hands sweaty and thoughts
+              frantic as people swarmed and coalesced in different circles.
+              Failed interactions brought a sense of defeat that bled deeply
+              into my self-esteem, and though I recognized these thought
+              patterns as unsustainable, I was stuck, unable to escape.
               <br />
               <br />
-              Think about this: there’s an undeniable shift that occurs when
-              another person enters the room. This is the space between people —
-              suddenly there are two points instead of one; there is distance
-              and potential for interaction; there is perception, sensitivity,
-              and self-consciousness. We’re newly aware of our own physicality
-              and personality in light of the person’s presence and perspective,
-              which imbues the space with significance.
+              Think about this: there&apos;s an undeniable shift that occurs
+              when another person enters the room. This is the space between
+              people &mdash; suddenly there are two points instead of one; there
+              is distance and potential for interaction; there is perception,
+              sensitivity, and self-consciousness. We&apos;re newly aware of our
+              own physicality and personality in light of the person&apos;s
+              presence and perspective, which imbues the space with
+              significance.
               <br />
               <br />I observe that these spaces exist everywhere: between
               students studying at the library, over the mugs of friends at a
@@ -77,24 +80,24 @@ export default async function Article() {
               Whether or not you find these experiences relatable, my hope is to
               bring into focus the existence of these spaces and their potential
               to facilitate love, especially for all my awkward friends out
-              there. I don’t claim to have everything figured out; if anything,
-              I’ve only been learning how much more I have to grow. But in
-              numerous highs and lows, God has taught me how to love others{" "}
-              <i>despite</i> fears and anxieties; I hope to share and encourage
-              you in that today.
+              there. I don&apos;t claim to have everything figured out; if
+              anything, I&apos;ve only been learning how much more I have to
+              grow. But in numerous highs and lows, God has taught me how to
+              love others <i>despite</i> fears and anxieties; I hope to share
+              and encourage you in that today.
             </p>
             <h3 className="font-bold text-xl mt-10 mb-4">
               I. Substantial silence
             </h3>
             <p>
-              On more occasions than I’m willing to admit, I’ve caught myself
-              hyper-fixating on the flow of a conversation, sometimes to the
-              point that I accidentally tune out what the other person is
-              saying. I’m thinking about well-timed hmm’s, appropriate facial
-              expressions, and what I’ll ask or say to fill the next pause. This
-              preoccupation stemmed from a fear of silence, and I constantly
-              worried that any awkwardness would leave a negative impression of
-              me and what I represent (e.g. my church or Christ).
+              On more occasions than I&apos;m willing to admit, I&apos;ve caught
+              myself hyper-fixating on the flow of a conversation, sometimes to
+              the point that I accidentally tune out what the other person is
+              saying. I&apos;m thinking about well-timed hmm&apos;s, appropriate
+              facial expressions, and what I&apos;ll ask or say to fill the next
+              pause. This preoccupation stemmed from a fear of silence, and I
+              constantly worried that any awkwardness would leave a negative
+              impression of me and what I represent (e.g. my church or Christ).
               <br />
               <br />
               This line of thinking, while considerate, ironically contradicted
@@ -102,17 +105,18 @@ export default async function Article() {
               build rapport. It was arguably self-indulgent too, as I worried
               more about appearing attentive than really listening to what my
               conversation partner had to say. This kind of self-focus in
-              conversation can come in many forms, whether it’s overthinking
-              that new pimple that <i>everyone</i> must be noticing or avoiding
-              genuine sharing for the sake of seeming composed and put-together.
+              conversation can come in many forms, whether it&apos;s
+              overthinking that new pimple that <i>everyone</i> must be noticing
+              or avoiding genuine sharing for the sake of seeming composed and
+              put-together.
               <br />
               <br />
               So I ask: In conversation, to what extent are you thinking about{" "}
               <i>yourself</i>, and to what extent thinking about the{" "}
-              <i>other</i>? Apostle Paul’s instruction to the Philippians comes
-              to mind, as he says, “in humility count others more significant
-              than yourselves. Let each of you look not only to his own
-              interests, but also to the interests of others.”
+              <i>other</i>? Apostle Paul&apos;s instruction to the Philippians
+              comes to mind, as he says, “in humility count others more
+              significant than yourselves. Let each of you look not only to his
+              own interests, but also to the interests of others.”
               <Reference number={1} /> With this standard in mind, I encourage
               you to examine your posture in future conversations and{" "}
               <i>insist</i> on keeping the other person at the forefront of your
@@ -124,36 +128,36 @@ export default async function Article() {
               signified awkwardness and failure, and they allowed anxieties to
               intrude and fester as we spoke. But experience has shown me that
               silences give time to think and allow for more effective,
-              meaningful conversation. I’m grateful to have learned from friends
-              who dwell deliberately in silence before speaking, to ensure the
-              truth and conviction of the words they speak.
+              meaningful conversation. I&apos;m grateful to have learned from
+              friends who dwell deliberately in silence before speaking, to
+              ensure the truth and conviction of the words they speak.
               <br />
               <br />
               Anxiousness can make our minds grow hot and our words run quickly;
-              I’d find myself leaping frantically from one topic to the next to
-              outrun any awkward silences. But I encourage you to slow down,
-              allow for pauses and thought, and see how silence invites richness
-              and authenticity into a dialogue.
+              I&apos;d find myself leaping frantically from one topic to the
+              next to outrun any awkward silences. But I encourage you to slow
+              down, allow for pauses and thought, and see how silence invites
+              richness and authenticity into a dialogue.
               <br />
               <br />
               Now, broadening the scope a bit from silences within conversation,
               we can also observe spaces that are entirely characterized by
               silence. Words are often constructive, but they can also clutter,
-              and the space between people doesn’t always have to be filled with
-              speech — that was a misconception I had to deliberately overwrite
-              in my mind. Silence allows for actions, especially in the form of
-              hospitality: “Dear children, let us not love with words or tongue
-              but with actions and in truth.”
+              and the space between people doesn&apos;t always have to be filled
+              with speech &mdash; that was a misconception I had to deliberately
+              overwrite in my mind. Silence allows for actions, especially in
+              the form of hospitality: “Dear children, let us not love with
+              words or tongue but with actions and in truth.”
               <Reference number={2} /> And this can be simple: a quiet favor, a
               cooked meal, a comforting hug.
               <br />
               <br />
-              So, consider what the other person needs in the moment — at times,
-              making conversation, especially routine small talk, is only
+              So, consider what the other person needs in the moment &mdash; at
+              times, making conversation, especially routine small talk, is only
               another tax on a long day, and silent yet amicable company is
-              preferred. At others, what’s needed is the distraction of talk, a
-              cheerful exchange of notable events from the day. Take into
-              account your needs and theirs to find the best approach; this
+              preferred. At others, what&apos;s needed is the distraction of
+              talk, a cheerful exchange of notable events from the day. Take
+              into account your needs and theirs to find the best approach; this
               posture of humility will overcome much awkwardness and discomfort.
               And whether the space is filled with words or actions or silence,
               it will be <i>substantial</i>, because it is a vehicle of your
@@ -164,9 +168,9 @@ export default async function Article() {
             </h3>
             <p>
               Now, embracing silence is a critical and nontrivial step, but we
-              must also address the conversation itself — what <i>do</i> we talk
-              about, how do we avoid awkwardness, and how can we initiate and
-              conduct deep and meaningful conversations?
+              must also address the conversation itself &mdash; what <i>do</i>{" "}
+              we talk about, how do we avoid awkwardness, and how can we
+              initiate and conduct deep and meaningful conversations?
               <br />
               <br />
               For those initial moments when we strike up a conversation, I
@@ -191,72 +195,74 @@ export default async function Article() {
               <li>
                 For planned meetups (especially one-on-ones), I sometimes
                 prepare a list of questions I might want to ask. This way, I
-                won’t be distracted by brainstorming during our conversation,
-                and it’s a good exercise to consider what I wanted to talk about
-                with this person, what they might be seeking in our
-                conversation, and how to make the time most worthwhile for both
-                of us.
+                won&apos;t be distracted by brainstorming during our
+                conversation, and it&apos;s a good exercise to consider what I
+                wanted to talk about with this person, what they might be
+                seeking in our conversation, and how to make the time most
+                worthwhile for both of us.
               </li>
             </ul>
             <br />
             <p>
               This last point (3), when taken into a spiritual context, is the
               heart of <i>prayerful preparation</i>. What is prayer, after all?
-              It’s intentional thought and a petition for someone’s well-being.
-              We consider how they are <i>really</i> doing and what they may be
-              struggling with. When we pray, we intercede and bring those
-              requests to God, knowing that He is solely sufficient to comfort,
-              heal, and redeem their pain and suffering — prayer is
-              fundamentally an act of love. As such, Apostle Paul is always
+              It&apos;s intentional thought and a petition for someone&apos;s
+              well-being. We consider how they are <i>really</i> doing and what
+              they may be struggling with. When we pray, we intercede and bring
+              those requests to God, knowing that He is solely sufficient to
+              comfort, heal, and redeem their pain and suffering &mdash; prayer
+              is fundamentally an act of love. As such, Apostle Paul is always
               praying in gratitude and joy for his fellow saints, saying “I
               remember you constantly in my prayers night and day. As I remember
               your tears, I long to see you, that I may be filled with joy.”
               <Reference number={3} /> By praying, we demonstrate our care for
               others in private and prepare our hearts to love them in public.
               Then, our next conversation is driven not by courtesy or
-              happenstance, but a sincere concern for our brother or sister’s
-              well-being.
+              happenstance, but a sincere concern for our brother or
+              sister&apos;s well-being.
               <br />
               <br />
-              I’ll add a final note on prayer requests — if you’ve been to a
-              Bible study or church gathering, you might have been asked your
-              prayer requests before. From a worldly perspective, it might seem
-              strange or inconsequential — can a few uttered words really change
-              anything in my life? But the practice of sharing prayer requests
-              isn’t merely a courtesy or Christianese for asking, “how are you?”
-              Rather, the question “how can I pray for you?” carries a genuine
-              belief that prayer has miracle-working power and can invoke divine
-              change in others’ lives. This is why Apostle James exhorts us to
-              “pray for each other so that you may be healed. The prayer of a
-              righteous person is powerful and effective.”
+              I&apos;ll add a final note on prayer requests &mdash; if
+              you&apos;ve been to a Bible study or church gathering, you might
+              have been asked your prayer requests before. From a worldly
+              perspective, it might seem strange or inconsequential &mdash; can
+              a few uttered words really change anything in my life? But the
+              practice of sharing prayer requests isn&apos;t merely a courtesy
+              or Christianese for asking, “how are you?” Rather, the question
+              “how can I pray for you?” carries a genuine belief that prayer has
+              miracle-working power and can invoke divine change in others&apos;
+              lives. This is why Apostle James exhorts us to “pray for each
+              other so that you may be healed. The prayer of a righteous person
+              is powerful and effective.”
               <Reference number={4} /> So I urge you not to neglect or downplay
               the power of prayer, but continue praying with conviction, in fear
-              of the Lord, out of love for the people of God’s kingdom.
+              of the Lord, out of love for the people of God&apos;s kingdom.
             </p>
             <h3 className="font-bold text-xl mt-10 mb-4">
               III. Welcome in worship
             </h3>
             <p>
               This last section comes more as a challenge than a word of advice.
-              I’ll be frank in asking: how often do you invite God into your
-              conversations? If we are like cups filled to the brim, what spills
-              out in our everyday interactions?
+              I&apos;ll be frank in asking: how often do you invite God into
+              your conversations? If we are like cups filled to the brim, what
+              spills out in our everyday interactions?
               <br />
               <br />
               For some of you, reflections on faith and excitement about Christ
-              come readily to your lips — I’ve been so encouraged by you! But if
-              that’s the case, I’ll probe a bit deeper — are you similarly bold
-              across all conversations with both Christian and non-Christian
-              friends? For others, our spiritual lives rarely enter our
-              conversations, especially outside religious contexts. This is
-              unsurprising: we naturally adapt to situational social norms as a
-              means of survival. It’s an unfortunate truth that faith-related
-              conversations have become a kind of social taboo, and we tend to
-              conform to “safe” conversation topics in response.
+              come readily to your lips &mdash; I&apos;ve been so encouraged by
+              you! But if that&apos;s the case, I&apos;ll probe a bit deeper
+              &mdash; are you similarly bold across all conversations with both
+              Christian and non-Christian friends? For others, our spiritual
+              lives rarely enter our conversations, especially outside religious
+              contexts. This is unsurprising: we naturally adapt to situational
+              social norms as a means of survival. It&apos;s an unfortunate
+              truth that faith-related conversations have become a kind of
+              social taboo, and we tend to conform to “safe” conversation topics
+              in response.
               <br />
               <br />
-              I return again to Apostle Paul’s teachings for instruction and
-              encouragement. He tells us to “present your bodies as a living
+              I return again to Apostle Paul&apos;s teachings for instruction
+              and encouragement. He tells us to “present your bodies as a living
               sacrifice, holy and acceptable to God, which is your spiritual
               worship. Do not be conformed to this world, but be transformed by
               the renewal of your mind.”
@@ -268,7 +274,7 @@ export default async function Article() {
               sacrifices, given up in worship to Him. If we truly fear God, then
               we <i>cannot</i> compartmentalize him to a small drawer in our
               lives or a block in our calendar. Rather, He is the entire dresser
-              that holds all part of our lives — and this includes our
+              that holds all part of our lives &mdash; and this includes our
               conversations and our daily conduct. (2) As such, we are called to
               be counter-cultural, not “conformed to this world,” and the
               transformation we are promised through Christ will empower us to
@@ -277,9 +283,9 @@ export default async function Article() {
               obey God rather than men”,
               <Reference number={6} /> and there is no higher calling than total
               worship and the dedication of our conversational spaces to Him.
-              And I’ll share a final encouragement from Apostle Peter, who says
-              it far better than I can: “Now who is there to harm you if you are
-              zealous for what is good?... Have no fear of them, nor be
+              And I&apos;ll share a final encouragement from Apostle Peter, who
+              says it far better than I can: “Now who is there to harm you if
+              you are zealous for what is good?... Have no fear of them, nor be
               troubled, but in your hearts honor Christ the Lord as holy, always
               being prepared to make a defense to anyone who asks you for a
               reason for the hope that is in you; yet do it with gentleness and
@@ -294,8 +300,8 @@ export default async function Article() {
               Bringing this into the space between people, this is my
               observation: when we approach this space with love, we begin to
               see the other person not as a stranger or a fringe acquaintance or
-              even merely fun company, but as a <i>soul</i> — suddenly, their
-              spiritual well-being comes into focus and becomes urgently
+              even merely fun company, but as a <i>soul</i> &mdash; suddenly,
+              their spiritual well-being comes into focus and becomes urgently
               important to us.
               <br />
               <br />
@@ -312,12 +318,12 @@ export default async function Article() {
               friends, navigating toward faith or spirituality is much trickier,
               especially when their attitude towards religion is unknown to us.
               Questions like “do you believe in an afterlife?” or “do you think
-              you’re a good person?” work well in an evangelistic context, but
-              in day-to-day conversation, they’re usually met with dismissal or
-              repulsion. Still, there are ways to discuss our spiritual lives
-              that are non-intrusive and more likely to inspire natural
-              intrigue. We can include church in recaps of our weekend plans,
-              because service was not just non-obligatory, but it was{" "}
+              you&apos;re a good person?” work well in an evangelistic context,
+              but in day-to-day conversation, they&apos;re usually met with
+              dismissal or repulsion. Still, there are ways to discuss our
+              spiritual lives that are non-intrusive and more likely to inspire
+              natural intrigue. We can include church in recaps of our weekend
+              plans, because service was not just non-obligatory, but it was{" "}
               <i>enjoyable</i>
               and lifegiving. We can make space to pray before meals, because
               properly honoring and thanking God for His provision is{" "}
@@ -331,10 +337,11 @@ export default async function Article() {
               moment <i>take hold</i> of the chance to speak about Him.
               Remember, there is a soul at stake; I hope there is some gravity
               to that. One of the most loving things we can do is to care for
-              others’ spiritual well-being, and there is no greater gift than
-              the good news of Christ’s healing power. Conversations are a space
-              where we can exchange these acts of love, so let us strive to
-              invite God in and turn these moments into places of worship.
+              others&apos; spiritual well-being, and there is no greater gift
+              than the good news of Christ&apos;s healing power. Conversations
+              are a space where we can exchange these acts of love, so let us
+              strive to invite God in and turn these moments into places of
+              worship.
               <br />
               <br />
               –
@@ -348,17 +355,17 @@ export default async function Article() {
               watched our senior pastor, freshly returned from a six-month
               sabbatical, greet each member with radiant joy, the image of
               fatherly love and sweet reconciliation. My eyes traveled down the
-              line of people, all former strangers, many now known to me — their
-              quirks and quips and affections like bright patches of sunlight in
-              my life.
+              line of people, all former strangers, many now known to me &mdash;
+              their quirks and quips and affections like bright patches of
+              sunlight in my life.
               <br />
               <br />
               My cup overflows.
               <Reference number={8} />
               <br />
               <br />
-              I’m always moved by this image of the early church: “they devoted
-              themselves to the apostles’ teaching and the{" "}
+              I&apos;m always moved by this image of the early church: “they
+              devoted themselves to the apostles&apos; teaching and the{" "}
               <span className="underline">fellowship</span>, to the breaking of
               bread and the prayers… All who believed were together and had all
               things in common.”
@@ -385,22 +392,22 @@ export default async function Article() {
               friends, attend classes, and share meals. Each of these encounters
               presents an opportunity to fill that space with intentionality, be
               it silence, words, or worship. This may mean stepping outside of
-              our comfort zone to talk to newcomers when we’d rather stick with
-              our comfort people, or initiating conversations about faith when
-              resistance is expected. It can be intimidating, but I urge you to
-              think of this space as a gift: it’s the arena where we see God’s
-              mighty hand at work.
+              our comfort zone to talk to newcomers when we&apos;d rather stick
+              with our comfort people, or initiating conversations about faith
+              when resistance is expected. It can be intimidating, but I urge
+              you to think of this space as a gift: it&apos;s the arena where we
+              see God&apos;s mighty hand at work.
               <br />
               <br />
-              So the next time you’re immersed in the post-church loitering
+              So the next time you&apos;re immersed in the post-church loitering
               frenzy or in other ways confronted by the space between people, I
-              pray that you see Spirit at work in these spaces. These aren’t
-              just moments of horizontal, human connection, but a space where
-              His body is being built up: “You are no longer strangers and
-              aliens, but you are fellow citizens with the saints and members of
-              the household of God, … Christ Jesus himself being the
-              cornerstone, in whom the whole structure, being joined together,
-              grows into a holy temple in the Lord.”
+              pray that you see Spirit at work in these spaces. These
+              aren&apos;t just moments of horizontal, human connection, but a
+              space where His body is being built up: “You are no longer
+              strangers and aliens, but you are fellow citizens with the saints
+              and members of the household of God, … Christ Jesus himself being
+              the cornerstone, in whom the whole structure, being joined
+              together, grows into a holy temple in the Lord.”
               <Reference number={12} />
               <br />
               <br />
