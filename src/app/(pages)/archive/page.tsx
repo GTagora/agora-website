@@ -43,6 +43,14 @@ const Card = ({ issue }: Card) => {
 
 const issues = [
   {
+    semester: "Spring 2026",
+    theme: "Ink",
+    slug: "/26s",
+    image: "/covers/26s.webp",
+    volume: 2,
+    issue: 3,
+  },
+  {
     semester: "Fall 2025",
     theme: "Space",
     slug: "/25f",

@@ -11,7 +11,7 @@ const articles = [
     image: "/issues/26s/test.png",
     genre: "Essay",
     issue: "Ink",
-    link: "/26s/article-1",
+    link: "/26s/1-ballpoint",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const articles = [
     image: "/issues/26s/test.png",
     genre: "genre",
     issue: "Ink",
-    link: "/26s/article-2",
+    link: "/26s/2-article",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function Home() {
         <div className="col-span-2">
           <Image
             className="hidden lg:block w-full h-full object-cover"
-            src="/issues/26s/test.png"
+            src="/covers/26s.webp"
             width={400}
             height={400}
             alt="article image"
@@ -69,53 +69,52 @@ export default function Home() {
             <p className="font-bold text-xs text-right">LETTER FROM THE EICS</p>
           </div>
           <div className="font-cormorant">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            tempus feugiat enim, nec condimentum neque sollicitudin eu. Morbi
-            accumsan risus elit, ut finibus sem auctor in. Orci varius natoque
-            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            Morbi elementum lacinia nibh, eu fringilla nisl. Morbi bibendum
-            egestas lectus sit amet maximus. Duis at lorem ac velit elementum
-            aliquet ac eu dolor. Fusce gravida eros vel pulvinar consectetur.
+            Welcome! It’s with great joy that we bring you the sixth issue of
+            <i>Agora</i>. Spring comes like a whirlwind each year: throughout a
+            semester of busyness and endless deadlines, we witness the seasons
+            change from brutal cold to hopeful warmth, then just like that,
+            school breaks for summer. It’s with awe and great relief that we
+            present this journal to you — God has shown his faithfulness time
+            and time again in providing for <i>Agora</i>.
             <br />
             <br />
-            Donec pharetra metus sem, quis mattis urna malesuada in. Nam elit
-            nisi, porta pharetra mauris vel, ultricies aliquam ipsum.
-            Pellentesque egestas ex vitae sem feugiat dictum. Donec aliquam elit
-            vitae mattis vulputate. Nunc vitae ultricies sapien. Sed imperdiet
-            sed lorem id condimentum. Sed ac odio lacus.
+            We’ve been blessed to see <i>Agora</i> evolve over the past three
+            years, as God brings new staff and new visions into our body. This
+            semester is a special one, as we (Olivia and Sean) gift you this
+            issue as
+            <i>Agora</i>’s old and new editors-in-chief. For me (Olivia), this
+            is a truly sweet goodbye and a final love letter to you, and for me
+            (Sean), it is a foretaste of the exciting things to come.
             <br />
             <br />
-            Ut ultrices mollis scelerisque. Fusce commodo sem eu felis cursus,
-            sit amet dapibus tortor mollis. Donec mollis neque ac odio posuere
-            accumsan. Cras dui odio, suscipit lacinia nisi nec, tincidunt porta
-            ex. Maecenas in mauris sollicitudin, viverra massa non, mollis erat.
-            Phasellus in mi eu libero tristique vestibulum. Sed nec arcu quis
-            nibh interdum condimentum. Mauris tempus in tortor ac interdum.
-            Fusce est justo, mollis ut ligula viverra, interdum tincidunt
-            lectus. Quisque ultrices pulvinar eros, vel sagittis lectus
-            tincidunt ac. Nam vitae mauris eu magna dictum hendrerit. Duis
-            blandit lorem eu nisl hendrerit ornare.
+            As a journal of Christian thought, these pages serve as a medium to
+            convey experiences and grace. We discover, here, a raw distillation
+            of thought and emotion through words and images. And so, it is with
+            great pleasure that we would like to introduce the theme of this
+            semester: Ink.
             <br />
             <br />
-            Maecenas urna arcu, vulputate sit amet elit ut, interdum feugiat
-            ligula. Nulla facilisi. In gravida molestie magna, a lacinia nisi
-            lobortis id. Mauris sollicitudin congue neque, id fringilla magna
-            euismod sed. Nulla facilisis in nibh at mattis. Suspendisse augue
-            tellus, pulvinar ut pellentesque sit amet, elementum at ante. Aenean
-            eleifend, tortor sit amet bibendum lacinia, purus enim mattis sem,
-            id laoreet elit mi vel orci.
+            Ink is used to record, to remember, to express. It persists beyond
+            time and human fickleness, allowing us to see glimpses of who we
+            used to be and how we have changed. Its permanence echoes the stain
+            of everpresent sin, resistant to our efforts to erase it. At the
+            same time, ink embodies the steadfastness of God’s word, which forms
+            the foundation of our faith throughout eternity.
             <br />
             <br />
-            Integer nulla tellus, posuere a turpis eget, eleifend pellentesque
-            ipsum. Nunc non interdum lorem, vel pulvinar ex. Aliquam erat
-            volutpat. Duis suscipit at libero eu maximus. Aenean in risus
-            venenatis, consectetur urna ut, dapibus erat. Pellentesque dignissim
-            blandit augue. Aenean et risus vel erat dapibus tempus id convallis
-            dui. Sed tempus nulla non velit volutpat, euismod vulputate nisl
-            placerat. Praesent accumsan vel nunc ac vulputate.
+            Through the metaphor of ink, our writers have crystalized the
+            stories they hold and the marks they bear, offering up an
+            interpretation of what <i>Ink</i> means to them. Every piece is
+            unique, a reflection of the author’s varying walks in faith, but
+            they all come together to testify of God’s grace in our lives.
             <br />
             <br />
-            Yours in Christ,
+            So, as you flip through these pages, we invite you to take a moment
+            of rest. We hope these pieces bring comfort and peace, questions and
+            resolutions to the ways He is moving in your life. We humbly present
+            these works as an offering to you, dear Reader, for you too are an
+            artwork of the greatest Creator of all. May grace and blessings be
+            with you! Yours in Christ,
             <br />
             Olivia and Sean
           </div>
