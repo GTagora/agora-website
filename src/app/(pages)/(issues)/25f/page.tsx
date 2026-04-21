@@ -1,4 +1,3 @@
-import styles from "./page.module.css";
 import { ArticleCard } from "@/app/components/cards";
 import { IssuuButton } from "@/app/components/buttons";
 import Footer from "@/app/components/footer";
@@ -165,21 +164,19 @@ export default async function Issue() {
   const volume = 3;
   const issue = 1;
   const semester = "Fall 2025";
-  const theme = "Space";
+  const theme = "SPACE";
   const issuu = "";
 
   return (
     <main className="flex flex-col items-center justify-start pt-24 mx-auto px-[25%] lg:px-[30%]">
-      <h1>{theme}</h1>
-      <h5>
-        {semester.toUpperCase()} | VOL. {volume}, NO. {issue}
+      <h1 className="text-[7rem] font-bold font-playfair italic">{theme}</h1>
+      <h5 className="font-inter tracking-widest">
+        {semester.toUpperCase()} | VOL. {volume} NO. {issue}
       </h5>
       {issuu ? <IssuuButton link={issuu} /> : null}
       <div className="">
-        <div className="">
-          <h3 className="font-ebgaramond mt-8 mb-5">
-            Letter from the Editor-in-Chief
-          </h3>
+        <div className="mx-20 my-10 bg-neutral-50 border shadow-md rounded-xl px-20 py-12 font-ebgaramond">
+          <h3 className="font-ebgaramond mb-5">Dear Reader,</h3>
           <div>
             I’m overjoyed to invite you into this fifth issue of <i>Agora</i> —
             it has been such a blessing to see this journal grow, both
