@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import Footer from "@/app/components/footer";
 import { Reference, Footnote } from "@/app/components/buttons";

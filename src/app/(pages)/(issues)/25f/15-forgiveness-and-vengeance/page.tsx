@@ -228,15 +228,15 @@ export default async function Article() {
             <p>
               Let’s step through some points I made in the previous section with
               this idea:
-              <ul>
-                <li>It is not the healthy that need a doctor, but the sick</li>
-                <li>Judge not lest you be judged/turn the other cheek</li>
-                <li>
-                  God’s grace through Jesus’s sacrifice is how we ought to
-                  overcome evil with good
-                </li>
-              </ul>
             </p>
+            <ul className="ml-10 list-disc">
+              <li>It is not the healthy that need a doctor, but the sick</li>
+              <li>Judge not lest you be judged/turn the other cheek</li>
+              <li>
+                God’s grace through Jesus’s sacrifice is how we ought to
+                overcome evil with good
+              </li>
+            </ul>
             <br />
             <p>
               First, let us imagine a patient who is morbidly obese. If the
