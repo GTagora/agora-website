@@ -13,16 +13,16 @@ interface ArticleCard {
 }
 
 interface HomeCard {
-    article: {
-      id: number;
-      title: string;
-      image: string;
-      genre: string;
-      author: string;
-      issue: string;
-      link: string;
-    };
-  }
+  article: {
+    id: number;
+    title: string;
+    image: string;
+    genre: string;
+    author: string;
+    issue: string;
+    link: string;
+  };
+}
 
 export function ArticleCard({ article }: ArticleCard) {
   const image = article.image;
@@ -55,24 +55,26 @@ export function ArticleCard({ article }: ArticleCard) {
 }
 
 export function HomeCard({ article }: HomeCard) {
-    return (
-        <Link href={article.link}>
-            <div className="w-full flex flex-col overflow-hidden">
-                <Image
-                    className="w-full h-[300pt] md:h-[350pt] object-cover"
-                    src={article.image ? article.image : "/test.jpg"}
-                    width={400}
-                    height={300}
-                    alt="article image"
-                    />
-                <div>
-                    <p className="font-playfair text-2xl font-bold mt-2">{article.title}</p>
-                    <div className="mt-1 font-[550] text-sm flex flex-flow justify-between">
-                        <p>{article.author.toUpperCase()}</p>
-                        <p>{article.genre.toUpperCase()}</p>
-                    </div>
-                </div>
-            </div>
-        </Link>
-    );
+  return (
+    <Link href={article.link}>
+      <div className="w-full flex flex-col overflow-hidden">
+        <Image
+          className="w-full h-[300pt] md:h-[350pt] object-cover"
+          src={article.image ? article.image : "/test.jpg"}
+          width={400}
+          height={300}
+          alt="article image"
+        />
+        <div>
+          <p className="font-playfair text-2xl font-bold mt-2">
+            {article.title}
+          </p>
+          <div className="mt-1 font-[550] text-sm flex flex-flow justify-between">
+            <p>{article.author.toUpperCase()}</p>
+            <p>{article.genre.toUpperCase()}</p>
+          </div>
+        </div>
+      </div>
+    </Link>
+  );
 }

@@ -47,7 +47,7 @@ export default function Home() {
 
       {/* LATEST ISSUE */}
       <div
-        className="mt-12 bg-neutralTan py-20 w-[100vw] px-14
+        className="mt-12 bg-neutral-50 py-20 w-[100vw] px-14 rounded-2xl
 						lg:px-28 lg:grid lg:grid-cols-5 gap-12 lg:w-[80vw]"
       >
         <div className="col-span-2">

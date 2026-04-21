@@ -1,13 +1,14 @@
-import styles from './page.module.css'
-import { ArticleCard } from '@/app/components/cards';
-import { IssuuButton } from '@/app/components/buttons';
-import Footer from '@/app/components/footer';
-import { Article } from '@/app/types/types';
+import styles from "./page.module.css";
+import { ArticleCard } from "@/app/components/cards";
+import { IssuuButton } from "@/app/components/buttons";
+import Footer from "@/app/components/footer";
+import { Article } from "@/app/types/types";
 
 const articles = [
   {
     id: 3,
     title: "Canyon",
+    author: "Catherine Tian",
     image: "/issues/24f-water/canyon.webp",
     genre: "poem",
     issue: "Water",
@@ -16,6 +17,7 @@ const articles = [
   {
     id: 1,
     title: "On Tempests and Trials",
+    author: "Katherine Leasure",
     image: "/issues/24f-water/on-tempests-and-trials.webp",
     genre: "personal essay",
     issue: "Water",
@@ -24,6 +26,7 @@ const articles = [
   {
     id: 5,
     title: "Sometimes I Feel Just Like A Fish",
+    author: "Sean Kim",
     image: "/issues/24f-water/sometimes-i-feel-just-like-a-fish.webp",
     genre: "personal essay",
     issue: "Water",
@@ -32,6 +35,7 @@ const articles = [
   {
     id: 2,
     title: "The Donkey and the Lake",
+    author: "Elliott Chen",
     image: "/issues/24f-water/the-donkey-and-the-lake.webp",
     genre: "poem",
     issue: "Water",
@@ -40,6 +44,7 @@ const articles = [
   {
     id: 4,
     title: "who i am",
+    author: "Ansley Cheng",
     image: "/issues/24f-water/who-i-am.webp",
     genre: "poem",
     issue: "Water",
@@ -101,8 +106,9 @@ export default async function Issue() {
           </div>
         </div>
         <div className={styles.articlesContainer}>
-            {articles && articles.map((item: Article) => (
-                <ArticleCard key={item.id} article={item}></ArticleCard>
+          {articles &&
+            articles.map((item: Article) => (
+              <ArticleCard key={item.id} article={item}></ArticleCard>
             ))}
         </div>
       </div>

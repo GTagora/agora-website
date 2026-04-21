@@ -8,6 +8,7 @@ const articles = [
   {
     id: 1,
     title: "For a daisy to bloom, He is the source.",
+    author: "Shirley Lin",
     image: "/issues/24s-cycles/shirley.png",
     genre: "poem",
     issue: "Cycles",
@@ -16,6 +17,7 @@ const articles = [
   {
     id: 2,
     title: "Hey God, Can I Get a Girlfriend?",
+    author: "Raphael Cheng",
     image: "/issues/24s-cycles/raph.jpg",
     genre: "personal essay",
     issue: "Cycles",
@@ -24,6 +26,7 @@ const articles = [
   {
     id: 3,
     title: "If Grace is an Ocean",
+    author: "Esther Shen",
     image: "/issues/24s-cycles/esther.jpg",
     genre: "short story",
     issue: "Cycles",
@@ -32,6 +35,7 @@ const articles = [
   {
     id: 4,
     title: "Journey of the Broken",
+    author: "Joshua Park",
     image: "/issues/24s-cycles/jp.png",
     genre: "poem",
     issue: "Cycles",
@@ -40,6 +44,7 @@ const articles = [
   {
     id: 5,
     title: "Slaying Ouroboros",
+    author: "Elliott Chen",
     image: "/issues/24s-cycles/elliott.JPG",
     genre: "academic essay",
     issue: "Cycles",
@@ -48,6 +53,7 @@ const articles = [
   {
     id: 6,
     title: "Without you...",
+    author: "Simon Ruiz",
     image: "/issues/24s-cycles/simon.png",
     genre: "poem",
     issue: "Cycles",
@@ -56,6 +62,7 @@ const articles = [
   {
     id: 7,
     title: "sanctification, and why i don’t like the dishwasher",
+    author: "Chris Moon",
     image: "/issues/24s-cycles/chris.jpg",
     genre: "personal essay",
     issue: "Cycles",
@@ -64,6 +71,7 @@ const articles = [
   {
     id: 8,
     title: "Adactylidium",
+    author: "Catherine Tian",
     image: "/issues/24s-cycles/catherine.png",
     genre: "personal essay",
     issue: "Cycles",
