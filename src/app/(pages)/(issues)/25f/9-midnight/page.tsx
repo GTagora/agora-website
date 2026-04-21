@@ -137,7 +137,10 @@ export default async function Article() {
                 overcome it.” - John 1:5
               </em>
             </p>
-            <Footnote number={1} text="Psalm 42:5" />
+            <p className="font-serif font-bold text-xl mt-10">Footnotes</p>
+            <div className="font-serif text-md whitespace-pre-line space-y-2">
+              <Footnote number={1} text="Psalm 42:5" />
+            </div>
           </div>
         </div>
       </div>
