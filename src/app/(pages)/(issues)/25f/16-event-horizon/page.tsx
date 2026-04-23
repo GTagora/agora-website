@@ -6,7 +6,7 @@ import Footer from '@/app/components/footer'
 
 export default async function Article() {
     const author = 'Daeyong Kwon';
-    const credit = 'Alex Wu';
+    const credit = 'Photo by Alex Wu';
     const title = 'Event Horizon';
     const date = 'December 06, 2025';
 
