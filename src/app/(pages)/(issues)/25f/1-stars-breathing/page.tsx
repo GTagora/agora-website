@@ -36,19 +36,19 @@ export default async function Article() {
             <p>the exhale of God’s imagination.</p>
             <br />
             <p>Light travels for centuries</p>
-            <p>but it began as a single word–</p>
+            <p>but it began as a single word –</p>
             <p>spoken by God before clocks,</p>
             <p>before time bent to listen.</p>
             <br />
             <p>Every supernova echoes “Let there be,”</p>
-            <p>a wound of light bleeds creation–</p>
+            <p>a wound of light bleeds creation –</p>
             <p>heavens remember the cross,</p>
             <p>where beauty once broke to make us whole.</p>
             <br />
             <p>I watch the stars consume themselves in brilliance,</p>
             <p>born from heat, time, and pressure.</p>
             <p>Science calls it fusion,</p>
-            <p>faith calls it fire–</p>
+            <p>faith calls it fire –</p>
             <p>one names the process,</p>
             <p>the other, the Presence.</p>
             <br />
@@ -57,7 +57,7 @@ export default async function Article() {
             <p>are the same that dwell in our body,</p>
             <p>and neither burn without Him.</p>
             <br />
-            <p>He crafts distance–</p>
+            <p>He crafts distance –</p>
             <p>stretches between galaxies,</p>
             <p>silences between orbits,</p>
             <p>so perfectly</p>
@@ -66,14 +66,13 @@ export default async function Article() {
             <p>He veiled heavens</p>
             <p>so we would seek,</p>
             <p>and when we looked far enough,</p>
-            <p>He stepped closer–</p>
+            <p>He stepped closer –</p>
             <p>Word became flesh</p>
             <p>infinity folded into a single heartbeat.</p>
             <br />
             <p>So I stand under the sky</p>
             <p>a fragment of dust,</p>
             <p>a witness to light still traveling from Eden.</p>
-            <br />
             <p>And in the stillness,</p>
             <p>I whisper back into the vastness:</p>
             <p>You are here.</p>
