@@ -134,7 +134,7 @@ const articles: Article[] = [
   {
     id: 15,
     title: "Forgiveness and Vengeance",
-    author: "Elliot Chen",
+    author: "Elliott Chen",
     image: "/issues/25f/forgiveness-and-vengeance.webp",
     genre: "essay",
     issue: "Space",
