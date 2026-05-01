@@ -13,7 +13,7 @@ export default async function Article() {
         <div className="mt-[100px] w-full md:mt-0">
           <Image
             className="w-full h-auto object-cover md:object-contain my-5 md:my-8 md:max-h-[70vh]"
-            src="/issues/26s/test.png"
+            src="/issues/26s/beautiful-rupture.webp"
             width={600}
             height={600}
             alt="article image"
@@ -110,29 +110,26 @@ I can think
             <p>{`The pen trembles 
 As if it knows before I do
 `}</p>
-<p>
-  {`Line after line 
+            <p>
+              {`Line after line 
 The ink confesses what I cannot say 
 `}
-</p>
-<p>
-  {`And suddenly I realize 
+            </p>
+            <p>
+              {`And suddenly I realize 
 You have been watching the page
 `}
-</p>
-<p>
-  {`It is you Lord 
+            </p>
+            <p>
+              {`It is you Lord 
 Who sees my final stroke. 
 `}
-</p>
-<p>
-  {`It does not have the final word 
+            </p>
+            <p>
+              {`It does not have the final word 
 `}
-</p>
-<p>
-  {`You do.`}
-</p>
-
+            </p>
+            <p>{`You do.`}</p>
           </div>
         </div>
       </div>
