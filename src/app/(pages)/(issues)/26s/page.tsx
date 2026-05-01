@@ -162,7 +162,7 @@ const articles: Article[] = [
     id: 18,
     title: "Paint With Me",
     author: "Olivia Hu",
-    image: "/issues/26s/18-paint-with-me.webp",
+    image: "/issues/26s/paint-with-me-cover.webp",
     genre: "Essay",
     issue: "Ink",
     link: "/26s/18-paint-with-me",
