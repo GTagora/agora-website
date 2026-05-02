@@ -259,7 +259,10 @@ export default function Home() {
             resolutions to the ways He is moving in your life. We humbly present
             these works as an offering to you, dear Reader, for you too are an
             artwork of the greatest Creator of all. May grace and blessings be
-            with you! Yours in Christ,
+            with you!
+            <br />
+            <br />
+            Yours in Christ,
             <br />
             Olivia and Sean
           </div>

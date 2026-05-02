@@ -183,10 +183,61 @@ export default async function Issue() {
         {semester.toUpperCase()} | VOL. {volume}, NO. {issue}
       </h5>
       {issuu ? <IssuuButton link={issuu} /> : null}
-      {/* <div className={styles.letter}>
-        <h3>Letter from the editors</h3>
-        <div>Letter from the EICs</div>
-      </div> */}
+      <div className="pt-1 flex flex-row justify-between">
+        <p className="font-cormorant text-left">Dear Reader,</p>
+      </div>
+      <div className="font-cormorant">
+        Welcome! It’s with great joy that we bring you the sixth issue of
+        <i>Agora</i>. Spring comes like a whirlwind each year: throughout a
+        semester of busyness and endless deadlines, we witness the seasons
+        change from brutal cold to hopeful warmth, then just like that, school
+        breaks for summer. It’s with awe and great relief that we present this
+        journal to you — God has shown his faithfulness time and time again in
+        providing for <i>Agora</i>.
+        <br />
+        <br />
+        We’ve been blessed to see <i>Agora</i> evolve over the past three years,
+        as God brings new staff and new visions into our body. This semester is
+        a special one, as we (Olivia and Sean) gift you this issue as
+        <i>Agora</i>’s old and new editors-in-chief. For me (Olivia), this is a
+        truly sweet goodbye and a final love letter to you, and for me (Sean),
+        it is a foretaste of the exciting things to come.
+        <br />
+        <br />
+        As a journal of Christian thought, these pages serve as a medium to
+        convey experiences and grace. We discover, here, a raw distillation of
+        thought and emotion through words and images. And so, it is with great
+        pleasure that we would like to introduce the theme of this semester:
+        Ink.
+        <br />
+        <br />
+        Ink is used to record, to remember, to express. It persists beyond time
+        and human fickleness, allowing us to see glimpses of who we used to be
+        and how we have changed. Its permanence echoes the stain of everpresent
+        sin, resistant to our efforts to erase it. At the same time, ink
+        embodies the steadfastness of God’s word, which forms the foundation of
+        our faith throughout eternity.
+        <br />
+        <br />
+        Through the metaphor of ink, our writers have crystalized the stories
+        they hold and the marks they bear, offering up an interpretation of what{" "}
+        <i>Ink</i> means to them. Every piece is unique, a reflection of the
+        author’s varying walks in faith, but they all come together to testify
+        of God’s grace in our lives.
+        <br />
+        <br />
+        So, as you flip through these pages, we invite you to take a moment of
+        rest. We hope these pieces bring comfort and peace, questions and
+        resolutions to the ways He is moving in your life. We humbly present
+        these works as an offering to you, dear Reader, for you too are an
+        artwork of the greatest Creator of all. May grace and blessings be with
+        you!
+        <br />
+        <br />
+        Yours in Christ,
+        <br />
+        Olivia and Sean
+      </div>
       <div
         className="py-14 w-full flex flex-col gap-12
                                 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-14
