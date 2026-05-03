@@ -115,7 +115,7 @@ const articles: Article[] = [
   },
   {
     id: 13,
-    title: "Bloth",
+    title: "Blot",
     author: "Gabriel Lyannas",
     image: "/issues/26s/13-blot.webp",
     genre: "Poem",
