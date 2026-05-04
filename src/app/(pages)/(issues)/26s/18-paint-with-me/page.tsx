@@ -78,9 +78,8 @@ export default async function Article() {
             <p>
               But I don’t want to. I sketch fuzzy lines, I hesitate, I erase and
               try again. I can’t help my indecision. I can’t tell if a line is
-              accurate, much less
-              <em>good</em> or <em>beautiful</em>. The result is vague and
-              noncommittal.
+              accurate, much less <em>good</em> or <em>beautiful</em>. The
+              result is vague and noncommittal.
             </p>
             <p>
               But canvas is forgiving, and erasure grants a clean slate. So I
@@ -167,9 +166,8 @@ export default async function Article() {
             <p>
               You don’t know that her mind is teetering at the extremes,
               romanticizing oblivion, anything to escape the excruciating
-              present. You don’t
-              <em>realize</em> that, though you’re a mere twenty feet away, she
-              feels utterly alone.
+              present. You don’t <em>realize</em> that, though you’re a mere
+              twenty feet away, she feels utterly alone.
             </p>
             <h4 className="font-bold">Day 1 17:27</h4>
             <p>
@@ -238,7 +236,7 @@ export default async function Article() {
               At her doorway, you find her mother hesitant, peering in. The
               hallway light casts over a form covered by quilts, but her face is
               still hidden in shadows.
-              <em>what’s wrong</em>, her mother entreats, but there is only a
+              <em> what’s wrong</em>, her mother entreats, but there is only a
               quivering silence.
             </p>
             <p>When she finally speaks, her voice is fragile and young.</p>
@@ -514,7 +512,7 @@ export default async function Article() {
               alt="article image"
             />
             <br />
-            <div className="font-sans font-light mx-36 text-[10pt] my-24 leading-6">
+            <div className="font-sans font-light md:mx-36 text-[10pt] my-24 leading-6">
               <p>dad,</p>
               <p>
                 I see it now. All my life I have struggled to grow up, perhaps
@@ -548,17 +546,21 @@ export default async function Article() {
               <p>
                 It has been similar in my Christian walk. There were things I
                 had learned about the God of Christianity: he is merciful,
-                faithful, steadfast, and loving (Exodus 34:6). But during the
-                past few years, I’ve been coming to <em>know</em> this God, as a
-                father, as a daughter. These truths became the substance of my
-                relationship with him. He is my heavenly Father. His great and
-                perfect love is offered to me; in fact, it has been pursuing me
-                since my very birth. And, dad, this love is offered to you too.
+                faithful, steadfast, and loving <Reference number={1} />. But
+                during the past few years, I’ve been coming to <em>know</em>{" "}
+                this God, as a father, as a daughter. These truths became the
+                substance of my relationship with him. He is my heavenly Father.
+                His great and perfect love is offered to me; in fact, it has
+                been pursuing me since my very birth. And, dad, this love is
+                offered to you too.
               </p>
               <br />
               <p>
-                “See what kind of love the Father has given to us, that we
-                should be called children of God; and so we are.” (1 John 3:1)
+                <em>
+                  “See what kind of love the Father has given to us, that we
+                  should be called children of God; and so we are.”
+                </em>{" "}
+                <Reference number={2} />
               </p>
               <br />
               <p>
@@ -572,9 +574,9 @@ export default async function Article() {
                 and a contemporary one. Despite the heartache this causes, God
                 refuses to give up on his creation. To reconcile us to him, he
                 chose to give up his own son to demonstrate the depth of his
-                love for us (John 3:16-18, Romans 5:10-11, Romans 8:31-39). God
-                loved, and sought our adoption. God spoke, and called us his
-                children. And so we are.
+                love for us.
+                <Reference number={3} /> God loved, and sought our adoption. God
+                spoke, and called us his children. And so we are.
               </p>
               <br />
               <p>
@@ -588,9 +590,12 @@ export default async function Article() {
               </p>
               <br />
               <p>
-                “The Lord is not slow to fulfill his promise as some count
-                slowness, but is patient toward you, not wishing that any should
-                perish, but that all should reach repentance.” (2 Peter 3:9)
+                <em>
+                  “The Lord is not slow to fulfill his promise as some count
+                  slowness, but is patient toward you, not wishing that any
+                  should perish, but that all should reach repentance.”
+                </em>{" "}
+                <Reference number={4} />
               </p>
               <br />
               <p>
@@ -614,7 +619,11 @@ export default async function Article() {
                 As you have been here for me, He will also be there for you.
               </p>
               <br />
-              <p>all my love, olivia</p>
+              <p>
+                all my love,
+                <br />
+                olivia
+              </p>
             </div>
             <Image
               className="w-full h-full object-cover md:object-contain my-5 md:my-144 md:max-h-[70vh]"
@@ -623,7 +632,7 @@ export default async function Article() {
               height={600}
               alt="article image"
             />
-            <h4 className="mb-20">July 2026</h4>
+            <h4 className="font-bold mb-20">July 2026</h4>
             <p>
               Three thousand miles west, your daughter will set down her
               suitcase in an empty apartment room. Seattle air will carry
@@ -644,6 +653,19 @@ export default async function Article() {
               knot, will finally be drawn closed.
             </p>
           </div>
+        </div>
+
+        <div className="mt-16 font-serif text-sm space-y-2">
+          <p>
+            <b>References</b>
+          </p>
+          <Footnote number={1} text="Exodus 34:6" />
+          <Footnote number={2} text="1 John 3:1" />
+          <Footnote
+            number={3}
+            text="John 3:16-18, Romans 5:10-11, Romans 8:31-39"
+          />
+          <Footnote number={4} text="2 Peter 3:9" />
         </div>
       </div>
       <div className="w-full">
