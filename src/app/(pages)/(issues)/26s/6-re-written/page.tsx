@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Footer from "@/app/components/footer";
+import { Reference, Footnote } from "@/app/components/buttons";
 
 export default async function Article() {
   const author = "Catherine Tian";
@@ -57,7 +58,7 @@ export default async function Article() {
                 better, to have purer faith, but I can&rsquo;t. Nothing helps.
                 Oh God, what am I doing wrong? Are You not the God who moves
                 mountains? Am I too far gone from Your reach? My God, my God,
-                why have You forsaken me? [Psalm 22:1]
+                why have You forsaken me? <Reference number={1} />
               </i>
             </div>
             <br />
@@ -92,7 +93,7 @@ export default async function Article() {
                 fault and impurity that I fear I am despised by You. I fear I am
                 rejected by You because I constantly reject You. God, I need
                 help even just to want You. Save me, O God, for the waters have
-                come up to my neck. [Psalm 69:1]
+                come up to my neck. <Reference number={2} />
               </i>
             </div>
             <br />
@@ -133,8 +134,8 @@ export default async function Article() {
                 creation reveals. But with every cry of worship, there is the
                 shout of my unfaithfulness, my endless fault, my questioning, my
                 evil. I try to pick up my cross, but how much longer? My head is
-                in pain. God, I believe, I believe, help my unbelief. [Mark
-                9:24]
+                in pain. God, I believe, I believe, help my unbelief.{" "}
+                <Reference number={3} />
               </i>
             </div>
             <br />
@@ -171,7 +172,8 @@ export default async function Article() {
                 too, I know this is true. How good it is that the place where we
                 find respite is not in our creation, but Yours. I cannot deny
                 that the heavens declare Your glory God, and the sky above
-                proclaims Your handiwork [Psalm 19:1].
+                proclaims Your handiwork.
+                <Reference number={4} />
               </i>
             </div>
             <br />
@@ -208,8 +210,8 @@ export default async function Article() {
                 can&rsquo;t save myself, but You did. You&rsquo;ve invaded my
                 heart, shattered the walls, breathed in me new life through
                 Yours. Fear flees at the sight of You, death has no hold.
-                &ldquo;So Lord, in You will I take my refuge.&rdquo; [Psalm
-                11:1]
+                &ldquo;So Lord, in You will I take my refuge.&rdquo;{" "}
+                <Reference number={5} />
               </i>
             </div>
             <br />
@@ -224,6 +226,17 @@ export default async function Article() {
             </div>
             <br />
             <div>Amen</div>
+
+            <div className="mt-10 font-serif text-sm space-y-2">
+              <p>
+                <b>Footnotes</b>
+              </p>
+              <Footnote number={1} text="Psalm 22:1" />
+              <Footnote number={2} text="Psalm 69:1" />
+              <Footnote number={3} text="Mark 9:24" />
+              <Footnote number={4} text="Psalm 19:1" />
+              <Footnote number={5} text="Psalm 11:1" />
+            </div>
           </div>
         </div>
       </div>
