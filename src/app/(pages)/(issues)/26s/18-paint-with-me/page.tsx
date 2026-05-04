@@ -546,7 +546,7 @@ export default async function Article() {
               <p>
                 It has been similar in my Christian walk. There were things I
                 had learned about the God of Christianity: he is merciful,
-                faithful, steadfast, and loving <Reference number={1} />. But
+                faithful, steadfast, and loving. <Reference number={1} /> But
                 during the past few years, I’ve been coming to <em>know</em>{" "}
                 this God, as a father, as a daughter. These truths became the
                 substance of my relationship with him. He is my heavenly Father.
